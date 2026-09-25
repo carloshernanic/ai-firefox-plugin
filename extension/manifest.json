@@ -1,0 +1,37 @@
+{
+  "manifest_version": 2,
+  "name": "Privacy Inspector",
+  "version": "0.1.0",
+  "description": "Detecta rastreadores, cookies, armazenamento HTML5, fingerprinting e indicadores de hijacking na página atual.",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "privacy-inspector@insper.edu.br",
+      "strict_min_version": "142.0",
+      "data_collection_permissions": {
+        "required": ["none"]
+      }
+    }
+  },
+  "permissions": [
+    "<all_urls>",
+    "webRequest",
+    "webRequestBlocking",
+    "webNavigation",
+    "tabs",
+    "cookies",
+    "storage"
+  ],
+  "background": {
+    "scripts": ["lib/domain.js", "background.js"],
+    "persistent": true
+  },
+  "browser_action": {
+    "default_title": "Privacy Inspector",
+    "default_popup": "popup/popup.html",
+    "default_icon": "icons/icon.svg"
+  },
+  "icons": {
+    "48": "icons/icon.svg",
+    "96": "icons/icon.svg"
+  }
+}

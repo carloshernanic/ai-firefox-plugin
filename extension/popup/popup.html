@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header>
+    <div class="title">Privacy Inspector</div>
+    <div class="page" id="page">—</div>
+  </header>
+
+  <section class="summary">
+    <div class="stat"><span id="stat-third">0</span><label>domínios de 3ª parte</label></div>
+    <div class="stat"><span id="stat-trackers">0</span><label>rastreadores conhecidos</label></div>
+    <div class="stat"><span id="stat-requests">0</span><label>requisições</label></div>
+  </section>
+
+  <main>
+    <h2>Conexões a terceiros</h2>
+    <ul id="third-list" class="list"></ul>
+    <p id="empty" class="empty" hidden>Nenhuma conexão de terceira parte observada.</p>
+  </main>
+
+  <script src="popup.js"></script>
+</body>
+</html>
