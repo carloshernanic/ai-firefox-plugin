@@ -58,6 +58,12 @@ evidencias/          HARs e prints usados no relatório
 - **Classificação de cookies:** 3ª parte quando o site (eTLD+1) do domínio do
   cookie difere do site da aba; sessão quando não há `Expires`/`Max-Age`;
   `Expires`/`Max-Age` no passado é contado como remoção, não como injeção.
+- **Cookies rejeitados (RFC 6265 §5.3):** um `Domain` que seja sufixo público
+  (`br`, `com.br`) ou que não corresponda ao host que grava o cookie é recusado
+  pelo navegador. Essas tentativas não entram na contagem e são listadas à parte:
+  elas revelam *domain probing*, técnica do Google Analytics e de outros scripts
+  (ex.: `_ga` e `_rdc…=writeable` tentados em `br`, `com.br` e só aceitos em
+  `uol.com.br`).
 - **Limitação conhecida:** um cabeçalho `Set-Cookie` observado não garante que
   o cookie foi aceito — a Enhanced Tracking Protection pode rejeitá-lo ou
   particioná-lo (Total Cookie Protection). O plugin mede o que a página

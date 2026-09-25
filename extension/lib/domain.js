@@ -45,6 +45,16 @@ function baseDomain(host) {
   return parts.slice(-2).join(".");
 }
 
+/** Sufixo público: TLD simples ("br") ou sufixo composto da lista ("com.br"). */
+function isPublicSuffix(domain) {
+  return !!domain && !isIpAddress(domain) && (!domain.includes(".") || MULTI_PART_SUFFIXES.has(domain));
+}
+
+/** Domain-match da RFC 6265 §5.1.3: host igual ao domínio ou subdomínio dele. */
+function domainMatches(host, domain) {
+  return host === domain || (!isIpAddress(host) && host.endsWith("." + domain));
+}
+
 function siteFromUrl(url) {
   return baseDomain(hostFromUrl(url));
 }

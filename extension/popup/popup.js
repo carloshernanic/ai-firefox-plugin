@@ -169,6 +169,24 @@ function renderStorage() {
   }
 }
 
+function renderRejectedCookies() {
+  const rejected = report.cookieRejected || [];
+  $("ck-rejected-box").hidden = rejected.length === 0;
+  $("ck-rejected-n").textContent = rejected.length;
+  const list = $("ck-rejected-list");
+  list.replaceChildren();
+  for (const r of rejected) {
+    list.append(el("li", {},
+      el("div", { class: "row" },
+        el("span", { class: "site" }, r.name || "(sem nome)"),
+        el("span", { class: "count" }, `Domain=${r.domain}`)
+      ),
+      el("div", {}, tag(r.reason, "third"), tag(r.source.toUpperCase()), r.attempts > 1 ? tag(`${r.attempts} tentativas`) : null),
+      el("div", { class: "meta" }, `por ${truncate(r.setBy, 70)}`)
+    ));
+  }
+}
+
 $("ck-only-third").addEventListener("change", () => report && renderCookies());
 
 // ---------------------------------------------------------------------------
@@ -194,6 +212,7 @@ async function load() {
   renderThirdParty();
   if (!report.cookieSummary) return;
   renderCookies();
+  renderRejectedCookies();
   if (report.storageSummary) renderStorage();
 }
 

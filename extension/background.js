@@ -18,6 +18,7 @@ function newPageState(url) {
     thirdParty: new Map(), // site -> { site, hosts:Set, count, types:{}, classifications:Set, sample }
     cookies: new Map(),    // "domínio|path|nome" -> cookie observado
     cookieDeletions: 0,
+    cookieRejected: new Map(), // "domínio|nome" -> tentativa rejeitada pelo navegador
     storage: new Map()     // origem -> { origin, site, thirdParty, ops:Map, snapshot }
   };
 }
@@ -102,6 +103,15 @@ browser.webRequest.onBeforeRequest.addListener(
 function recordCookie(state, raw, defaultHost, source, setBy) {
   const c = parseCookieString(raw, defaultHost);
   if (!c) return;
+
+  const reason = cookieRejection(c, defaultHost);
+  if (reason) {
+    const rkey = `${c.domain}|${c.name}`;
+    const r = state.cookieRejected.get(rkey) || { name: c.name, domain: c.domain, reason, source, setBy, attempts: 0 };
+    r.attempts++;
+    state.cookieRejected.set(rkey, r);
+    return;
+  }
 
   const key = `${c.domain}|${c.path}|${c.name}`;
   if (c.deleted) {
@@ -192,7 +202,8 @@ function onPageEvents(msg, sender) {
   for (const { event, data } of msg.events || []) {
     switch (event) {
       case "cookieWrite":
-        recordCookie(state, data.raw, hostFromUrl(frameUrl), "js", frameUrl);
+        // Host efetivo do documento (about:blank herda o do pai via origin).
+        recordCookie(state, data.raw, hostFromUrl(origin !== "null" ? origin : frameUrl), "js", frameUrl);
         break;
       case "storageOp":
         recordStorageOp(storageEntry(state, origin, frameUrl), data);
@@ -268,7 +279,8 @@ function serializeReport(state) {
     persistent: count((c) => !c.session),
     viaHttp: count((c) => c.sources.includes("http")),
     viaJs: count((c) => c.sources.includes("js")),
-    deletions: state.cookieDeletions
+    deletions: state.cookieDeletions,
+    rejected: state.cookieRejected.size
   };
 
   const storage = [...state.storage.values()]
@@ -314,6 +326,7 @@ function serializeReport(state) {
     thirdParty,
     cookies,
     cookieSummary,
+    cookieRejected: [...state.cookieRejected.values()],
     storage,
     storageSummary
   };

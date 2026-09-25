@@ -57,3 +57,17 @@ function parseCookieString(raw, defaultHost, now = Date.now()) {
   cookie.domain = (cookie.domain || defaultHost || "").replace(/^\./, "").toLowerCase();
   return cookie;
 }
+
+/**
+ * Motivo pelo qual o navegador rejeitaria o cookie (RFC 6265 §5.3, passos 5-6),
+ * ou null se ele é aceito. Scripts de analytics usam essas rejeições de
+ * propósito ("domain probing"): tentam gravar em br, com.br, uol.com.br… até
+ * descobrir o domínio mais alto que aceita cookies.
+ */
+function cookieRejection(cookie, setterHost) {
+  if (!cookie.domain) return "sem domínio";
+  if (cookie.hostOnly) return null;
+  if (isPublicSuffix(cookie.domain) && cookie.domain !== setterHost) return "sufixo público";
+  if (!domainMatches(setterHost, cookie.domain)) return "domínio não corresponde ao host";
+  return null;
+}

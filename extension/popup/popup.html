@@ -45,6 +45,12 @@
       </div>
       <ul id="cookie-list" class="list"></ul>
       <p id="cookie-empty" class="empty" hidden>Nenhum cookie criado durante o carregamento.</p>
+      <details id="ck-rejected-box" class="rejected" hidden>
+        <summary>Tentativas rejeitadas pelo navegador (<span id="ck-rejected-n">0</span>)</summary>
+        <p class="meta">Cookies com Domain inválido (sufixo público ou domínio alheio). Não são gravados;
+          em geral indicam <em>domain probing</em> de scripts de analytics.</p>
+        <ul id="ck-rejected-list" class="list"></ul>
+      </details>
     </section>
 
     <!-- Storage HTML5 -->
