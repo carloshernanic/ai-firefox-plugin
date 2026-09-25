@@ -13,6 +13,7 @@
   <nav class="tabs">
     <button data-tab="third" class="active">Terceiros <span id="n-third"></span></button>
     <button data-tab="cookies">Cookies <span id="n-cookies"></span></button>
+    <button data-tab="storage">Storage <span id="n-storage"></span></button>
   </nav>
 
   <main>
@@ -44,6 +45,22 @@
       </div>
       <ul id="cookie-list" class="list"></ul>
       <p id="cookie-empty" class="empty" hidden>Nenhum cookie criado durante o carregamento.</p>
+    </section>
+
+    <!-- Storage HTML5 -->
+    <section id="tab-storage" class="panel">
+      <div class="summary">
+        <div class="stat"><span id="st-local">0</span><label>itens localStorage</label></div>
+        <div class="stat"><span id="st-session">0</span><label>itens sessionStorage</label></div>
+        <div class="stat"><span id="st-idb">0</span><label>bancos IndexedDB</label></div>
+      </div>
+      <div class="summary">
+        <div class="stat"><span id="st-origins">0</span><label>origens com dados</label></div>
+        <div class="stat"><span id="st-third">0</span><label>origens de 3ª parte</label></div>
+        <div class="stat small"><span id="st-bytes">0</span><label>tamanho (Web Storage)</label></div>
+      </div>
+      <ul id="storage-list" class="list"></ul>
+      <p id="storage-empty" class="empty" hidden>Nenhum dado gravado em localStorage, sessionStorage ou IndexedDB.</p>
     </section>
   </main>
 

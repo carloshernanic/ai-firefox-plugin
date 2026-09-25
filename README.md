@@ -9,7 +9,7 @@ apresentar rastreamento e violações de privacidade no cliente web.
 |---|---|
 | Conexões a domínios de terceira parte (com classificação de rastreadores do Firefox) | ✅ |
 | Cookies: contagem, 1ª/3ª parte, sessão/persistente, origem HTTP/JS | ✅ |
-| Armazenamento HTML5 (localStorage, sessionStorage, IndexedDB) | ⏳ |
+| Armazenamento HTML5 (localStorage, sessionStorage, IndexedDB), por origem 1ª/3ª parte | ✅ |
 | Canvas fingerprint | ⏳ |
 | Cookie sync / bounce tracking | ⏳ |
 | Indicadores de hijacking / hook | ⏳ |
@@ -34,7 +34,7 @@ apresentar rastreamento e violações de privacidade no cliente web.
 extension/
   manifest.json      Manifest V2 (background persistente + webRequest)
   background.js      Coleta do tráfego por aba e montagem do relatório
-  content/inject.js  Hooks nas APIs da página (document.cookie, cookieStore…)
+  content/inject.js  Hooks nas APIs da página (cookies, Web Storage, IndexedDB…)
   lib/domain.js      Cálculo de site (eTLD+1) e classificação 1ª/3ª parte
   lib/cookies.js     Parser de Set-Cookie / document.cookie
   popup/             Interface do relatório
@@ -62,7 +62,20 @@ evidencias/          HARs e prints usados no relatório
   o cookie foi aceito — a Enhanced Tracking Protection pode rejeitá-lo ou
   particioná-lo (Total Cookie Protection). O plugin mede o que a página
   *tentou* gravar.
+- **Storage HTML5 por duas técnicas complementares:**
+  - *hooks* em `Storage.prototype.setItem/removeItem/clear` e em
+    `IDBFactory.open` / `IDBObjectStore.put/add` registram as escritas feitas
+    durante o carregamento;
+  - *snapshot* do `localStorage`, `sessionStorage` e `indexedDB.databases()` de
+    cada frame (no `load`, +3 s, +10 s e ao abrir o popup) captura o estado final,
+    inclusive escritas por atribuição direta (`localStorage.x = 1`), que não
+    passam por `setItem`.
+- **Storage de terceiros:** cada iframe tem o storage da própria origem. Uma
+  origem é de 3ª parte quando seu site difere do site da aba. No Firefox, esse
+  storage é **particionado** pela Total Cookie Protection (chaveado pelo site do
+  topo), então não é compartilhado entre sites diferentes — relevante para
+  interpretar a página *Storage partitioning* do DDG.
 
 ## Uma Curiosidade
 
-Eu uso o zen browser como navegador principal, diferente de outros navegadores que a base são chromium o zen tem como base o firefox e as extensões também funcionaram para eles
+Eu uso o zen browser como navegador principal, diferente de outros navegadores que a base são chromium o zen tem como base o firefox e as extensões também funcionaram para ele.

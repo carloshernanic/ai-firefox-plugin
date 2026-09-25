@@ -17,7 +17,8 @@ function newPageState(url) {
     firstPartyRequests: 0,
     thirdParty: new Map(), // site -> { site, hosts:Set, count, types:{}, classifications:Set, sample }
     cookies: new Map(),    // "domínio|path|nome" -> cookie observado
-    cookieDeletions: 0
+    cookieDeletions: 0,
+    storage: new Map()     // origem -> { origin, site, thirdParty, ops:Map, snapshot }
   };
 }
 
@@ -144,10 +145,41 @@ browser.webRequest.onHeadersReceived.addListener(
 );
 
 // ---------------------------------------------------------------------------
+// Armazenamento HTML5 (localStorage, sessionStorage, IndexedDB)
+// ---------------------------------------------------------------------------
+
+function storageEntry(state, origin, frameUrl) {
+  let entry = state.storage.get(origin);
+  if (!entry) {
+    // Origem opaca ("null") de iframes sandbox: usa a URL do frame para o site;
+    // about:blank/srcdoc não têm site próprio e pertencem ao documento da aba.
+    const site = siteFromUrl(origin !== "null" ? origin : frameUrl) || state.site;
+    entry = { origin, site, thirdParty: site !== state.site, frameUrl, ops: new Map(), snapshot: null };
+    state.storage.set(origin, entry);
+  }
+  return entry;
+}
+
+/** Operação observada por hook: set/remove/clear (Web Storage), open/write (IndexedDB). */
+function recordStorageOp(entry, op) {
+  const key = `${op.api}|${op.key}`;
+  let rec = entry.ops.get(key);
+  if (!rec) {
+    rec = { api: op.api, key: op.key, ops: {}, writes: 0, size: 0, preview: "" };
+    entry.ops.set(key, rec);
+  }
+  // Escritas IndexedDB chegam já agregadas no content script (campo count).
+  rec.ops[op.op] = op.count || (rec.ops[op.op] || 0) + 1;
+  if (op.op === "set" || op.op === "write") rec.writes = op.count || rec.writes + 1;
+  if (op.size !== undefined) rec.size = op.size;
+  if (op.preview !== undefined) rec.preview = op.preview;
+}
+
+// ---------------------------------------------------------------------------
 // Eventos vindos do content script (APIs chamadas pela página)
 // ---------------------------------------------------------------------------
 
-function onPageEvent(msg, sender) {
+function onPageEvents(msg, sender) {
   const tabId = sender.tab && sender.tab.id;
   const state = tabId !== undefined && getState(tabId);
   if (!state) return;
@@ -155,11 +187,20 @@ function onPageEvent(msg, sender) {
   const frameUrl = msg.frameUrl || sender.url || state.url;
   // Descarta eventos atrasados de um documento anterior da mesma aba.
   if (sender.frameId === 0 && siteFromUrl(frameUrl) !== state.site) return;
+  const origin = msg.origin || new URL(frameUrl).origin;
 
-  switch (msg.event) {
-    case "cookieWrite":
-      recordCookie(state, msg.data.raw, hostFromUrl(frameUrl), "js", frameUrl);
-      break;
+  for (const { event, data } of msg.events || []) {
+    switch (event) {
+      case "cookieWrite":
+        recordCookie(state, data.raw, hostFromUrl(frameUrl), "js", frameUrl);
+        break;
+      case "storageOp":
+        recordStorageOp(storageEntry(state, origin, frameUrl), data);
+        break;
+      case "storageSnapshot":
+        storageEntry(state, origin, frameUrl).snapshot = data;
+        break;
+    }
   }
 }
 
@@ -230,6 +271,38 @@ function serializeReport(state) {
     deletions: state.cookieDeletions
   };
 
+  const storage = [...state.storage.values()]
+    .map((e) => {
+      const snap = e.snapshot || { local: { count: 0, bytes: 0, items: [] }, session: { count: 0, bytes: 0, items: [] }, idb: [] };
+      const ops = [...e.ops.values()];
+      // Bancos IndexedDB abertos por hook, mesmo que o snapshot não os liste.
+      const idbNames = new Set(snap.idb.map((d) => d.name));
+      for (const o of ops) if (o.api === "idb") idbNames.add(o.key.split("/")[0]);
+      return {
+        origin: e.origin,
+        site: e.site,
+        thirdParty: e.thirdParty,
+        local: snap.local,
+        session: snap.session,
+        idb: [...idbNames],
+        ops,
+        writes: ops.reduce((n, o) => n + o.writes, 0)
+      };
+    })
+    .filter((e) => e.local.count || e.session.count || e.idb.length || e.ops.length)
+    .sort((a, b) => (a.thirdParty - b.thirdParty) || a.origin.localeCompare(b.origin));
+
+  const sum = (f) => storage.reduce((n, e) => n + f(e), 0);
+  const storageSummary = {
+    origins: storage.length,
+    thirdPartyOrigins: storage.filter((e) => e.thirdParty).length,
+    localItems: sum((e) => e.local.count),
+    sessionItems: sum((e) => e.session.count),
+    idbDatabases: sum((e) => e.idb.length),
+    bytes: sum((e) => e.local.bytes + e.session.bytes),
+    writes: sum((e) => e.writes)
+  };
+
   return {
     url: state.url,
     host: state.host,
@@ -240,14 +313,16 @@ function serializeReport(state) {
     thirdPartyRequests: thirdParty.reduce((s, e) => s + e.count, 0),
     thirdParty,
     cookies,
-    cookieSummary
+    cookieSummary,
+    storage,
+    storageSummary
   };
 }
 
 browser.runtime.onMessage.addListener((msg, sender) => {
   if (!msg) return;
-  if (msg.type === "pageEvent") {
-    onPageEvent(msg, sender);
+  if (msg.type === "pageEvents") {
+    onPageEvents(msg, sender);
     return;
   }
   if (msg.type === "getReport") {

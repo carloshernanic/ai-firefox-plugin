@@ -64,3 +64,9 @@ main { padding: 0 14px 14px; }
 .tag.first { background: var(--ok); color: #fff; }
 .tag.persistent { background: var(--warn); color: #fff; }
 .empty { color: var(--muted); }
+
+.group { margin-top: 6px; }
+.group-title { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: .03em; color: var(--muted); }
+.kv { display: flex; justify-content: space-between; gap: 8px; font-size: 11px; padding: 1px 0 1px 8px; }
+.kv .k { font-family: ui-monospace, monospace; word-break: break-all; }
+.kv .v { color: var(--muted); white-space: nowrap; }

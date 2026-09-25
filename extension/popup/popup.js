@@ -116,12 +116,70 @@ function renderCookies() {
   }
 }
 
+// ---------------------------------------------------------------------------
+// Storage HTML5
+// ---------------------------------------------------------------------------
+
+function formatBytes(n) {
+  if (n >= 1048576) return `${(n / 1048576).toFixed(1)} MB`;
+  if (n >= 1024) return `${(n / 1024).toFixed(1)} KB`;
+  return `${n} B`;
+}
+
+function storageGroup(title, items) {
+  if (!items.length) return null;
+  const group = el("div", { class: "group" }, el("div", { class: "group-title" }, title));
+  for (const [k, v] of items) {
+    group.append(el("div", { class: "kv" }, el("span", { class: "k" }, k), el("span", { class: "v" }, v)));
+  }
+  return group;
+}
+
+function renderStorage() {
+  const s = report.storageSummary;
+  $("st-local").textContent = s.localItems;
+  $("st-session").textContent = s.sessionItems;
+  $("st-idb").textContent = s.idbDatabases;
+  $("st-origins").textContent = s.origins;
+  $("st-third").textContent = s.thirdPartyOrigins;
+  $("st-bytes").textContent = formatBytes(s.bytes);
+  $("n-storage").textContent = `(${s.localItems + s.sessionItems + s.idbDatabases})`;
+
+  const list = $("storage-list");
+  list.replaceChildren();
+  $("storage-empty").hidden = report.storage.length > 0;
+
+  for (const e of report.storage) {
+    const idbWrites = {};
+    for (const o of e.ops) if (o.api === "idb" && o.ops.write) idbWrites[o.key] = o.writes;
+
+    list.append(el("li", {},
+      el("div", { class: "row" },
+        el("span", { class: "site" }, e.origin),
+        el("span", { class: "count" }, `${e.writes} escritas`)
+      ),
+      el("div", {}, e.thirdParty ? tag("3ª parte", "third") : tag("1ª parte", "first")),
+      storageGroup(`localStorage · ${e.local.count} itens`, e.local.items.map((i) => [i.key, formatBytes(i.size)])),
+      storageGroup(`sessionStorage · ${e.session.count} itens`, e.session.items.map((i) => [i.key, formatBytes(i.size)])),
+      storageGroup(`IndexedDB · ${e.idb.length} bancos`, [
+        ...e.idb.map((name) => [name, "banco"]),
+        ...Object.entries(idbWrites).map(([k, n]) => [k, `${n} escritas`])
+      ])
+    ));
+  }
+}
+
 $("ck-only-third").addEventListener("change", () => report && renderCookies());
 
 // ---------------------------------------------------------------------------
 
 async function load() {
   const [tab] = await browser.tabs.query({ active: true, currentWindow: true });
+  // Pede a todos os frames um snapshot atualizado do storage antes de ler o relatório.
+  try {
+    await browser.tabs.sendMessage(tab.id, { type: "snapshotNow" });
+    await new Promise((r) => setTimeout(r, 400));
+  } catch (e) { /* página sem content script (about:, loja de extensões...) */ }
   report = await browser.runtime.sendMessage({ type: "getReport", tabId: tab.id });
   if (!report) {
     $("page").textContent = "Recarregue a página para iniciar a análise.";
@@ -136,6 +194,7 @@ async function load() {
   renderThirdParty();
   if (!report.cookieSummary) return;
   renderCookies();
+  if (report.storageSummary) renderStorage();
 }
 
 load();
