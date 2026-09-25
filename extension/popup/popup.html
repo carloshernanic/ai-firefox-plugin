@@ -10,16 +10,41 @@
     <div class="page" id="page">—</div>
   </header>
 
-  <section class="summary">
-    <div class="stat"><span id="stat-third">0</span><label>domínios de 3ª parte</label></div>
-    <div class="stat"><span id="stat-trackers">0</span><label>rastreadores conhecidos</label></div>
-    <div class="stat"><span id="stat-requests">0</span><label>requisições</label></div>
-  </section>
+  <nav class="tabs">
+    <button data-tab="third" class="active">Terceiros <span id="n-third"></span></button>
+    <button data-tab="cookies">Cookies <span id="n-cookies"></span></button>
+  </nav>
 
   <main>
-    <h2>Conexões a terceiros</h2>
-    <ul id="third-list" class="list"></ul>
-    <p id="empty" class="empty" hidden>Nenhuma conexão de terceira parte observada.</p>
+    <!-- Terceiros -->
+    <section id="tab-third" class="panel active">
+      <div class="summary">
+        <div class="stat"><span id="stat-third">0</span><label>domínios de 3ª parte</label></div>
+        <div class="stat"><span id="stat-trackers">0</span><label>rastreadores conhecidos</label></div>
+        <div class="stat"><span id="stat-requests">0</span><label>requisições</label></div>
+      </div>
+      <ul id="third-list" class="list"></ul>
+      <p id="third-empty" class="empty" hidden>Nenhuma conexão de terceira parte observada.</p>
+    </section>
+
+    <!-- Cookies -->
+    <section id="tab-cookies" class="panel">
+      <div class="summary">
+        <div class="stat"><span id="ck-total">0</span><label>cookies injetados</label></div>
+        <div class="stat"><span id="ck-first">0</span><label>1ª parte</label></div>
+        <div class="stat"><span id="ck-third">0</span><label>3ª parte</label></div>
+      </div>
+      <div class="summary">
+        <div class="stat"><span id="ck-session">0</span><label>sessão</label></div>
+        <div class="stat"><span id="ck-persistent">0</span><label>persistentes</label></div>
+        <div class="stat small"><span id="ck-origin">0 / 0</span><label>via HTTP / via JS</label></div>
+      </div>
+      <div class="filters">
+        <label><input type="checkbox" id="ck-only-third"> só 3ª parte</label>
+      </div>
+      <ul id="cookie-list" class="list"></ul>
+      <p id="cookie-empty" class="empty" hidden>Nenhum cookie criado durante o carregamento.</p>
+    </section>
   </main>
 
   <script src="popup.js"></script>

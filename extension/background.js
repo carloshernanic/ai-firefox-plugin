@@ -15,7 +15,9 @@ function newPageState(url) {
     startedAt: Date.now(),
     totalRequests: 0,
     firstPartyRequests: 0,
-    thirdParty: new Map() // site -> { site, hosts:Set, count, types:{}, classifications:Set, sample }
+    thirdParty: new Map(), // site -> { site, hosts:Set, count, types:{}, classifications:Set, sample }
+    cookies: new Map(),    // "domínio|path|nome" -> cookie observado
+    cookieDeletions: 0
   };
 }
 
@@ -89,6 +91,79 @@ browser.webRequest.onBeforeRequest.addListener(
 );
 
 // ---------------------------------------------------------------------------
+// Cookies
+// ---------------------------------------------------------------------------
+
+/**
+ * Registra um cookie criado durante o carregamento da página.
+ * source: "http" (Set-Cookie) ou "js" (document.cookie / cookieStore).
+ */
+function recordCookie(state, raw, defaultHost, source, setBy) {
+  const c = parseCookieString(raw, defaultHost);
+  if (!c) return;
+
+  const key = `${c.domain}|${c.path}|${c.name}`;
+  if (c.deleted) {
+    state.cookieDeletions++;
+    const existing = state.cookies.get(key);
+    if (existing) existing.deleted = true;
+    return;
+  }
+
+  const site = baseDomain(c.domain);
+  let entry = state.cookies.get(key);
+  if (!entry) {
+    entry = { ...c, site, thirdParty: site !== state.site, sources: new Set(), setBy, writes: 0 };
+    state.cookies.set(key, entry);
+  } else {
+    Object.assign(entry, c, { deleted: false });
+  }
+  entry.writes++;
+  entry.sources.add(source);
+}
+
+function onHeadersReceived(details) {
+  if (details.tabId < 0 || !details.responseHeaders) return;
+  const state = getState(details.tabId);
+  if (!state) return;
+
+  const host = hostFromUrl(details.url);
+  for (const h of details.responseHeaders) {
+    if (h.name.toLowerCase() !== "set-cookie" || !h.value) continue;
+    // O Firefox junta múltiplos Set-Cookie em um único cabeçalho separado por \n.
+    for (const line of h.value.split("\n")) {
+      if (line.trim()) recordCookie(state, line, host, "http", details.url);
+    }
+  }
+}
+
+browser.webRequest.onHeadersReceived.addListener(
+  onHeadersReceived,
+  { urls: ["<all_urls>"] },
+  ["responseHeaders"]
+);
+
+// ---------------------------------------------------------------------------
+// Eventos vindos do content script (APIs chamadas pela página)
+// ---------------------------------------------------------------------------
+
+function onPageEvent(msg, sender) {
+  const tabId = sender.tab && sender.tab.id;
+  const state = tabId !== undefined && getState(tabId);
+  if (!state) return;
+
+  const frameUrl = msg.frameUrl || sender.url || state.url;
+  // Descarta eventos atrasados de um documento anterior da mesma aba.
+  if (sender.frameId === 0 && siteFromUrl(frameUrl) !== state.site) return;
+
+  switch (msg.event) {
+    case "cookieWrite":
+      recordCookie(state, msg.data.raw, hostFromUrl(frameUrl), "js", frameUrl);
+      break;
+  }
+}
+
+// ---------------------------------------------------------------------------
 // Badge
 // ---------------------------------------------------------------------------
 
@@ -118,6 +193,43 @@ function serializeReport(state) {
     }))
     .sort((a, b) => (b.tracker - a.tracker) || (b.count - a.count));
 
+  const cookies = [...state.cookies.values()]
+    .filter((c) => !c.deleted)
+    .map((c) => ({
+      name: c.name,
+      value: c.value,
+      domain: c.domain,
+      site: c.site,
+      path: c.path,
+      thirdParty: c.thirdParty,
+      session: c.session,
+      expiry: c.expiry,
+      secure: c.secure,
+      httpOnly: c.httpOnly,
+      sameSite: c.sameSite,
+      partitioned: c.partitioned,
+      sources: [...c.sources],
+      writes: c.writes,
+      setBy: c.setBy
+    }))
+    .sort((a, b) => (b.thirdParty - a.thirdParty) || a.domain.localeCompare(b.domain) || a.name.localeCompare(b.name));
+
+  const cookiesBySite = {};
+  for (const c of cookies) cookiesBySite[c.site] = (cookiesBySite[c.site] || 0) + 1;
+  for (const e of thirdParty) e.cookies = cookiesBySite[e.site] || 0;
+
+  const count = (pred) => cookies.filter(pred).length;
+  const cookieSummary = {
+    total: cookies.length,
+    firstParty: count((c) => !c.thirdParty),
+    thirdParty: count((c) => c.thirdParty),
+    session: count((c) => c.session),
+    persistent: count((c) => !c.session),
+    viaHttp: count((c) => c.sources.includes("http")),
+    viaJs: count((c) => c.sources.includes("js")),
+    deletions: state.cookieDeletions
+  };
+
   return {
     url: state.url,
     host: state.host,
@@ -126,12 +238,19 @@ function serializeReport(state) {
     totalRequests: state.totalRequests,
     firstPartyRequests: state.firstPartyRequests,
     thirdPartyRequests: thirdParty.reduce((s, e) => s + e.count, 0),
-    thirdParty
+    thirdParty,
+    cookies,
+    cookieSummary
   };
 }
 
-browser.runtime.onMessage.addListener((msg) => {
-  if (msg && msg.type === "getReport") {
+browser.runtime.onMessage.addListener((msg, sender) => {
+  if (!msg) return;
+  if (msg.type === "pageEvent") {
+    onPageEvent(msg, sender);
+    return;
+  }
+  if (msg.type === "getReport") {
     const state = getState(msg.tabId);
     return Promise.resolve(state ? serializeReport(state) : null);
   }

@@ -8,7 +8,7 @@ apresentar rastreamento e violações de privacidade no cliente web.
 | Funcionalidade | Status |
 |---|---|
 | Conexões a domínios de terceira parte (com classificação de rastreadores do Firefox) | ✅ |
-| Cookies: contagem, 1ª/3ª parte, sessão/persistente | ⏳ |
+| Cookies: contagem, 1ª/3ª parte, sessão/persistente, origem HTTP/JS | ✅ |
 | Armazenamento HTML5 (localStorage, sessionStorage, IndexedDB) | ⏳ |
 | Canvas fingerprint | ⏳ |
 | Cookie sync / bounce tracking | ⏳ |
@@ -34,7 +34,9 @@ apresentar rastreamento e violações de privacidade no cliente web.
 extension/
   manifest.json      Manifest V2 (background persistente + webRequest)
   background.js      Coleta do tráfego por aba e montagem do relatório
+  content/inject.js  Hooks nas APIs da página (document.cookie, cookieStore…)
   lib/domain.js      Cálculo de site (eTLD+1) e classificação 1ª/3ª parte
+  lib/cookies.js     Parser de Set-Cookie / document.cookie
   popup/             Interface do relatório
 evidencias/          HARs e prints usados no relatório
 ```
@@ -49,3 +51,18 @@ evidencias/          HARs e prints usados no relatório
   Enhanced Tracking Protection classifica a URL como rastreador (lista
   Disconnect), o que permite marcar rastreadores conhecidos sem embutir uma
   lista própria.
+- **Cookies por duas fontes:** cabeçalhos `Set-Cookie` (`webRequest.onHeadersReceived`)
+  e escritas via JavaScript (`document.cookie` e Cookie Store API), interceptadas
+  no mundo da página com `exportFunction` — técnica do Firefox que não depende
+  de injetar `<script>` e por isso não é bloqueada pela CSP do site.
+- **Classificação de cookies:** 3ª parte quando o site (eTLD+1) do domínio do
+  cookie difere do site da aba; sessão quando não há `Expires`/`Max-Age`;
+  `Expires`/`Max-Age` no passado é contado como remoção, não como injeção.
+- **Limitação conhecida:** um cabeçalho `Set-Cookie` observado não garante que
+  o cookie foi aceito — a Enhanced Tracking Protection pode rejeitá-lo ou
+  particioná-lo (Total Cookie Protection). O plugin mede o que a página
+  *tentou* gravar.
+
+## Uma Curiosidade
+
+Eu uso o zen browser como navegador principal, diferente de outros navegadores que a base são chromium o zen tem como base o firefox e as extensões também funcionaram para eles
