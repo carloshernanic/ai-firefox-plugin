@@ -85,3 +85,8 @@ evidencias/          HARs e prints usados no relatório
 ## Uma Curiosidade
 
 Eu uso o zen browser como navegador principal, diferente de outros navegadores que a base são chromium o zen tem como base o firefox e as extensões também funcionaram para ele.
+- **Hooks e compartimentos do Firefox:** o método original é chamado com
+  `orig.call(this, ...args)`, nunca `orig.apply(this, args)`. O array `args`
+  pertence ao compartimento do content script e o código da página não pode
+  ler suas propriedades (`Permission denied to access property "length"`),
+  o que quebrava `setItem`, `getImageData` etc. na própria página.

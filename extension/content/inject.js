@@ -66,13 +66,21 @@
     });
   }
 
-  /** Envolve um método de protótipo, chamando onCall antes do original. */
+  /**
+   * Envolve um método de protótipo, chamando onCall antes do original.
+   *
+   * Os argumentos são espalhados aqui (orig.call(this, ...args)) em vez de
+   * orig.apply(this, args): o array args pertence ao compartimento do content
+   * script, e o código da página não tem permissão para ler suas propriedades
+   * ("Permission denied to access property length"). Espalhando, cada valor
+   * cruza a fronteira individualmente.
+   */
   function hookMethod(proto, name, onCall) {
     const orig = proto && proto[name];
     if (typeof orig !== "function") return;
     proto[name] = exportFunction(function (...args) {
       try { onCall(args, this); } catch (e) { /* nunca quebrar a página */ }
-      return orig.apply(this, args);
+      return orig.call(this, ...args);
     }, pageWin);
   }
 
