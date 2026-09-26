@@ -38,10 +38,13 @@
       .catch(() => {});
   }
 
+  // Janela curta: páginas de bounce redirecionam logo após gravar o ID.
   function send(event, data) {
     queue.push({ event, data });
-    if (!flushTimer) flushTimer = setTimeout(flush, 250);
+    if (!flushTimer) flushTimer = setTimeout(flush, 50);
   }
+  window.addEventListener("pagehide", flush);
+  window.addEventListener("beforeunload", flush);
 
   // -------------------------------------------------------------------------
   // Utilitários de hook
@@ -165,6 +168,92 @@
       });
     }
   });
+
+  // -------------------------------------------------------------------------
+  // Canvas fingerprinting
+  // -------------------------------------------------------------------------
+  /*
+   * Heurística de Englehardt & Narayanan (2016, "Online Tracking: A
+   * 1-million-site Measurement and Analysis"): é fingerprinting quando
+   *  1. o canvas tem pelo menos 16x16 px;
+   *  2. o texto desenhado usa >= 10 caracteres distintos ou >= 2 cores;
+   *  3. a imagem é extraída (toDataURL/toBlob/getImageData).
+   * Leituras sem texto (ex.: editores de imagem) ficam como "leitura de canvas".
+   */
+  const canvasInfo = new WeakMap(); // canvas -> { chars:Set, colors:Set, sample, reported:Set }
+
+  function infoFor(canvas) {
+    let info = canvasInfo.get(canvas);
+    if (!info) {
+      info = { chars: new Set(), colors: new Set(), sample: "", reported: new Set() };
+      canvasInfo.set(canvas, info);
+    }
+    return info;
+  }
+
+  /** Primeiro script da página na pilha de chamadas (quem chamou a API). */
+  function callerScript() {
+    try {
+      const stack = new pageWin.Error().stack || "";
+      for (const line of stack.split("\n")) {
+        const m = line.match(/(https?:\/\/[^\s)]+?):\d+:\d+\)?$/);
+        if (m) return m[1];
+      }
+    } catch (e) {}
+    return location.href;
+  }
+
+  function onCanvasRead(canvas, api, area) {
+    if (!canvas) return;
+    const info = infoFor(canvas);
+    if (info.reported.has(api)) return; // um evento por canvas/API
+    info.reported.add(api);
+    const width = canvas.width;
+    const height = canvas.height;
+    const hasText = info.chars.size > 0;
+    const suspect = width >= 16 && height >= 16 && (info.chars.size >= 10 || info.colors.size >= 2) && hasText;
+    send("canvasRead", {
+      api, width, height, area,
+      distinctChars: info.chars.size,
+      colors: info.colors.size,
+      sample: info.sample,
+      suspect,
+      script: callerScript()
+    });
+  }
+
+  tryHook("canvas", () => {
+    const ctx2d = pageWin.CanvasRenderingContext2D.prototype;
+    for (const method of ["fillText", "strokeText"]) {
+      hookMethod(ctx2d, method, (args, ctx) => {
+        const info = infoFor(ctx.canvas);
+        const text = String(args[0]);
+        for (const ch of text) info.chars.add(ch);
+        info.colors.add(String(method === "fillText" ? ctx.fillStyle : ctx.strokeStyle));
+        if (!info.sample) info.sample = text.slice(0, 40);
+      });
+    }
+    hookMethod(ctx2d, "getImageData", (args, ctx) => {
+      onCanvasRead(ctx.canvas, "getImageData", `${args[2]}x${args[3]}`);
+    });
+    const canvasProto = pageWin.HTMLCanvasElement.prototype;
+    hookMethod(canvasProto, "toDataURL", (args, canvas) => onCanvasRead(canvas, "toDataURL"));
+    hookMethod(canvasProto, "toBlob", (args, canvas) => onCanvasRead(canvas, "toBlob"));
+  });
+
+  // -------------------------------------------------------------------------
+  // Interação do usuário (distingue navegação por clique de redirecionamento)
+  // -------------------------------------------------------------------------
+  if (window === window.top) {
+    const onInteraction = (e) => {
+      if (!e.isTrusted) return;
+      send("userInteraction", { type: e.type });
+      window.removeEventListener("pointerdown", onInteraction, true);
+      window.removeEventListener("keydown", onInteraction, true);
+    };
+    window.addEventListener("pointerdown", onInteraction, true);
+    window.addEventListener("keydown", onInteraction, true);
+  }
 
   // -------------------------------------------------------------------------
   // Snapshot do armazenamento do frame

@@ -14,6 +14,7 @@
     <button data-tab="third" class="active">Terceiros <span id="n-third"></span></button>
     <button data-tab="cookies">Cookies <span id="n-cookies"></span></button>
     <button data-tab="storage">Storage <span id="n-storage"></span></button>
+    <button data-tab="tracking">Rastreio <span id="n-tracking"></span></button>
   </nav>
 
   <main>
@@ -67,6 +68,21 @@
       </div>
       <ul id="storage-list" class="list"></ul>
       <p id="storage-empty" class="empty" hidden>Nenhum dado gravado em localStorage, sessionStorage ou IndexedDB.</p>
+    </section>
+
+    <!-- Técnicas de rastreamento -->
+    <section id="tab-tracking" class="panel">
+      <h3>Canvas fingerprint <span id="tr-canvas-status" class="tag"></span></h3>
+      <ul id="tr-canvas" class="list"></ul>
+
+      <h3>Bounce tracking <span id="tr-bounce-status" class="tag"></span></h3>
+      <div id="tr-bounce"></div>
+
+      <h3>Cookie sync / compartilhamento de ID <span id="tr-sync-status" class="tag"></span></h3>
+      <ul id="tr-sync" class="list"></ul>
+
+      <h3>Parâmetros de rastreamento na URL <span id="tr-params-status" class="tag"></span></h3>
+      <ul id="tr-params" class="list"></ul>
     </section>
   </main>
 

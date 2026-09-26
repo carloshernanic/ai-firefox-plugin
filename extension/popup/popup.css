@@ -65,6 +65,15 @@ main { padding: 0 14px 14px; }
 .tag.persistent { background: var(--warn); color: #fff; }
 .empty { color: var(--muted); }
 
+h3 { font-size: 13px; margin: 14px 0 4px; display: flex; align-items: center; gap: 6px; }
+h3 .tag { margin: 0; }
+.tag.ok { background: var(--ok); color: #fff; }
+.tag.warn { background: var(--warn); color: #fff; }
+.chain { display: flex; flex-wrap: wrap; align-items: center; gap: 4px; margin: 4px 0; font-size: 12px; }
+.chain .hop { padding: 2px 6px; border-radius: 6px; background: var(--chip); }
+.chain .hop.bad { background: var(--danger); color: #fff; }
+.mono { font-family: ui-monospace, monospace; }
+
 .rejected { margin-top: 12px; }
 .rejected summary { cursor: pointer; color: var(--muted); font-size: 12px; }
 

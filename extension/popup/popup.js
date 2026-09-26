@@ -187,6 +187,153 @@ function renderRejectedCookies() {
   }
 }
 
+// ---------------------------------------------------------------------------
+// Rastreio: canvas, bounce, cookie sync, parâmetros de URL
+// ---------------------------------------------------------------------------
+
+function setStatus(id, found, foundText, cls = "third") {
+  const node = $(id);
+  node.textContent = found ? foundText : "não detectado";
+  node.className = `tag ${found ? cls : "ok"}`;
+}
+
+function emptyItem(text) {
+  return el("li", { class: "empty" }, text);
+}
+
+function renderCanvas(canvas) {
+  const reads = canvas.reads;
+  setStatus("tr-canvas-status", reads.length, canvas.fingerprinting ? "FINGERPRINT" : "leitura de canvas", canvas.fingerprinting ? "third" : "warn");
+  const list = $("tr-canvas");
+  list.replaceChildren();
+  if (!reads.length) list.append(emptyItem("Nenhuma extração de imagem de canvas."));
+  for (const c of reads) {
+    list.append(el("li", {},
+      el("div", { class: "row" },
+        el("span", { class: "site" }, c.api),
+        el("span", { class: "count" }, `${c.width}×${c.height}`)
+      ),
+      el("div", {},
+        c.suspect ? tag("suspeito", "third") : tag("inconclusivo"),
+        tag(`${c.distinctChars} caracteres`),
+        tag(`${c.colors} cores`),
+        c.thirdParty ? tag("script de 3ª parte", "third") : tag("script de 1ª parte", "first")
+      ),
+      c.sample ? el("div", { class: "meta mono" }, `texto: "${c.sample}"`) : null,
+      el("div", { class: "meta" }, `por ${truncate(c.script, 80)}`)
+    ));
+  }
+}
+
+function renderBounce(b) {
+  setStatus("tr-bounce-status", b.detected || b.hops.length, b.detected ? "DETECTADO" : "redirecionamento", b.detected ? "third" : "warn");
+  const box = $("tr-bounce");
+  box.replaceChildren();
+  if (!b.hops.length) {
+    box.append(el("p", { class: "empty" }, "A página não foi alcançada por redirecionamentos."));
+    return;
+  }
+  const chain = el("div", { class: "chain" });
+  if (b.origin) chain.append(el("span", { class: "hop" }, b.origin.site), "→");
+  for (const h of b.hops) {
+    const via = h.via === "http" ? "HTTP 30x" : "JS";
+    chain.append(el("span", { class: `hop ${b.trackers.includes(h.site) ? "bad" : ""}` }, `${h.site} (${via})`), "→");
+  }
+  chain.append(el("span", { class: "hop" }, report.site));
+  box.append(chain);
+
+  const list = el("ul", { class: "list" });
+  for (const h of b.hops) {
+    list.append(el("li", {},
+      el("div", { class: "row" },
+        el("span", { class: "site" }, h.site),
+        el("span", { class: "count" }, `${h.dwellMs} ms na página`)
+      ),
+      el("div", {},
+        h.crossSite ? tag("site diferente da origem", "third") : tag("mesmo site"),
+        h.interacted ? tag("com interação") : tag("sem interação", "warn"),
+        h.cookiesSet.length ? tag(`gravou cookie: ${h.cookiesSet.join(", ")}`, "third") : null,
+        h.cookiesSent.length ? tag(`leu cookie: ${h.cookiesSent.join(", ")}`, "warn") : null,
+        h.storageKeys.length ? tag(`gravou storage: ${h.storageKeys.join(", ")}`, "third") : null
+      ),
+      el("div", { class: "meta" }, truncate(h.url, 100))
+    ));
+  }
+  for (const l of b.leaks) {
+    list.append(el("li", {},
+      el("div", { class: "site" }, "ID repassado na URL"),
+      el("div", { class: "meta mono" }, `${l.param}=${truncate(l.value, 40)}  ←  ${l.source} de ${l.from}`)
+    ));
+  }
+  box.append(list);
+}
+
+const SYNC_KIND_LABEL = {
+  "cookie-sync": "cookie sync",
+  "id-1a-parte": "ID de 1ª parte → terceiro",
+  "navegação": "ID na navegação"
+};
+
+function renderSync(t) {
+  const n = t.idSharing.length + t.syncRedirects.length;
+  const hasSync = t.idSharing.some((s) => s.kind !== "id-1a-parte") || t.syncRedirects.length > 0;
+  setStatus("tr-sync-status", n, hasSync ? "DETECTADO" : "ID de 1ª parte enviado", hasSync ? "third" : "warn");
+  const list = $("tr-sync");
+  list.replaceChildren();
+  if (!n) list.append(emptyItem("Nenhum ID de cookie encontrado em URLs de outros sites."));
+  for (const s of t.idSharing) {
+    list.append(el("li", {},
+      el("div", { class: "row" },
+        el("span", { class: "site" }, `${s.from} → ${s.to}`),
+        el("span", { class: "count" }, `${s.count}×`)
+      ),
+      el("div", {}, tag(SYNC_KIND_LABEL[s.kind] || s.kind, s.kind === "id-1a-parte" ? "warn" : "third"), tag(`cookie ${s.cookie}`)),
+      el("div", { class: "meta mono" }, `${s.param}=${truncate(s.value, 48)}`),
+      el("div", { class: "meta" }, truncate(s.url, 100))
+    ));
+  }
+  for (const r of t.syncRedirects) {
+    list.append(el("li", {},
+      el("div", { class: "row" },
+        el("span", { class: "site" }, `${r.from} ⇢ ${r.to}`),
+        el("span", { class: "count" }, `${r.count}×`)
+      ),
+      el("div", {}, tag("redirecionamento entre terceiros", "warn")),
+      el("div", { class: "meta" }, truncate(r.sample, 100))
+    ));
+  }
+}
+
+function renderParams(p) {
+  const n = p.page.length + p.requests.length;
+  setStatus("tr-params-status", n, `${n} ocorrências`, "warn");
+  const list = $("tr-params");
+  list.replaceChildren();
+  if (!n) list.append(emptyItem("Nenhum parâmetro de rastreamento conhecido."));
+  if (p.page.length) {
+    list.append(el("li", {},
+      el("div", { class: "site" }, "URL desta página"),
+      el("div", { class: "meta mono" }, p.page.map((x) => `${x.name}=${truncate(x.value, 30)}`).join("  "))
+    ));
+  }
+  for (const r of p.requests) {
+    list.append(el("li", {},
+      el("div", { class: "row" }, el("span", { class: "site" }, r.site), el("span", { class: "count" }, `${r.count} req`)),
+      el("div", {}, ...r.params.map((x) => tag(x)))
+    ));
+  }
+}
+
+function renderTracking() {
+  const t = report.tracking;
+  renderCanvas(t.canvas);
+  renderBounce(t.bounce);
+  renderSync(t);
+  renderParams(t.trackingParams);
+  const alerts = [t.canvas.fingerprinting, t.bounce.detected, t.idSharing.length + t.syncRedirects.length > 0].filter(Boolean).length;
+  $("n-tracking").textContent = alerts ? `(${alerts}⚠)` : "";
+}
+
 $("ck-only-third").addEventListener("change", () => report && renderCookies());
 
 // ---------------------------------------------------------------------------
@@ -214,6 +361,7 @@ async function load() {
   renderCookies();
   renderRejectedCookies();
   if (report.storageSummary) renderStorage();
+  if (report.tracking) renderTracking();
 }
 
 load();

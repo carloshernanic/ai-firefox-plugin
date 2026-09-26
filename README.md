@@ -10,8 +10,8 @@ apresentar rastreamento e violações de privacidade no cliente web.
 | Conexões a domínios de terceira parte (com classificação de rastreadores do Firefox) | ✅ |
 | Cookies: contagem, 1ª/3ª parte, sessão/persistente, origem HTTP/JS | ✅ |
 | Armazenamento HTML5 (localStorage, sessionStorage, IndexedDB), por origem 1ª/3ª parte | ✅ |
-| Canvas fingerprint | ⏳ |
-| Cookie sync / bounce tracking | ⏳ |
+| Canvas fingerprint (heurística de Englehardt & Narayanan) | ✅ |
+| Cookie sync, bounce tracking e parâmetros de rastreamento na URL | ✅ |
 | Indicadores de hijacking / hook | ⏳ |
 | Pontuação de privacidade | ⏳ |
 | Lista de bloqueio personalizada | ⏳ |
@@ -34,9 +34,10 @@ apresentar rastreamento e violações de privacidade no cliente web.
 extension/
   manifest.json      Manifest V2 (background persistente + webRequest)
   background.js      Coleta do tráfego por aba e montagem do relatório
-  content/inject.js  Hooks nas APIs da página (cookies, Web Storage, IndexedDB…)
+  content/inject.js  Hooks nas APIs da página (cookies, storage, canvas…)
   lib/domain.js      Cálculo de site (eTLD+1) e classificação 1ª/3ª parte
   lib/cookies.js     Parser de Set-Cookie / document.cookie
+  lib/tracking.js    Parâmetros de rastreamento e índice de IDs (cookie sync)
   popup/             Interface do relatório
 evidencias/          HARs e prints usados no relatório
 ```
@@ -81,12 +82,36 @@ evidencias/          HARs e prints usados no relatório
   storage é **particionado** pela Total Cookie Protection (chaveado pelo site do
   topo), então não é compartilhado entre sites diferentes — relevante para
   interpretar a página *Storage partitioning* do DDG.
-
-## Uma Curiosidade
-
-Eu uso o zen browser como navegador principal, diferente de outros navegadores que a base são chromium o zen tem como base o firefox e as extensões também funcionaram para ele.
+- **Canvas fingerprint:** hooks em `fillText`/`strokeText` registram o texto e
+  as cores desenhadas em cada canvas; `toDataURL`, `toBlob` e `getImageData`
+  disparam a avaliação. Segue o critério de Englehardt & Narayanan (2016):
+  canvas ≥ 16×16 px, texto com ≥ 10 caracteres distintos ou ≥ 2 cores, e
+  extração da imagem. O script responsável é identificado pela pilha de
+  chamadas (`new Error().stack` no mundo da página).
+- **Bounce tracking:** o background guarda as últimas páginas de cada aba. Uma
+  página intermediária é um "salto" quando foi deixada por redirecionamento HTTP
+  30x (mesmo `requestId`), por redirecionamento de cliente sinalizado em
+  `webNavigation` (`client_redirect`) ou sem interação do usuário em menos de
+  10 s. É *bounce tracking* quando o salto é de site diferente da origem e
+  gravou/leu cookie ou storage, ou repassou um ID na URL do destino. Eventos que
+  a página de salto envia depois de já ter redirecionado são atribuídos a ela
+  pela URL exata do documento.
+- **Cookie sync:** todo valor de cookie visto (`Set-Cookie`, `document.cookie`
+  e cabeçalho `Cookie` enviado) com cara de identificador entra num índice
+  valor → site. Cada URL de requisição é procurada nesse índice; um ID de outro
+  site na URL de um terceiro é *cookie sync* (ou "ID de 1ª parte → terceiro",
+  como o client id do `_ga` enviado ao Google Analytics). Redirecionamentos de
+  sub-recursos entre dois terceiros também são listados, pois são o mecanismo de
+  sync mesmo quando o ID vai cifrado. Timestamps (10–13 dígitos) são ignorados
+  para evitar falsos positivos.
+- **Parâmetros de rastreamento:** `utm_*`, `gclid`, `fbclid`, `msclkid`, `_gl`
+  e outros na URL da página (link decoration) e nas requisições a terceiros.
 - **Hooks e compartimentos do Firefox:** o método original é chamado com
   `orig.call(this, ...args)`, nunca `orig.apply(this, args)`. O array `args`
   pertence ao compartimento do content script e o código da página não pode
   ler suas propriedades (`Permission denied to access property "length"`),
   o que quebrava `setItem`, `getImageData` etc. na própria página.
+
+## Uma Curiosidade
+
+Eu uso o zen browser como navegador principal, diferente de outros navegadores que a base são chromium o zen tem como base o firefox e as extensões também funcionaram para ele.
