@@ -39,6 +39,10 @@ function newPageState(url, requestId) {
     idSharing: new Map(),  // "dono|nome|destino|param" -> ID enviado a outro site
     syncRedirects: new Map(), // "origem->destino" -> redirecionamentos entre terceiros
     pageTrackingParams: trackingParamsIn(url),
+    websockets: [],        // conexões WebSocket abertas pela página
+    polling: new Map(),    // "host/caminho" de terceiro -> instantes das requisições
+    keyListeners: new Map(), // "evento|script" -> ouvinte de teclado registrado
+    globals: null,         // resultado da última verificação de objetos globais
     decoratedRequests: new Map() // site -> { site, params:Set, count }
   };
 }
@@ -115,6 +119,10 @@ function onBeforeRequest(details) {
   const reqSite = baseDomain(reqHost);
   if (!reqSite || !/^(https?|wss?):/.test(details.url)) return;
 
+  if (details.type === "websocket" && state.websockets.length < 50) {
+    state.websockets.push({ url: details.url, site: reqSite, thirdParty: reqSite !== state.site, at: Date.now() - state.startedAt });
+  }
+
   // Firefox informa se a requisição é de terceira parte em relação ao topo;
   // usamos a comparação por eTLD+1 como fallback.
   const third = typeof details.thirdParty === "boolean"
@@ -146,6 +154,19 @@ function onBeforeRequest(details) {
 
   // IDs de cookies de outros sites presentes na URL (cookie sync).
   recordIdSharing(state, details.url, reqSite);
+
+  // Instantes das requisições por endpoint, para detectar polling persistente.
+  if (POLLING_TYPES.has(details.type)) {
+    let path = "";
+    try { path = new URL(details.url).pathname; } catch (e) {}
+    const key = `${reqHost}${path}`;
+    let p = state.polling.get(key);
+    if (!p && state.polling.size < 500) {
+      p = { endpoint: key, site: reqSite, type: details.type, times: [] };
+      state.polling.set(key, p);
+    }
+    if (p && p.times.length < 300) p.times.push(Date.now());
+  }
 
   // Classificação da Enhanced Tracking Protection do Firefox (lista Disconnect),
   // ex.: tracking_ad, tracking_analytics, tracking_social, fingerprinting, cryptomining.
@@ -352,8 +373,70 @@ function onPageEvents(msg, sender) {
       case "userInteraction":
         if (sender.frameId === 0) state.interacted = true;
         break;
+      case "keyListener": {
+        const key = `${data.type}|${data.script}`;
+        if (!state.keyListeners.has(key) && state.keyListeners.size < 200) {
+          state.keyListeners.set(key, { ...data, frameUrl, thirdParty: siteFromUrl(data.script) !== state.site });
+        }
+        break;
+      }
+      case "globalsCheck":
+        if (sender.frameId === 0) state.globals = data;
+        break;
     }
   }
+}
+
+// ---------------------------------------------------------------------------
+// Hijacking / hook
+// ---------------------------------------------------------------------------
+/*
+ * Um navegador "fisgado" (ex.: pelo framework BeEF via XSS) mantém um canal
+ * de comando com o servidor do atacante: WebSocket ou polling periódico
+ * (XHR/script/imagem a cada poucos segundos). Um endpoint é considerado
+ * polling quando recebeu >= POLL_MIN_HITS requisições, ao longo de pelo
+ * menos POLL_MIN_SPAN ms, com intervalos regulares (coeficiente de variação
+ * baixo) entre 0,5 s e 2 min. Beacons de analytics costumam ser disparados
+ * por eventos (irregulares) e ficam de fora.
+ */
+const POLLING_TYPES = new Set(["xmlhttprequest", "script", "image", "beacon", "ping", "other"]);
+const POLL_MIN_HITS = 5;
+const POLL_MIN_SPAN = 15000;
+const POLL_MAX_CV = 0.35;
+
+function detectPolling(state) {
+  const found = [];
+  for (const p of state.polling.values()) {
+    if (p.times.length < POLL_MIN_HITS) continue;
+    const span = p.times[p.times.length - 1] - p.times[0];
+    if (span < POLL_MIN_SPAN) continue;
+    const gaps = p.times.slice(1).map((t, i) => t - p.times[i]);
+    const mean = gaps.reduce((a, b) => a + b, 0) / gaps.length;
+    if (mean < 500 || mean > 120000) continue;
+    const sd = Math.sqrt(gaps.reduce((a, g) => a + (g - mean) ** 2, 0) / gaps.length);
+    const cv = sd / mean;
+    if (cv > POLL_MAX_CV) continue;
+    found.push({ endpoint: p.endpoint, site: p.site, type: p.type, hits: p.times.length, intervalMs: Math.round(mean), cv: Math.round(cv * 100) / 100 });
+  }
+  return found.sort((a, b) => b.hits - a.hits);
+}
+
+function evaluateHijack(state) {
+  const websockets = state.websockets;
+  const polling = detectPolling(state);
+  const keyListeners = [...state.keyListeners.values()];
+  const g = state.globals || { overwritten: [], addedCount: 0, addedSample: [], signatures: [] };
+
+  const indicators = [];
+  const thirdWs = websockets.filter((w) => w.thirdParty);
+  if (thirdWs.length) indicators.push({ id: "websocket", severity: "alta", text: `WebSocket para terceiro: ${[...new Set(thirdWs.map((w) => w.site))].join(", ")}` });
+  if (polling.length) indicators.push({ id: "polling", severity: "alta", text: `Polling persistente para terceiro: ${[...new Set(polling.map((p) => p.site))].join(", ")}` });
+  const thirdKeys = keyListeners.filter((k) => k.thirdParty);
+  if (thirdKeys.length) indicators.push({ id: "keylogger", severity: "média", text: `Script de terceiro ouvindo teclas: ${[...new Set(thirdKeys.map((k) => siteFromUrl(k.script)))].join(", ")}` });
+  if (g.overwritten.length) indicators.push({ id: "overwritten", severity: "média", text: `APIs nativas substituídas pela página: ${g.overwritten.join(", ")}` });
+  if (g.signatures.length) indicators.push({ id: "signature", severity: "crítica", text: `Assinatura de framework de hook: ${g.signatures.join(", ")}` });
+
+  return { websockets, polling, keyListeners, globals: g, indicators, detected: indicators.length > 0 };
 }
 
 // ---------------------------------------------------------------------------
@@ -556,6 +639,7 @@ function serializeReport(state, tabId) {
       scripts: [...new Set(canvasSuspects.map((c) => c.script))]
     },
     bounce: evaluateBounce(tabId, state),
+    hijack: evaluateHijack(state),
     idSharing: [...state.idSharing.values()].sort((a, b) => (a.kind === "id-1a-parte") - (b.kind === "id-1a-parte")),
     syncRedirects: [...state.syncRedirects.values()].sort((a, b) => b.count - a.count),
     trackingParams: {

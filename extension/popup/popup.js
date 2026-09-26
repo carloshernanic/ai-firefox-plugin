@@ -324,13 +324,54 @@ function renderParams(p) {
   }
 }
 
+function renderHijack(h) {
+  const critical = h.indicators.some((i) => i.severity === "crítica");
+  setStatus("tr-hijack-status", h.detected, critical ? "HOOK DETECTADO" : `${h.indicators.length} indicador(es)`, critical || h.indicators.some((i) => i.severity === "alta") ? "third" : "warn");
+  const list = $("tr-hijack");
+  list.replaceChildren();
+  if (!h.detected) list.append(emptyItem("Nenhum canal persistente, captura de teclas por terceiro ou alteração de APIs nativas."));
+  const sevClass = { "crítica": "third", "alta": "third", "média": "warn" };
+  for (const i of h.indicators) {
+    list.append(el("li", {},
+      el("div", {}, tag(i.severity, sevClass[i.severity] || "")),
+      el("div", { class: "meta" }, i.text)
+    ));
+  }
+  for (const p of h.polling) {
+    list.append(el("li", {},
+      el("div", { class: "row" }, el("span", { class: "site" }, "Polling"), el("span", { class: "count" }, `${p.hits}× a cada ~${(p.intervalMs / 1000).toFixed(1)} s`)),
+      el("div", { class: "meta mono" }, truncate(p.endpoint, 90))
+    ));
+  }
+  for (const w of h.websockets) {
+    list.append(el("li", {},
+      el("div", { class: "row" }, el("span", { class: "site" }, "WebSocket"), el("span", { class: "count" }, w.thirdParty ? "3ª parte" : "1ª parte")),
+      el("div", { class: "meta mono" }, truncate(w.url, 90))
+    ));
+  }
+  const thirdKeys = h.keyListeners.filter((k) => k.thirdParty);
+  if (thirdKeys.length) {
+    list.append(el("li", {},
+      el("div", { class: "site" }, "Ouvintes de teclado de terceiros"),
+      ...thirdKeys.slice(0, 8).map((k) => el("div", { class: "meta" }, `${k.type} em ${k.target} ← ${truncate(k.script, 70)}`))
+    ));
+  }
+  if (h.globals.addedCount) {
+    list.append(el("li", {},
+      el("div", { class: "row" }, el("span", { class: "site" }, "Globais criados pela página"), el("span", { class: "count" }, String(h.globals.addedCount))),
+      el("div", { class: "meta mono" }, truncate(h.globals.addedSample.join(", "), 160))
+    ));
+  }
+}
+
 function renderTracking() {
   const t = report.tracking;
   renderCanvas(t.canvas);
   renderBounce(t.bounce);
   renderSync(t);
   renderParams(t.trackingParams);
-  const alerts = [t.canvas.fingerprinting, t.bounce.detected, t.idSharing.length + t.syncRedirects.length > 0].filter(Boolean).length;
+  if (t.hijack) renderHijack(t.hijack);
+  const alerts = [t.canvas.fingerprinting, t.bounce.detected, t.idSharing.length + t.syncRedirects.length > 0, t.hijack && t.hijack.detected].filter(Boolean).length;
   $("n-tracking").textContent = alerts ? `(${alerts}⚠)` : "";
 }
 

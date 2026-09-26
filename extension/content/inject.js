@@ -242,6 +242,100 @@
   });
 
   // -------------------------------------------------------------------------
+  // Hijacking / hook: captura de teclas por scripts
+  // -------------------------------------------------------------------------
+  /*
+   * Keyloggers e hooks (ex.: BeEF) registram ouvintes de teclado para capturar
+   * o que o usuário digita. Registra quem (qual script) pediu para ouvir teclas.
+   */
+  const KEY_EVENTS = new Set(["keydown", "keyup", "keypress", "input", "paste"]);
+  const keyListenersSeen = new Set();
+
+  tryHook("addEventListener", () => {
+    hookMethod(pageWin.EventTarget.prototype, "addEventListener", (args, target) => {
+      const type = String(args[0]);
+      if (!KEY_EVENTS.has(type)) return;
+      const script = callerScript();
+      const key = `${type}|${script}`;
+      if (keyListenersSeen.has(key) || keyListenersSeen.size > 100) return;
+      keyListenersSeen.add(key);
+      let where = "elemento";
+      try {
+        if (target === window) where = "window";
+        else if (target === document) where = "document";
+        else if (target && target.nodeName) where = String(target.nodeName).toLowerCase();
+      } catch (e) {}
+      send("keyListener", { type, script, target: where });
+    });
+  });
+
+  // -------------------------------------------------------------------------
+  // Hijacking / hook: alterações em objetos globais
+  // -------------------------------------------------------------------------
+  /*
+   * Linha de base tirada agora (document_start, antes de qualquer script da
+   * página e depois dos hooks do próprio plugin). Depois do carregamento,
+   * compara: APIs sensíveis substituídas indicam script interceptando rede,
+   * eventos ou formulários; propriedades globais novas com assinatura de
+   * frameworks de hook (BeEF) indicam navegador sequestrado.
+   */
+  const SENSITIVE_APIS = [
+    ["window", "fetch"], ["window", "XMLHttpRequest"], ["window", "WebSocket"], ["window", "EventSource"],
+    ["window", "open"], ["window", "eval"], ["window", "Function"], ["window", "alert"],
+    ["XMLHttpRequest.prototype", "open"], ["XMLHttpRequest.prototype", "send"], ["XMLHttpRequest.prototype", "setRequestHeader"],
+    ["WebSocket.prototype", "send"], ["EventTarget.prototype", "addEventListener"],
+    ["Document.prototype", "write"], ["Document.prototype", "createElement"],
+    ["Navigator.prototype", "sendBeacon"], ["History.prototype", "pushState"], ["History.prototype", "replaceState"],
+    ["HTMLFormElement.prototype", "submit"], ["Function.prototype", "toString"],
+    ["Object", "defineProperty"], ["JSON", "stringify"], ["JSON", "parse"]
+  ];
+  const HOOK_SIGNATURES = /^(beef|BeEF|beef_init|__beef|beef_url|xss_hook)$/;
+
+  function resolve(path) {
+    let obj = pageWin;
+    if (path !== "window") for (const part of path.split(".")) obj = obj && obj[part];
+    return obj;
+  }
+
+  const apiBaseline = new Map();
+  let globalsBaseline = new Set();
+  try {
+    for (const [path, name] of SENSITIVE_APIS) {
+      const obj = resolve(path);
+      if (obj) apiBaseline.set(`${path}.${name}`, obj[name]);
+    }
+    globalsBaseline = new Set(Object.getOwnPropertyNames(pageWin));
+  } catch (e) {
+    console.warn("[Privacy Inspector] linha de base dos globais falhou:", e);
+  }
+
+  function checkGlobals() {
+    try {
+      const overwritten = [];
+      for (const [path, name] of SENSITIVE_APIS) {
+        const key = `${path}.${name}`;
+        const obj = resolve(path);
+        if (obj && apiBaseline.has(key) && obj[name] !== apiBaseline.get(key)) overwritten.push(key.replace("window.", ""));
+      }
+      const added = Object.getOwnPropertyNames(pageWin).filter((n) => !globalsBaseline.has(n));
+      const signatures = added.filter((n) => HOOK_SIGNATURES.test(n));
+      for (const s of document.scripts) {
+        if (/\/hook\.js(\?|$)/.test(s.src)) signatures.push(`script ${s.src}`);
+      }
+      send("globalsCheck", { overwritten, addedCount: added.length, addedSample: added.slice(0, 60), signatures });
+    } catch (e) {
+      console.warn("[Privacy Inspector] verificação dos globais falhou:", e);
+    }
+  }
+
+  if (window === window.top) {
+    window.addEventListener("load", () => {
+      setTimeout(checkGlobals, 1000);
+      setTimeout(checkGlobals, 8000);
+    }, { once: true });
+  }
+
+  // -------------------------------------------------------------------------
   // Interação do usuário (distingue navegação por clique de redirecionamento)
   // -------------------------------------------------------------------------
   if (window === window.top) {
@@ -305,6 +399,9 @@
 
   // O popup pede um snapshot atualizado ao ser aberto.
   browser.runtime.onMessage.addListener((msg) => {
-    if (msg && msg.type === "snapshotNow") snapshot();
+    if (msg && msg.type === "snapshotNow") {
+      snapshot();
+      if (window === window.top) checkGlobals();
+    }
   });
 })();

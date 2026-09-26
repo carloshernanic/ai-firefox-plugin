@@ -23,7 +23,7 @@
 * { box-sizing: border-box; }
 body {
   margin: 0;
-  width: 440px;
+  width: 480px;
   max-height: 600px;
   font: 13px/1.4 system-ui, sans-serif;
   background: var(--bg);
