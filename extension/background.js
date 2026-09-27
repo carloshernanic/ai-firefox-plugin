@@ -136,7 +136,7 @@ function onBeforeRequest(details) {
 
   let entry = state.thirdParty.get(reqSite);
   if (!entry) {
-    entry = { site: reqSite, hosts: new Set(), count: 0, types: {}, classifications: new Set(), sample: details.url };
+    entry = { site: reqSite, hosts: new Set(), count: 0, types: {}, classifications: new Set(), sample: details.url, blocked: { etp: 0, plugin: 0, cancelled: 0, error: 0 } };
     state.thirdParty.set(reqSite, entry);
   }
   entry.count++;
@@ -186,6 +186,49 @@ browser.webRequest.onBeforeRequest.addListener(
   []
 );
 
+// ---------------------------------------------------------------------------
+// Lista de bloqueio personalizada
+// ---------------------------------------------------------------------------
+/*
+ * Domínios escolhidos pelo usuário (popup) ficam em storage.local.blocklist.
+ * Uma entrada bloqueia o domínio e todos os subdomínios. A navegação
+ * principal nunca é bloqueada, apenas os recursos que a página carrega.
+ */
+let blocklist = new Set();
+const cancelledByPlugin = new Set(); // requestIds cancelados por este bloqueio
+
+function normalizeDomain(d) {
+  return String(d || "").trim().toLowerCase().replace(/^\*?\./, "").replace(/^[a-z]+:\/\//, "").split("/")[0];
+}
+
+function isBlocked(host) {
+  if (!host || !blocklist.size) return null;
+  const parts = host.split(".");
+  for (let i = 0; i < parts.length - 1; i++) {
+    const candidate = parts.slice(i).join(".");
+    if (blocklist.has(candidate)) return candidate;
+  }
+  return null;
+}
+
+browser.storage.local.get("blocklist").then(({ blocklist: list }) => {
+  blocklist = new Set((list || []).map(normalizeDomain).filter(Boolean));
+}).catch(() => {});
+
+browser.storage.onChanged.addListener((changes, area) => {
+  if (area === "local" && changes.blocklist) {
+    blocklist = new Set((changes.blocklist.newValue || []).map(normalizeDomain).filter(Boolean));
+  }
+});
+
+browser.webRequest.onBeforeRequest.addListener((details) => {
+  if (details.type === "main_frame") return {};
+  if (!isBlocked(hostFromUrl(details.url))) return {};
+  cancelledByPlugin.add(details.requestId);
+  if (cancelledByPlugin.size > 5000) cancelledByPlugin.clear();
+  return { cancel: true };
+}, { urls: ["<all_urls>"] }, ["blocking"]);
+
 /**
  * Redirecionamento de sub-recurso entre dois sites de terceiros: é o
  * mecanismo típico de cookie sync (pixel A -> 302 -> pixel B?uid=...),
@@ -202,6 +245,26 @@ browser.webRequest.onBeforeRedirect.addListener((details) => {
   const r = state.syncRedirects.get(key) || { from, to, count: 0, sample: details.redirectUrl };
   r.count++;
   state.syncRedirects.set(key, r);
+}, { urls: ["<all_urls>"] });
+
+/**
+ * Requisições a terceiros que não chegaram ao servidor:
+ *  - etp: bloqueadas pela Enhanced Tracking Protection do Firefox
+ *    (NS_ERROR_TRACKING_URI, NS_ERROR_FINGERPRINTING_URI...);
+ *  - cancelled: canceladas (NS_ERROR_ABORT) por outra extensão, como o
+ *    uBlock Origin, ou pela própria página ao navegar;
+ *  - error: falhas de rede comuns.
+ */
+browser.webRequest.onErrorOccurred.addListener((details) => {
+  if (details.tabId < 0 || details.type === "main_frame") return;
+  const state = getState(details.tabId);
+  const entry = state && state.thirdParty.get(siteFromUrl(details.url));
+  if (!entry) return;
+  const err = details.error || "";
+  if (cancelledByPlugin.delete(details.requestId)) entry.blocked.plugin++;
+  else if (/TRACKING|FINGERPRINTING|CRYPTOMINING|SOCIALTRACKING|EMAILTRACKING/.test(err)) entry.blocked.etp++;
+  else if (/NS_ERROR_ABORT|NS_BINDING_ABORTED/.test(err)) entry.blocked.cancelled++;
+  else entry.blocked.error++;
 }, { urls: ["<all_urls>"] });
 
 /** Cabeçalho Cookie enviado: ensina ao índice os IDs já guardados por cada site. */
@@ -557,7 +620,8 @@ function serializeReport(state, tabId) {
       types: e.types,
       classifications: [...e.classifications],
       tracker: e.classifications.size > 0,
-      sample: e.sample
+      sample: e.sample,
+      blocked: e.blocked
     }))
     .sort((a, b) => (b.tracker - a.tracker) || (b.count - a.count));
 
@@ -676,6 +740,8 @@ browser.runtime.onMessage.addListener((msg, sender) => {
   }
   if (msg.type === "getReport") {
     const state = getState(msg.tabId);
-    return Promise.resolve(state ? serializeReport(state, msg.tabId) : null);
+    const report = state ? serializeReport(state, msg.tabId) : null;
+    if (report) report.blocklist = [...blocklist].sort();
+    return Promise.resolve(report);
   }
 });

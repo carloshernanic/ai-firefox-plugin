@@ -32,11 +32,44 @@ function formatExpiry(ts) {
 // Abas
 // ---------------------------------------------------------------------------
 
+function showTab(name) {
+  const btn = document.querySelector(`.tabs button[data-tab="${name}"]`);
+  if (!btn) return;
+  document.querySelectorAll(".tabs button").forEach((b) => b.classList.toggle("active", b === btn));
+  document.querySelectorAll(".panel").forEach((p) => p.classList.toggle("active", p.id === `tab-${name}`));
+}
+
 for (const btn of document.querySelectorAll(".tabs button")) {
   btn.addEventListener("click", () => {
-    document.querySelectorAll(".tabs button").forEach((b) => b.classList.toggle("active", b === btn));
-    document.querySelectorAll(".panel").forEach((p) => p.classList.toggle("active", p.id === `tab-${btn.dataset.tab}`));
+    showTab(btn.dataset.tab);
+    // Reabre o popup na última aba vista.
+    browser.storage.local.set({ popupTab: btn.dataset.tab }).catch(() => {});
   });
+}
+
+browser.storage.local.get("popupTab").then(({ popupTab }) => popupTab && showTab(popupTab)).catch(() => {});
+
+// Lembra a posição de rolagem de cada aba do popup.
+function currentTab() {
+  const active = document.querySelector(".tabs button.active");
+  return active ? active.dataset.tab : "third";
+}
+
+let scrollTimer = null;
+window.addEventListener("scroll", () => {
+  clearTimeout(scrollTimer);
+  scrollTimer = setTimeout(() => {
+    browser.storage.local.get("popupScroll").then(({ popupScroll }) => {
+      browser.storage.local.set({ popupScroll: { ...(popupScroll || {}), [currentTab()]: window.scrollY } });
+    }).catch(() => {});
+  }, 200);
+});
+
+function restoreScroll() {
+  browser.storage.local.get("popupScroll").then(({ popupScroll }) => {
+    const y = popupScroll && popupScroll[currentTab()];
+    if (y) window.scrollTo(0, y);
+  }).catch(() => {});
 }
 
 // ---------------------------------------------------------------------------
@@ -59,18 +92,70 @@ function renderThirdParty() {
       if (!HIDDEN_CLASSIFICATIONS.has(c)) tags.append(tag(c, "tracker"));
     }
     if (e.cookies) tags.append(tag(`🍪 ${e.cookies}`, "persistent"));
+    if (e.blocked.plugin) tags.append(tag(`bloqueado pelo plugin ×${e.blocked.plugin}`, "ok"));
+    if (e.blocked.etp) tags.append(tag(`bloqueado pelo Firefox ×${e.blocked.etp}`, "ok"));
+    if (e.blocked.cancelled) tags.append(tag(`cancelado ×${e.blocked.cancelled}`, "warn"));
     for (const [type, n] of Object.entries(e.types)) tags.append(tag(`${type} ×${n}`));
+
+    const blocked = blocklist.includes(e.site);
+    const btn = el("button", { class: `btn-block ${blocked ? "on" : ""}`, title: "Lista de bloqueio personalizada" }, blocked ? "bloqueado" : "bloquear");
+    btn.addEventListener("click", () => toggleBlock(e.site));
 
     list.append(el("li", {},
       el("div", { class: "row" },
         el("span", { class: "site" }, e.site),
-        el("span", { class: "count" }, `${e.count} req`)
+        el("span", { class: "count" }, `${e.count} req`, btn)
       ),
       el("div", { class: "meta" }, e.hosts.join(", ")),
       tags
     ));
   }
 }
+
+// ---------------------------------------------------------------------------
+// Lista de bloqueio personalizada
+// ---------------------------------------------------------------------------
+
+let blocklist = [];
+
+function normalizeDomain(d) {
+  return String(d || "").trim().toLowerCase().replace(/^\*?\./, "").replace(/^[a-z]+:\/\//, "").split("/")[0];
+}
+
+async function saveBlocklist(list) {
+  blocklist = [...new Set(list.map(normalizeDomain).filter((d) => d && d.includes(".")))].sort();
+  await browser.storage.local.set({ blocklist });
+  renderBlocklist();
+  if (report) renderThirdParty();
+}
+
+function toggleBlock(site) {
+  saveBlocklist(blocklist.includes(site) ? blocklist.filter((d) => d !== site) : [...blocklist, site]);
+}
+
+function renderBlocklist() {
+  $("bl-n").textContent = blocklist.length;
+  const list = $("bl-list");
+  list.replaceChildren();
+  if (!blocklist.length) list.append(emptyItem("Nenhum domínio bloqueado."));
+  for (const d of blocklist) {
+    const rm = el("button", { class: "btn-block on" }, "remover");
+    rm.addEventListener("click", () => saveBlocklist(blocklist.filter((x) => x !== d)));
+    list.append(el("li", {}, el("div", { class: "row" }, el("span", { class: "site" }, d), rm)));
+  }
+}
+
+$("bl-form").addEventListener("submit", (ev) => {
+  ev.preventDefault();
+  const value = $("bl-input").value;
+  $("bl-input").value = "";
+  if (value.trim()) saveBlocklist([...blocklist, value]);
+});
+
+browser.storage.local.get("blocklist").then(({ blocklist: list }) => {
+  blocklist = list || [];
+  renderBlocklist();
+}).catch(() => {});
 
 // ---------------------------------------------------------------------------
 // Cookies
@@ -433,6 +518,7 @@ async function load() {
   if (report.storageSummary) renderStorage();
   if (report.tracking) renderTracking();
   if (report.score) renderScore();
+  restoreScroll();
 }
 
 load();

@@ -88,6 +88,15 @@ h3 .tag { margin: 0; }
 .score-table tr.zero td { color: var(--muted); }
 .score-table .pen { color: var(--danger); font-weight: 600; }
 
+.btn-block { font: inherit; font-size: 11px; border: 1px solid var(--line); background: var(--chip); color: var(--fg);
+  border-radius: 6px; padding: 1px 8px; cursor: pointer; margin-left: 6px; }
+.btn-block.on { background: var(--danger); color: #fff; border-color: var(--danger); }
+.blocklist { margin-top: 12px; }
+.blocklist summary { cursor: pointer; font-weight: 600; }
+.bl-form { display: flex; gap: 6px; margin: 6px 0; }
+.bl-form input { flex: 1; font: inherit; padding: 4px 6px; border: 1px solid var(--line); border-radius: 6px; background: var(--bg); color: var(--fg); }
+.bl-form button { font: inherit; border: 0; background: var(--accent); color: #fff; border-radius: 6px; padding: 4px 10px; cursor: pointer; }
+
 .rejected { margin-top: 12px; }
 .rejected summary { cursor: pointer; color: var(--muted); font-size: 12px; }
 
