@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Privacy Inspector",
-  "version": "0.4.1",
+  "version": "0.5.0",
   "description": "Detecta rastreadores, cookies, armazenamento HTML5, fingerprinting e indicadores de hijacking na página atual.",
   "browser_specific_settings": {
     "gecko": {
@@ -22,7 +22,7 @@
     "storage"
   ],
   "background": {
-    "scripts": ["lib/domain.js", "lib/cookies.js", "lib/tracking.js", "background.js"],
+    "scripts": ["lib/domain.js", "lib/cookies.js", "lib/tracking.js", "lib/score.js", "background.js"],
     "persistent": true
   },
   "content_scripts": [

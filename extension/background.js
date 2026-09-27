@@ -648,7 +648,7 @@ function serializeReport(state, tabId) {
     }
   };
 
-  return {
+  const report = {
     url: state.url,
     host: state.host,
     site: state.site,
@@ -664,6 +664,8 @@ function serializeReport(state, tabId) {
     storageSummary,
     tracking
   };
+  report.score = computePrivacyScore(report);
+  return report;
 }
 
 browser.runtime.onMessage.addListener((msg, sender) => {

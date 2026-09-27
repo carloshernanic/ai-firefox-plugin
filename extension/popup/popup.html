@@ -15,6 +15,7 @@
     <button data-tab="cookies">Cookies <span id="n-cookies"></span></button>
     <button data-tab="storage">Storage <span id="n-storage"></span></button>
     <button data-tab="tracking">Rastreio <span id="n-tracking"></span></button>
+    <button data-tab="score">Score <span id="n-score"></span></button>
   </nav>
 
   <main>
@@ -86,6 +87,25 @@
 
       <h3>Hijacking / hook <span id="tr-hijack-status" class="tag"></span></h3>
       <ul id="tr-hijack" class="list"></ul>
+    </section>
+
+    <!-- Pontuação de privacidade -->
+    <section id="tab-score" class="panel">
+      <div class="score-head">
+        <div id="sc-value" class="score-value">–</div>
+        <div>
+          <div id="sc-grade" class="score-grade">–</div>
+          <div class="meta">100 pontos menos os descontos por critério.<br>
+            A ≥ 90 · B ≥ 75 · C ≥ 55 · D ≥ 35 · E &lt; 35</div>
+        </div>
+      </div>
+      <p id="sc-veto" class="veto" hidden></p>
+      <table class="score-table">
+        <thead><tr><th>Critério</th><th>Medido</th><th>Desconto</th></tr></thead>
+        <tbody id="sc-items"></tbody>
+      </table>
+      <p class="meta">Desconto = mín(teto, medido × peso). Os tetos somam 100.
+        Passe o mouse sobre um critério para ver a justificativa.</p>
     </section>
   </main>
 

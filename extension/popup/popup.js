@@ -375,6 +375,35 @@ function renderTracking() {
   $("n-tracking").textContent = alerts ? `(${alerts}⚠)` : "";
 }
 
+// ---------------------------------------------------------------------------
+// Score de privacidade
+// ---------------------------------------------------------------------------
+
+const GRADE_LABEL = { A: "Excelente", B: "Boa", C: "Regular", D: "Ruim", E: "Muito ruim" };
+
+function renderScore() {
+  const sc = report.score;
+  $("sc-value").textContent = sc.score;
+  $("sc-value").className = `score-value grade-${sc.grade}`;
+  $("sc-grade").textContent = `Nota ${sc.grade} · ${GRADE_LABEL[sc.grade]}`;
+  $("sc-grade").className = `score-grade grade-${sc.grade}`;
+  $("n-score").textContent = `(${sc.score})`;
+  $("sc-veto").hidden = !sc.veto;
+  $("sc-veto").textContent = sc.veto || "";
+
+  const body = $("sc-items");
+  body.replaceChildren();
+  const items = [...sc.items].sort((a, b) => b.penalty - a.penalty);
+  for (const i of items) {
+    const row = el("tr", { class: i.penalty ? "" : "zero", title: i.why },
+      el("td", {}, i.name),
+      el("td", {}, String(i.value)),
+      el("td", { class: i.penalty ? "pen" : "" }, i.penalty ? `−${i.penalty} / ${i.cap}` : `0 / ${i.cap}`)
+    );
+    body.append(row);
+  }
+}
+
 $("ck-only-third").addEventListener("change", () => report && renderCookies());
 
 // ---------------------------------------------------------------------------
@@ -403,6 +432,7 @@ async function load() {
   renderRejectedCookies();
   if (report.storageSummary) renderStorage();
   if (report.tracking) renderTracking();
+  if (report.score) renderScore();
 }
 
 load();

@@ -74,6 +74,20 @@ h3 .tag { margin: 0; }
 .chain .hop.bad { background: var(--danger); color: #fff; }
 .mono { font-family: ui-monospace, monospace; }
 
+.score-head { display: flex; align-items: center; gap: 14px; margin: 12px 0 8px; }
+.score-value { font-size: 44px; font-weight: 800; line-height: 1; min-width: 72px; text-align: center; }
+.score-grade { font-size: 18px; font-weight: 700; }
+.grade-A, .grade-B { color: var(--ok); }
+.grade-C { color: var(--warn); }
+.grade-D, .grade-E { color: var(--danger); }
+.veto { background: var(--danger); color: #fff; padding: 6px 8px; border-radius: 6px; font-size: 12px; }
+.score-table { width: 100%; border-collapse: collapse; font-size: 12px; }
+.score-table th { text-align: left; color: var(--muted); font-weight: 600; border-bottom: 1px solid var(--line); padding: 4px 2px; }
+.score-table td { border-bottom: 1px solid var(--line); padding: 4px 2px; }
+.score-table td:nth-child(2), .score-table td:nth-child(3), .score-table th:nth-child(2), .score-table th:nth-child(3) { text-align: right; white-space: nowrap; }
+.score-table tr.zero td { color: var(--muted); }
+.score-table .pen { color: var(--danger); font-weight: 600; }
+
 .rejected { margin-top: 12px; }
 .rejected summary { cursor: pointer; color: var(--muted); font-size: 12px; }
 
