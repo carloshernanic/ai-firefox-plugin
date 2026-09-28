@@ -12,9 +12,13 @@ apresentar rastreamento e violações de privacidade no cliente web.
 | Armazenamento HTML5 (localStorage, sessionStorage, IndexedDB), por origem 1ª/3ª parte | ✅ |
 | Canvas fingerprint (heurística de Englehardt & Narayanan) | ✅ |
 | Cookie sync, bounce tracking e parâmetros de rastreamento na URL | ✅ |
-| Indicadores de hijacking / hook | ⏳ |
-| Pontuação de privacidade | ⏳ |
-| Lista de bloqueio personalizada | ⏳ |
+| Indicadores de hijacking / hook (WebSocket e polling para terceiro, captura de teclas, APIs nativas substituídas, assinatura BeEF) | ✅ |
+| Pontuação de privacidade com metodologia explícita (aba Score) | ✅ |
+| Lista de bloqueio personalizada | ✅ |
+
+O relatório de avaliação (entregáveis 2, 3 e 4) está em
+[`docs/relatorio.pdf`](docs/relatorio.pdf); as evidências (HARs, prints,
+JSONs) em [`evidencias/`](evidencias/).
 
 ## Como instalar (modo desenvolvimento)
 
@@ -23,6 +27,10 @@ apresentar rastreamento e violações de privacidade no cliente web.
 3. Selecione o arquivo `extension/manifest.json` deste repositório.
 4. O ícone do **Privacy Inspector** aparece na barra de ferramentas. Abra (ou
    recarregue) uma página e clique no ícone para ver o relatório.
+
+O popup tem cinco abas: **Terceiros** (domínios, rastreadores, bloqueios e a
+lista de bloqueio personalizada), **Cookies**, **Storage**, **Rastreio**
+(canvas, bounce, cookie sync, parâmetros de URL, hijacking) e **Score**.
 
 > Extensões temporárias são removidas ao fechar o Firefox; repita o passo 2
 > a cada nova sessão. Após alterar o código, clique em **Recarregar** na
@@ -38,9 +46,50 @@ extension/
   lib/domain.js      Cálculo de site (eTLD+1) e classificação 1ª/3ª parte
   lib/cookies.js     Parser de Set-Cookie / document.cookie
   lib/tracking.js    Parâmetros de rastreamento e índice de IDs (cookie sync)
+  lib/score.js       Pontuação de privacidade (critérios, pesos, tetos)
   popup/             Interface do relatório
-evidencias/          HARs e prints usados no relatório
+demo/hook-simulado/  Laboratório local de browser hijacking (BeEF simulado)
+docs/relatorio.pdf   Relatório de avaliação
+evidencias/
+  ddg/               Páginas de teste do DuckDuckGo (prints do plugin e da página)
+  sites/<site>/      HAR, prints do plugin, uBlock e Blacklight, relatório JSON
 ```
+
+## Laboratório de hijacking
+
+`demo/hook-simulado` reproduz, sem nada sair da máquina, o que um hook do
+BeEF faz depois de um XSS: página vítima em `http://localhost:8000` carrega
+`http://127.0.0.1:8001/hook.js` (outro site), que cria o global `beef`, ouve
+teclas, substitui `XMLHttpRequest.prototype.open`, faz polling a cada 2 s e
+abre um WebSocket.
+
+```bash
+python demo/hook-simulado/servidor.py
+# abra http://localhost:8000, digite algo e aguarde ~20 s antes de abrir o popup
+```
+
+## Pontuação de privacidade
+
+A página começa com 100 pontos e cada critério desconta
+`mín(teto, medido × peso)`; os tetos somam 100. Faixas: A ≥ 90, B ≥ 75,
+C ≥ 55, D ≥ 35, E < 35. Com assinatura de framework de hook a nota é limitada
+a 20 (regra de veto). Critérios, pesos e justificativas estão em
+`extension/lib/score.js` e no relatório.
+
+| Critério | Teto |
+|---|---|
+| Rastreadores de terceiros conhecidos (22 pontos até 30 rastreadores) | 22 |
+| Cookies de terceira parte (13 pontos até 40 cookies) | 13 |
+| Canvas fingerprint | 11 |
+| Gravação de sessão | 8 |
+| Pixels de redes sociais (2 por plataforma) | 8 |
+| Remarketing do Google Analytics | 4 |
+| Outros domínios de terceiros | 3 |
+| Cookie sync entre terceiros (2 por par) | 8 |
+| ID de 1ª parte enviado a terceiros | 5 |
+| Bounce tracking | 6 |
+| Indicadores de hijacking / hook | 8 |
+| Armazenamento HTML5 de terceiros | 4 |
 
 ## Decisões técnicas
 
@@ -112,6 +161,28 @@ evidencias/          HARs e prints usados no relatório
   ler suas propriedades (`Permission denied to access property "length"`),
   o que quebrava `setItem`, `getImageData` etc. na própria página.
 
-## Uma Curiosidade
+- **Hijacking / hook:** o content script tira, em `document_start`, uma linha
+  de base das APIs sensíveis (`fetch`, `XMLHttpRequest`, `WebSocket`,
+  `addEventListener`, `document.write`, `sendBeacon`, `pushState`…) e das
+  propriedades de `window`; depois do `load` compara o que a página substituiu
+  e procura globais com assinatura de hook (`beef`) ou scripts `/hook.js`.
+  Ouvintes de `keydown`/`input` registrados por scripts de terceiros (pela
+  pilha de chamadas) indicam captura de teclas. No background, WebSocket para
+  terceiro e *polling* — ≥ 5 requisições ao mesmo endpoint de terceiro por
+  ≥ 15 s com intervalos regulares (coeficiente de variação ≤ 0,35) — indicam
+  canal de comando. São indicadores, não provas: frameworks como o zone.js do
+  Angular substituem `fetch`/XHR legitimamente.
+- **Lista de bloqueio personalizada:** domínios em `storage.local` bloqueados
+  (com subdomínios) por um listener `webRequest` com `blocking`; a navegação
+  principal nunca é bloqueada. Cancelamentos do plugin, da ETP do Firefox e de
+  outras extensões são contados separadamente por domínio.
+- **Rastro do plugin:** os hooks são observáveis pela página (a página js-leaks
+  do DDG lista 17 propriedades alteradas pelo plugin). É o custo de observar
+  a página de dentro dela.
 
-Eu uso o zen browser como navegador principal, diferente de outros navegadores que a base são chromium o zen tem como base o firefox e as extensões também funcionaram para ele.
+## Uma curiosidade
+
+Uso o [Zen Browser](https://zen-browser.app) como navegador principal.
+Diferente da maioria dos navegadores alternativos, que são baseados no
+Chromium, o Zen é construído sobre o Firefox — por isso o Privacy Inspector
+também funcionou nele, carregado da mesma forma pelo `about:debugging`.
