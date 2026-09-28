@@ -1,0 +1,3157 @@
+{
+ "blocklist": [],
+ "cookieRejected": [
+  {
+   "attempts": 1,
+   "domain": "com",
+   "name": "_fbp",
+   "reason": "sufixo público",
+   "setBy": "https://investidorsardinha.r7.com/",
+   "source": "js"
+  }
+ ],
+ "cookieSummary": {
+  "deletions": 17,
+  "firstParty": 32,
+  "persistent": 65,
+  "rejected": 1,
+  "session": 4,
+  "thirdParty": 37,
+  "total": 69,
+  "viaHttp": 37,
+  "viaJs": 32
+ },
+ "cookies": [
+  {
+   "domain": "bing.com",
+   "expiry": 1824155076000,
+   "httpOnly": false,
+   "name": "MUID",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": "none",
+   "secure": true,
+   "session": false,
+   "setBy": "https://c.bing.com/c.gif?ctsa=mr&CtsSyncId=43052A037C914E7FBE5A8A30C4ABFFCA&RedC=c.clarity.ms&MXFR=3C9289A63E7065120D4B9E463A706B27",
+   "site": "bing.com",
+   "sources": [
+    "http"
+   ],
+   "thirdParty": true,
+   "value": "2E89B8EF78936CAE0690AF0F79D96DA9",
+   "writes": 1
+  },
+  {
+   "domain": "c.bing.com",
+   "expiry": 1791063876000,
+   "httpOnly": false,
+   "name": "MR",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": "none",
+   "secure": true,
+   "session": false,
+   "setBy": "https://c.bing.com/c.gif?ctsa=mr&CtsSyncId=43052A037C914E7FBE5A8A30C4ABFFCA&RedC=c.clarity.ms&MXFR=3C9289A63E7065120D4B9E463A706B27",
+   "site": "bing.com",
+   "sources": [
+    "http"
+   ],
+   "thirdParty": true,
+   "value": "0",
+   "writes": 1
+  },
+  {
+   "domain": "c.bing.com",
+   "expiry": 1824155076000,
+   "httpOnly": false,
+   "name": "SRM_B",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": "none",
+   "secure": true,
+   "session": false,
+   "setBy": "https://c.bing.com/c.gif?ctsa=mr&CtsSyncId=43052A037C914E7FBE5A8A30C4ABFFCA&RedC=c.clarity.ms&MXFR=3C9289A63E7065120D4B9E463A706B27",
+   "site": "bing.com",
+   "sources": [
+    "http"
+   ],
+   "thirdParty": true,
+   "value": "2E89B8EF78936CAE0690AF0F79D96DA9",
+   "writes": 1
+  },
+  {
+   "domain": "c.clarity.ms",
+   "expiry": 1790459677000,
+   "httpOnly": false,
+   "name": "ANONCHK",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": "none",
+   "secure": true,
+   "session": false,
+   "setBy": "https://c.clarity.ms/c.gif?ctsa=mr&CtsSyncId=43052A037C914E7FBE5A8A30C4ABFFCA&MUID=2E89B8EF78936CAE0690AF0F79D96DA9",
+   "site": "clarity.ms",
+   "sources": [
+    "http"
+   ],
+   "thirdParty": true,
+   "value": "0",
+   "writes": 1
+  },
+  {
+   "domain": "c.clarity.ms",
+   "expiry": 1791063877000,
+   "httpOnly": false,
+   "name": "MR",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": "none",
+   "secure": true,
+   "session": false,
+   "setBy": "https://c.clarity.ms/c.gif?ctsa=mr&CtsSyncId=43052A037C914E7FBE5A8A30C4ABFFCA&MUID=2E89B8EF78936CAE0690AF0F79D96DA9",
+   "site": "clarity.ms",
+   "sources": [
+    "http"
+   ],
+   "thirdParty": true,
+   "value": "0",
+   "writes": 1
+  },
+  {
+   "domain": "c.clarity.ms",
+   "expiry": null,
+   "httpOnly": false,
+   "name": "SM",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": "none",
+   "secure": true,
+   "session": true,
+   "setBy": "https://c.clarity.ms/c.gif",
+   "site": "clarity.ms",
+   "sources": [
+    "http"
+   ],
+   "thirdParty": true,
+   "value": "C",
+   "writes": 2
+  },
+  {
+   "domain": "clarity.ms",
+   "expiry": 1824155077000,
+   "httpOnly": false,
+   "name": "MUID",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": "none",
+   "secure": true,
+   "session": false,
+   "setBy": "https://c.clarity.ms/c.gif",
+   "site": "clarity.ms",
+   "sources": [
+    "http"
+   ],
+   "thirdParty": true,
+   "value": "2E89B8EF78936CAE0690AF0F79D96DA9",
+   "writes": 2
+  },
+  {
+   "domain": "criteo.com",
+   "expiry": 1824155071000,
+   "httpOnly": false,
+   "name": "uid",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": "none",
+   "secure": true,
+   "session": false,
+   "setBy": "https://gum.criteo.com/syncframe?origin=publishertagids&topUrl=investidorsardinha.r7.com&gdpr=0&gdpr_consent=#{%22bundle%22:{%22origin%22:0},%22optout%22:{%22value%22:false,%22origin%22:0},%22tld%22:%22r7.com%22,%22topUrl%22:%22investidorsardinha.r7.com%22,%22version%22:109327,%22origin%22:%22publishertagids%22,%22requestId%22:%220.34426566056266594%22}",
+   "site": "criteo.com",
+   "sources": [
+    "http"
+   ],
+   "thirdParty": true,
+   "value": "045fb2f6-f4bc-4080-9415-e7ea360b3c3b",
+   "writes": 1
+  },
+  {
+   "domain": "crwdcntrl.net",
+   "expiry": 1813784760000,
+   "httpOnly": false,
+   "name": "_cc_dc",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": "none",
+   "secure": true,
+   "session": false,
+   "setBy": "https://bcp.crwdcntrl.net/6/map?xcid=16589",
+   "site": "crwdcntrl.net",
+   "sources": [
+    "http"
+   ],
+   "thirdParty": true,
+   "value": "0",
+   "writes": 1
+  },
+  {
+   "domain": "crwdcntrl.net",
+   "expiry": 1813784760000,
+   "httpOnly": false,
+   "name": "_cc_id",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": "none",
+   "secure": true,
+   "session": false,
+   "setBy": "https://bcp.crwdcntrl.net/6/map?xcid=16589",
+   "site": "crwdcntrl.net",
+   "sources": [
+    "http"
+   ],
+   "thirdParty": true,
+   "value": "f87327b1efca7f4dd54517b35863dcc0",
+   "writes": 1
+  },
+  {
+   "domain": "dnacdn.net",
+   "expiry": 1824155074000,
+   "httpOnly": false,
+   "name": "browser_data",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": "none",
+   "secure": true,
+   "session": false,
+   "setBy": "https://dnacdn.net/dna",
+   "site": "dnacdn.net",
+   "sources": [
+    "http"
+   ],
+   "thirdParty": true,
+   "value": "dmVno19WNjA5QXc4MzFEZzZZSVg4Nm1NcHkzS2NqTngxUUVnT2lzU1hON2ZLSWFMRkYzaWNYVG8xMGNIbXBhVTBYZXAyZzRydDM1diUyRmlmeDFyVTEwaFUzcmNBJTNEJTNE",
+   "writes": 2
+  },
+  {
+   "domain": "doubleclick.net",
+   "expiry": 1853531070000,
+   "httpOnly": true,
+   "name": "IDE",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": "none",
+   "secure": true,
+   "session": false,
+   "setBy": "https://cm.g.doubleclick.net/pixel?google_nid=realize&google_hm=Yzc2NWI4NGItM2E4ZS00NGI3LTk2OTUtYTZmZDBlZmU0M2NiLXR1Y3QxMWIxYzIzYw&google_cm&&gdpr=0&gdpr_consent=&ui=c765b84b-3a8e-44b7-9695-a6fd0efe43cb-tuct11b1c23c",
+   "site": "doubleclick.net",
+   "sources": [
+    "http"
+   ],
+   "thirdParty": true,
+   "value": "AHWqTUlF_wrp0zvkT-bJZjPWKuPOzaoB9_ZhbkVEQ9uZIah9FVPzCL-MKDBpiJyTMJ4",
+   "writes": 1
+  },
+  {
+   "domain": "facebook.com",
+   "expiry": 1798235070000,
+   "httpOnly": true,
+   "name": "fr",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": null,
+   "secure": true,
+   "session": false,
+   "setBy": "https://www.facebook.com/tr/?id=3298309077105940&ev=PageView&dl=https%3A%2F%2Finvestidorsardinha.r7.com&rl=&if=false&ts=1790459068692&iw=false&sw=1366&sh=768&v=2.9.408&r=stable&ec=0&o=4124&aems=0%3B0&fbp=fb.1.1790459068685.273012765883657852&eid=ob3_plugin-set_891082739f05cb78dba5d953119292ebc65a78927e2596d5703b8ee3e9a12d92&cs_est=true&pm=1&hrl=85d1fe&ler=empty&plt=1855&ups[pv]=%7B%7D&ups[rpv]=%7B%7D&it=1790459067132&coo=false&cs_cc=1&cas=28366423103043698%2C26890472097299028%2C29221081644161353%2C25095094483432685%2C24430990536539372%2C7373800502712550%2C24815018864826059%2C24777807005204438%2C23865189189757429%2C9991709200895161%2C24379363801651053%2C9842802189107819%2C24114563238167968%2C9966888116724383%2C9908876985811722%2C9483341645075545%2C9650300935032065%2C9517094641689645%2C9179524642173297%2C29854807237451568%2C9984793088209302%2C9487106581343233%2C9554840261205594%2C9447690488632906%2C9609692002424550%2C23936273219312690%2C9447469958680727%2C9469781003116239%2C8984443498328229%2C9476044695824213%2C29604588252473139%2C9892931480758313%2C28860194470294575%2C9210894135688521%2C9721023371279610%2C9523548114365500%2C9020121851411527%2C9470207902992420%2C9497457290274787%2C8652823681492857%2C8666425583485741%2C8994613303965762%2C8137170359652500%2C5926725997347504%2C8402933096445343&dlc=1&cf=1&expv2[0]=pl0&expv2[1]=el2&expv2[2]=bc1&expv2[3]=ra0&expv2[4]=rp0&expv2[5]=im1&expv2[6]=hf1&expv2[7]=sd1&expv2[8]=sp1&expv2[9]=ek1&expv2[10]=pc1&expv2[11]=gs1&expv2[12]=zs1&expv2[13]=cp1&expv2[14]=es1&expv2[15]=ac1&expv2[16]=so1&expv2[17]=wc1&expv2[18]=la1&expv2[19]=sf1&expv2[20]=da1&expv2[21]=io1&expv2[22]=ae1&expv2[23]=sx1&expv2[24]=if1&expv2[25]=fd1&expv2[26]=bg1&expv2[27]=mg1&expv2[28]=kl1&expv2[29]=sg1&expv2[30]=mk1&expv2[31]=sn1&expv2[32]=ec1&expv2[33]=mp1&expv2[34]=ps1&expv2[35]=fx1&expv2[36]=vt1&expv2[37]=dp1&expv2[38]=fw1&expv2[39]=cn1&expv2[40]=tz1&expv2[41]=pe1&expv2[42]=ee1&expv2[43]=bu1&expv2[44]=ta1&expv2[45]=ot1&expv2[46]=hv0&expv2[47]=ep1&rqm=GET",
+   "site": "facebook.com",
+   "sources": [
+    "http"
+   ],
+   "thirdParty": true,
+   "value": "0fO1KetQuGsHgXPAo..BquDy-...1.0.BquDy-.AWewxozAKIqEQq0QHDr0ZGiWdRE",
+   "writes": 2
+  },
+  {
+   "domain": "linkedin.com",
+   "expiry": 1790460870000,
+   "httpOnly": true,
+   "name": "__cf_bm",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": "none",
+   "secure": true,
+   "session": false,
+   "setBy": "https://px.ads.linkedin.com/collect?v=2&fmt=js&pid=10119273&time=1790459068769&li_adsId=7b4b0560-f39e-4342-a0af-98239c057a61&pageLoadId=04af42ec-a018-41f5-a2c1-b0324715e70e&url=https%3A%2F%2Finvestidorsardinha.r7.com%2F&tm=gtmv2",
+   "site": "linkedin.com",
+   "sources": [
+    "http"
+   ],
+   "thirdParty": true,
+   "value": ".9wZBaDv4IRnDmaxZZM.eour44L9VsNsRpoT5NMayEg-1790459070.5417535-1.0.1.1-vu1qfzo2_s0oCUqL90Q23KnuCPKPbnZtHZz5aJ3IUjyfH0LhiPlh2xty54bC3ep0KZr6BSeS99QCjE_8xs.HAjYKyGNmjGchaFusrrtAAaohbC_x8llfuJCjYdgJw7Us",
+   "writes": 2
+  },
+  {
+   "domain": "linkedin.com",
+   "expiry": 1793051072961,
+   "httpOnly": false,
+   "name": "AnalyticsSyncHistory",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": "none",
+   "secure": true,
+   "session": false,
+   "setBy": "https://px.ads.linkedin.com/collect?v=2&fmt=js&pid=10119273&time=1790459068769&li_adsId=7b4b0560-f39e-4342-a0af-98239c057a61&pageLoadId=04af42ec-a018-41f5-a2c1-b0324715e70e&url=https%3A%2F%2Finvestidorsardinha.r7.com%2F&tm=gtmv2&cookiesTest=true",
+   "site": "linkedin.com",
+   "sources": [
+    "http"
+   ],
+   "thirdParty": true,
+   "value": "AQJ7pejFukVpMgAAAaDfrVG9wWu7OEmaEfDY73yz3wsRAFXw5dXbp8IjnTgl5ep4t3iHRIxJfce1trrzausgIg",
+   "writes": 1
+  },
+  {
+   "domain": "linkedin.com",
+   "expiry": 1821995074000,
+   "httpOnly": false,
+   "name": "bcookie",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": "none",
+   "secure": true,
+   "session": false,
+   "setBy": "https://px.ads.linkedin.com/collect?v=2&fmt=js&pid=10119273&time=1790459068769&li_adsId=7b4b0560-f39e-4342-a0af-98239c057a61&pageLoadId=04af42ec-a018-41f5-a2c1-b0324715e70e&url=https%3A%2F%2Finvestidorsardinha.r7.com%2F&tm=gtmv2",
+   "site": "linkedin.com",
+   "sources": [
+    "http"
+   ],
+   "thirdParty": true,
+   "value": "\"v=2&c4ddca52-1250-452c-80dc-47215172dc4a\"",
+   "writes": 4
+  },
+  {
+   "domain": "linkedin.com",
+   "expiry": 1798235074083,
+   "httpOnly": false,
+   "name": "li_sugr",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": "none",
+   "secure": true,
+   "session": false,
+   "setBy": "https://px.ads.linkedin.com/collect?v=2&fmt=js&pid=10119273&time=1790459068769&li_adsId=7b4b0560-f39e-4342-a0af-98239c057a61&pageLoadId=04af42ec-a018-41f5-a2c1-b0324715e70e&url=https%3A%2F%2Finvestidorsardinha.r7.com%2F&tm=gtmv2",
+   "site": "linkedin.com",
+   "sources": [
+    "http"
+   ],
+   "thirdParty": true,
+   "value": "72b693ee-1c5f-4871-a323-c83fc94849e8",
+   "writes": 3
+  },
+  {
+   "domain": "linkedin.com",
+   "expiry": 1790545470000,
+   "httpOnly": false,
+   "name": "lidc",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": "none",
+   "secure": true,
+   "session": false,
+   "setBy": "https://px.ads.linkedin.com/collect?v=2&fmt=js&pid=10119273&time=1790459068769&li_adsId=7b4b0560-f39e-4342-a0af-98239c057a61&pageLoadId=04af42ec-a018-41f5-a2c1-b0324715e70e&url=https%3A%2F%2Finvestidorsardinha.r7.com%2F&tm=gtmv2",
+   "site": "linkedin.com",
+   "sources": [
+    "http"
+   ],
+   "thirdParty": true,
+   "value": "\"b=VGST09:s=V:r=V:a=V:p=V:g=3497:u=1:x=1:i=1790459070:t=1790545470:v=2:sig=AQHh-5SjmGgEtKhqu2nByLf_rjj_z_mS\"",
+   "writes": 2
+  },
+  {
+   "domain": "linkedin.com",
+   "expiry": 1793051072961,
+   "httpOnly": false,
+   "name": "UserMatchHistory",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": "none",
+   "secure": true,
+   "session": false,
+   "setBy": "https://px.ads.linkedin.com/collect?v=2&fmt=js&pid=10119273&time=1790459068769&li_adsId=7b4b0560-f39e-4342-a0af-98239c057a61&pageLoadId=04af42ec-a018-41f5-a2c1-b0324715e70e&url=https%3A%2F%2Finvestidorsardinha.r7.com%2F&tm=gtmv2&cookiesTest=true",
+   "site": "linkedin.com",
+   "sources": [
+    "http"
+   ],
+   "thirdParty": true,
+   "value": "AQJ-5FlE7kSIcwAAAaDfrVG9qDEjOj_Zf97iu_1ko5od2aTqnKr1-v9NVkzwztfyC3DbrNaXJD9x6w",
+   "writes": 1
+  },
+  {
+   "domain": "pexels.com",
+   "expiry": 1790460864000,
+   "httpOnly": true,
+   "name": "__cf_bm",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": "none",
+   "secure": true,
+   "session": false,
+   "setBy": "https://images.pexels.com/photos/4386366/pexels-photo-4386366.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+   "site": "pexels.com",
+   "sources": [
+    "http"
+   ],
+   "thirdParty": true,
+   "value": "R.BAKkQDcTlMR5ZB_cIJoR9lrA_06RzOemClFf1awe0-1790459064.4733367-1.0.1.1-RzD8mRrGFWU2_K9j7ssiMvT1QnZArur1oJ_fqWsnjdwG56PyxodGNYeQUKTSuRQFXdknzZnzcKNv8ZrW__17qc5Gbrmy_nHrPMs7kWtgvLu.uqGumtfSoOmJPSBcvxNU",
+   "writes": 1
+  },
+  {
+   "domain": "pexels.com",
+   "expiry": null,
+   "httpOnly": true,
+   "name": "_cfuvid",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": "none",
+   "secure": true,
+   "session": true,
+   "setBy": "https://images.pexels.com/photos/4386366/pexels-photo-4386366.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+   "site": "pexels.com",
+   "sources": [
+    "http"
+   ],
+   "thirdParty": true,
+   "value": "ZPyPIqr6D5RtfRzDo7HcrFFSYEu6QbE1Z9t8rpIMddk-1790459064.4733367-1.0.1.1-_cgr5_M4Xu1hE_Pp9wgfyKjgAuLNs2uc8k3bSLMZ6E8",
+   "writes": 1
+  },
+  {
+   "domain": "scorecardresearch.com",
+   "expiry": 1824155068702,
+   "httpOnly": false,
+   "name": "UID",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": null,
+   "secure": false,
+   "session": false,
+   "setBy": "https://sb.scorecardresearch.com/b?c1=2&c2=14194541&cs_it=b1&cv=4.14.0%2B2608070551&ns__t=1790459067005&ns_c=UTF-8&cs_cfg=1001110&cs_gpc=0&c7=https%3A%2F%2Finvestidorsardinha.r7.com%2F&c8=Investidor%20Sardinha%20%E2%80%93%20A%20ferramenta%20essencial%20para%20todos%20os%20pequenos%20investidores%20do%20Brasil&c9=",
+   "site": "scorecardresearch.com",
+   "sources": [
+    "http"
+   ],
+   "thirdParty": true,
+   "value": "1EFaa3ee5539512139f96ff1790459068",
+   "writes": 1
+  },
+  {
+   "domain": "t.tailtarget.com",
+   "expiry": 1790631878000,
+   "httpOnly": false,
+   "name": "_ssc",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": "none",
+   "secure": true,
+   "session": false,
+   "setBy": "https://tt-9964-3.seg.t.tailtarget.com/trk?tA=TT-9964-3&tJ=_channel:r7-geral:1|_channel:par-investidorsardinha:1|_channel:r7-cas-alimentacaosaudavel:1|_channel:r7-cas-int-em-livros:1|_channel:r7-visao-geral:1&tK=1790459075&tM=direct&tL=direct&tN=direct&tY=3&tZ=104888672",
+   "site": "tailtarget.com",
+   "sources": [
+    "http"
+   ],
+   "thirdParty": true,
+   "value": "y",
+   "writes": 6
+  },
+  {
+   "domain": "t.tailtarget.com",
+   "expiry": 1793051078652,
+   "httpOnly": false,
+   "name": "dc",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": "none",
+   "secure": true,
+   "session": false,
+   "setBy": "https://cm.t.tailtarget.com/doubleclick?google_gid=CAESEG__1FukQ3KwKmGEvjCFSTI&google_cver=1&google_ula=862479430,0",
+   "site": "tailtarget.com",
+   "sources": [
+    "http"
+   ],
+   "thirdParty": true,
+   "value": "1",
+   "writes": 1
+  },
+  {
+   "domain": "t.tailtarget.com",
+   "expiry": 1793051078363,
+   "httpOnly": false,
+   "name": "n",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": "none",
+   "secure": true,
+   "session": false,
+   "setBy": "https://t.tailtarget.com/__tt.gif?tA=TT-9964-3&tE=0&tF=&tI=_sao%20paulo_sao%20paulo_br_1790459076981_770495229&tJ=CA15766,CA28337,CA15795,CA15771,CA25916&tQ=r7-geral,par-investidorsardinha,r7-cas-alimentacaosaudavel,r7-cas-int-em-livros,r7-visao-geral&tU=0100007FC43CB86ABA06A1090254681C&tX=b.52&tY=1&tZ=503989274",
+   "site": "tailtarget.com",
+   "sources": [
+    "http"
+   ],
+   "thirdParty": true,
+   "value": "1790459078",
+   "writes": 1
+  },
+  {
+   "domain": "t.tailtarget.com",
+   "expiry": 1793051078652,
+   "httpOnly": false,
+   "name": "tp1",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": "none",
+   "secure": true,
+   "session": false,
+   "setBy": "https://cm.t.tailtarget.com/doubleclick?google_gid=CAESEG__1FukQ3KwKmGEvjCFSTI&google_cver=1&google_ula=862479430,0",
+   "site": "tailtarget.com",
+   "sources": [
+    "http"
+   ],
+   "thirdParty": true,
+   "value": "CAESEG__1FukQ3KwKmGEvjCFSTI",
+   "writes": 1
+  },
+  {
+   "domain": "t.tailtarget.com",
+   "expiry": 1793051076988,
+   "httpOnly": false,
+   "name": "ttbprf",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": "none",
+   "secure": true,
+   "session": false,
+   "setBy": "https://b.t.tailtarget.com/b?tA=TT-9964-3&tY=1&tS=4&tU=0100007FC43CB86ABA06A1090254681C&tX=b.52&tZ=340722878",
+   "site": "tailtarget.com",
+   "sources": [
+    "http"
+   ],
+   "thirdParty": true,
+   "value": "_sao paulo_sao paulo_br_1790459076981_770495229",
+   "writes": 1
+  },
+  {
+   "domain": "t.tailtarget.com",
+   "expiry": 1790460876988,
+   "httpOnly": false,
+   "name": "ttc",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": "none",
+   "secure": true,
+   "session": false,
+   "setBy": "https://b.t.tailtarget.com/b?tA=TT-9964-3&tY=1&tS=4&tU=0100007FC43CB86ABA06A1090254681C&tX=b.52&tZ=340722878",
+   "site": "tailtarget.com",
+   "sources": [
+    "http"
+   ],
+   "thirdParty": true,
+   "value": "1",
+   "writes": 1
+  },
+  {
+   "domain": "t.tailtarget.com",
+   "expiry": 1793051076988,
+   "httpOnly": false,
+   "name": "ttnprf",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": "none",
+   "secure": true,
+   "session": false,
+   "setBy": "https://b.t.tailtarget.com/b?tA=TT-9964-3&tY=1&tS=4&tU=0100007FC43CB86ABA06A1090254681C&tX=b.52&tZ=340722878",
+   "site": "tailtarget.com",
+   "sources": [
+    "http"
+   ],
+   "thirdParty": true,
+   "value": "",
+   "writes": 1
+  },
+  {
+   "domain": "t.tailtarget.com",
+   "expiry": 1821995076000,
+   "httpOnly": false,
+   "name": "u",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": "none",
+   "secure": true,
+   "session": false,
+   "setBy": "https://tt-9964-3.seg.t.tailtarget.com/trk?tA=TT-9964-3&tJ=_channel:r7-geral:1|_channel:par-investidorsardinha:1|_channel:r7-cas-alimentacaosaudavel:1|_channel:r7-cas-int-em-livros:1|_channel:r7-visao-geral:1&tK=1790459075&tM=direct&tL=direct&tN=direct&tY=3&tZ=104888672",
+   "site": "tailtarget.com",
+   "sources": [
+    "http"
+   ],
+   "thirdParty": true,
+   "value": "fwAAAWq4PMQJoQa6HGhUAgB=",
+   "writes": 2
+  },
+  {
+   "domain": "taboola.com",
+   "expiry": 1821995068795,
+   "httpOnly": false,
+   "name": "t_gid",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": "none",
+   "secure": true,
+   "session": false,
+   "setBy": "https://trc.taboola.com/1541584/trc/3/json?tim=1790459067203&data=%7B%22id%22%3A209%2C%22ii%22%3A%22%2F%22%2C%22it%22%3A%22video%22%2C%22sd%22%3Anull%2C%22ui%22%3Anull%2C%22vi%22%3A1790459067186%2C%22cv%22%3A%2220251112-1-RELEASE%22%2C%22uiv%22%3A%22default%22%2C%22u%22%3A%22https%3A%2F%2Finvestidorsardinha.r7.com%2F%22%2C%22e%22%3Anull%2C%22cb%22%3A%22TFASC.trkCallback%22%2C%22qs%22%3A%22%22%2C%22r%22%3A%5B%7B%22li%22%3A%22rbox-tracking%22%2C%22s%22%3A0%2C%22uim%22%3A%22rbox-tracking%3Apub%3Dtaboolaaccount-ferramentasinvestidorsardinhacombr%3Aabp%3D0%22%2C%22uip%22%3A%22rbox-tracking%22%2C%22orig_uip%22%3A%22rbox-tracking%22%7D%5D%2C%22mpvd%22%3A%7B%22en%22%3A%22page_view%22%2C%22it%22%3A%22GTM%22%2C%22tim%22%3A1790459067199%2C%22ref%22%3Anull%2C%22item-url%22%3A%22https%3A%2F%2Finvestidorsardinha.r7.com%2F%22%2C%22tos%22%3A5%2C%22ssd%22%3A1%2C%22scd%22%3A0%2C%22supv%22%3Atrue%7D%7D&pubit=i",
+   "site": "taboola.com",
+   "sources": [
+    "http"
+   ],
+   "thirdParty": true,
+   "value": "c765b84b-3a8e-44b7-9695-a6fd0efe43cb-tuct11b1c23c",
+   "writes": 1
+  },
+  {
+   "domain": "taboola.com",
+   "expiry": 1821995068796,
+   "httpOnly": false,
+   "name": "t_pt_gid",
+   "partitioned": true,
+   "path": "/",
+   "sameSite": "none",
+   "secure": true,
+   "session": false,
+   "setBy": "https://trc.taboola.com/1541584/trc/3/json?tim=1790459067203&data=%7B%22id%22%3A209%2C%22ii%22%3A%22%2F%22%2C%22it%22%3A%22video%22%2C%22sd%22%3Anull%2C%22ui%22%3Anull%2C%22vi%22%3A1790459067186%2C%22cv%22%3A%2220251112-1-RELEASE%22%2C%22uiv%22%3A%22default%22%2C%22u%22%3A%22https%3A%2F%2Finvestidorsardinha.r7.com%2F%22%2C%22e%22%3Anull%2C%22cb%22%3A%22TFASC.trkCallback%22%2C%22qs%22%3A%22%22%2C%22r%22%3A%5B%7B%22li%22%3A%22rbox-tracking%22%2C%22s%22%3A0%2C%22uim%22%3A%22rbox-tracking%3Apub%3Dtaboolaaccount-ferramentasinvestidorsardinhacombr%3Aabp%3D0%22%2C%22uip%22%3A%22rbox-tracking%22%2C%22orig_uip%22%3A%22rbox-tracking%22%7D%5D%2C%22mpvd%22%3A%7B%22en%22%3A%22page_view%22%2C%22it%22%3A%22GTM%22%2C%22tim%22%3A1790459067199%2C%22ref%22%3Anull%2C%22item-url%22%3A%22https%3A%2F%2Finvestidorsardinha.r7.com%2F%22%2C%22tos%22%3A5%2C%22ssd%22%3A1%2C%22scd%22%3A0%2C%22supv%22%3Atrue%7D%7D&pubit=i",
+   "site": "taboola.com",
+   "sources": [
+    "http"
+   ],
+   "thirdParty": true,
+   "value": "c765b84b-3a8e-44b7-9695-a6fd0efe43cb-tuct11b1c23c",
+   "writes": 1
+  },
+  {
+   "domain": "taboola.com",
+   "expiry": null,
+   "httpOnly": false,
+   "name": "taboola_session_id",
+   "partitioned": false,
+   "path": "/taboolaaccount-ferramentasinvestidorsardinhacombr/",
+   "sameSite": "none",
+   "secure": true,
+   "session": true,
+   "setBy": "https://trc.taboola.com/1541584/trc/3/json?tim=1790459067203&data=%7B%22id%22%3A209%2C%22ii%22%3A%22%2F%22%2C%22it%22%3A%22video%22%2C%22sd%22%3Anull%2C%22ui%22%3Anull%2C%22vi%22%3A1790459067186%2C%22cv%22%3A%2220251112-1-RELEASE%22%2C%22uiv%22%3A%22default%22%2C%22u%22%3A%22https%3A%2F%2Finvestidorsardinha.r7.com%2F%22%2C%22e%22%3Anull%2C%22cb%22%3A%22TFASC.trkCallback%22%2C%22qs%22%3A%22%22%2C%22r%22%3A%5B%7B%22li%22%3A%22rbox-tracking%22%2C%22s%22%3A0%2C%22uim%22%3A%22rbox-tracking%3Apub%3Dtaboolaaccount-ferramentasinvestidorsardinhacombr%3Aabp%3D0%22%2C%22uip%22%3A%22rbox-tracking%22%2C%22orig_uip%22%3A%22rbox-tracking%22%7D%5D%2C%22mpvd%22%3A%7B%22en%22%3A%22page_view%22%2C%22it%22%3A%22GTM%22%2C%22tim%22%3A1790459067199%2C%22ref%22%3Anull%2C%22item-url%22%3A%22https%3A%2F%2Finvestidorsardinha.r7.com%2F%22%2C%22tos%22%3A5%2C%22ssd%22%3A1%2C%22scd%22%3A0%2C%22supv%22%3Atrue%7D%7D&pubit=i",
+   "site": "taboola.com",
+   "sources": [
+    "http"
+   ],
+   "thirdParty": true,
+   "value": "v2_f0d7daec7ca6888604c55b8f8903e0d2_c765b84b-3a8e-44b7-9695-a6fd0efe43cb-tuct11b1c23c_1790459068_1790459068_CNawjgYQ0IteGLL2tP2NNCABKAEwHzjb1AdAgIgQSNCG2ANQ6dEEWABgAGirjIT_3qvNi1VwAYABAIgBAJABAA",
+   "writes": 1
+  },
+  {
+   "domain": "tt-9964-3.seg.t.tailtarget.com",
+   "expiry": 1793051076472,
+   "httpOnly": false,
+   "name": "trk",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": "none",
+   "secure": true,
+   "session": false,
+   "setBy": "https://tt-9964-3.seg.t.tailtarget.com/trk?tA=TT-9964-3&tJ=_channel:r7-geral:1|_channel:par-investidorsardinha:1|_channel:r7-cas-alimentacaosaudavel:1|_channel:r7-cas-int-em-livros:1|_channel:r7-visao-geral:1&tK=1790459075&tM=direct&tL=direct&tN=direct&tY=3&tZ=104888672",
+   "site": "tailtarget.com",
+   "sources": [
+    "http"
+   ],
+   "thirdParty": true,
+   "value": "48g4gc6Uau2UcSl8yyLFW9ZW+VCHEtE1VWrViWzM4H+XF/WHG72TXnnOj2cNdvllFb5Wh7HOAvAfuTA3vPYnyNd4fbZgqDE1YW6ExkKjQGksshecOrG07buQxOrUfofcZaYRxdwnBLwzeZmKmiWnIuVQvTeqp7OP5wq7SMozL8o=",
+   "writes": 1
+  },
+  {
+   "domain": "tt-9964-3.seg.t.tailtarget.com",
+   "expiry": 1790462677618,
+   "httpOnly": false,
+   "name": "ttca",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": "none",
+   "secure": true,
+   "session": false,
+   "setBy": "https://tt-9964-3.seg.t.tailtarget.com/ca?tZ=367319289",
+   "site": "tailtarget.com",
+   "sources": [
+    "http"
+   ],
+   "thirdParty": true,
+   "value": "CA15766,CA28337,CA15795,CA15771,CA25916_1790459077",
+   "writes": 1
+  },
+  {
+   "domain": "www.clarity.ms",
+   "expiry": 1821995066000,
+   "httpOnly": true,
+   "name": "CLID",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": "none",
+   "secure": true,
+   "session": false,
+   "setBy": "https://www.clarity.ms/tag/rcd75s0gl4?ref=wordpress",
+   "site": "clarity.ms",
+   "sources": [
+    "http"
+   ],
+   "thirdParty": true,
+   "value": "c0ee4890732a4c94b06aa832062220b7.20260926.20270926",
+   "writes": 2
+  },
+  {
+   "domain": "www.linkedin.com",
+   "expiry": 1821995073000,
+   "httpOnly": true,
+   "name": "bscookie",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": "none",
+   "secure": true,
+   "session": false,
+   "setBy": "https://www.linkedin.com/px/li_sync?redirect=https%3A%2F%2Fpx.ads.linkedin.com%2Fcollect%3Fv%3D2%26fmt%3Djs%26pid%3D10119273%26time%3D1790459068769%26li_adsId%3D7b4b0560-f39e-4342-a0af-98239c057a61%26pageLoadId%3D04af42ec-a018-41f5-a2c1-b0324715e70e%26url%3Dhttps%253A%252F%252Finvestidorsardinha.r7.com%252F%26tm%3Dgtmv2%26cookiesTest%3Dtrue%26liSync%3Dtrue",
+   "site": "linkedin.com",
+   "sources": [
+    "http"
+   ],
+   "thirdParty": true,
+   "value": "\"v=1&20260926214433b56e736b-589e-408b-8281-834d805cb605AQHrH-LnNGL24XG2blbs5JkV7L6bgJaA\"",
+   "writes": 1
+  },
+  {
+   "domain": "investidorsardinha.r7.com",
+   "expiry": 1853531067000,
+   "httpOnly": false,
+   "name": "__utma",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": null,
+   "secure": false,
+   "session": false,
+   "setBy": "https://investidorsardinha.r7.com/",
+   "site": "r7.com",
+   "sources": [
+    "js"
+   ],
+   "thirdParty": false,
+   "value": "193617781.165422203.1790459065.1790459067.1790459067.1",
+   "writes": 2
+  },
+  {
+   "domain": "investidorsardinha.r7.com",
+   "expiry": 1790460867000,
+   "httpOnly": false,
+   "name": "__utmb",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": null,
+   "secure": false,
+   "session": false,
+   "setBy": "https://investidorsardinha.r7.com/",
+   "site": "r7.com",
+   "sources": [
+    "js"
+   ],
+   "thirdParty": false,
+   "value": "193617781.1.10.1790459067",
+   "writes": 2
+  },
+  {
+   "domain": "investidorsardinha.r7.com",
+   "expiry": null,
+   "httpOnly": false,
+   "name": "__utmc",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": null,
+   "secure": false,
+   "session": true,
+   "setBy": "https://investidorsardinha.r7.com/",
+   "site": "r7.com",
+   "sources": [
+    "js"
+   ],
+   "thirdParty": false,
+   "value": "193617781",
+   "writes": 2
+  },
+  {
+   "domain": "investidorsardinha.r7.com",
+   "expiry": 1790459667000,
+   "httpOnly": false,
+   "name": "__utmt_UA-159842796-1",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": null,
+   "secure": false,
+   "session": false,
+   "setBy": "https://investidorsardinha.r7.com/",
+   "site": "r7.com",
+   "sources": [
+    "js"
+   ],
+   "thirdParty": false,
+   "value": "1",
+   "writes": 1
+  },
+  {
+   "domain": "investidorsardinha.r7.com",
+   "expiry": 1806227067000,
+   "httpOnly": false,
+   "name": "__utmz",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": null,
+   "secure": false,
+   "session": false,
+   "setBy": "https://investidorsardinha.r7.com/",
+   "site": "r7.com",
+   "sources": [
+    "js"
+   ],
+   "thirdParty": false,
+   "value": "193617781.1790459067.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)",
+   "writes": 2
+  },
+  {
+   "domain": "investidorsardinha.r7.com",
+   "expiry": 2135972667000,
+   "httpOnly": false,
+   "name": "_omappvp",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": "lax",
+   "secure": true,
+   "session": false,
+   "setBy": "https://investidorsardinha.r7.com/",
+   "site": "r7.com",
+   "sources": [
+    "js"
+   ],
+   "thirdParty": false,
+   "value": "94NyifgpiQBoqqZRXt1GYXdqNPNruLL5ES4I7zVKXotX0gp8FL1mxDq6nk3t7DYuBJo6mcZ3vceYNAsUTxZ4Dqs4z5nCwzIS",
+   "writes": 1
+  },
+  {
+   "domain": "investidorsardinha.r7.com",
+   "expiry": 1790460267000,
+   "httpOnly": false,
+   "name": "_omappvs",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": "lax",
+   "secure": true,
+   "session": false,
+   "setBy": "https://investidorsardinha.r7.com/",
+   "site": "r7.com",
+   "sources": [
+    "js"
+   ],
+   "thirdParty": false,
+   "value": "1790459067331",
+   "writes": 1
+  },
+  {
+   "domain": "investidorsardinha.r7.com",
+   "expiry": 1790462677000,
+   "httpOnly": false,
+   "name": "_ttdmp",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": null,
+   "secure": false,
+   "session": false,
+   "setBy": "https://investidorsardinha.r7.com/",
+   "site": "r7.com",
+   "sources": [
+    "js"
+   ],
+   "thirdParty": false,
+   "value": "|LS:|CA:CA15766,CA28337,CA15795,CA15771,CA25916",
+   "writes": 1
+  },
+  {
+   "domain": "investidorsardinha.r7.com",
+   "expiry": 1852667075000,
+   "httpOnly": false,
+   "name": "_ttuu.s",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": null,
+   "secure": false,
+   "session": false,
+   "setBy": "https://investidorsardinha.r7.com/",
+   "site": "r7.com",
+   "sources": [
+    "js"
+   ],
+   "thirdParty": false,
+   "value": "1790459075980",
+   "writes": 1
+  },
+  {
+   "domain": "investidorsardinha.r7.com",
+   "expiry": 1790459370000,
+   "httpOnly": false,
+   "name": "dicbo_id",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": null,
+   "secure": false,
+   "session": false,
+   "setBy": "https://investidorsardinha.r7.com/",
+   "site": "r7.com",
+   "sources": [
+    "js"
+   ],
+   "thirdParty": false,
+   "value": "%7B%22dicbo_fetch%22%3A1790459070390%7D",
+   "writes": 3
+  },
+  {
+   "domain": "investidorsardinha.r7.com",
+   "expiry": 1790460875000,
+   "httpOnly": false,
+   "name": "tt_c_c",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": null,
+   "secure": false,
+   "session": false,
+   "setBy": "https://investidorsardinha.r7.com/",
+   "site": "r7.com",
+   "sources": [
+    "js"
+   ],
+   "thirdParty": false,
+   "value": "direct",
+   "writes": 1
+  },
+  {
+   "domain": "investidorsardinha.r7.com",
+   "expiry": 1790460875000,
+   "httpOnly": false,
+   "name": "tt_c_m",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": null,
+   "secure": false,
+   "session": false,
+   "setBy": "https://investidorsardinha.r7.com/",
+   "site": "r7.com",
+   "sources": [
+    "js"
+   ],
+   "thirdParty": false,
+   "value": "direct",
+   "writes": 1
+  },
+  {
+   "domain": "investidorsardinha.r7.com",
+   "expiry": 1790460875000,
+   "httpOnly": false,
+   "name": "tt_c_s",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": null,
+   "secure": false,
+   "session": false,
+   "setBy": "https://investidorsardinha.r7.com/",
+   "site": "r7.com",
+   "sources": [
+    "js"
+   ],
+   "thirdParty": false,
+   "value": "direct",
+   "writes": 1
+  },
+  {
+   "domain": "investidorsardinha.r7.com",
+   "expiry": 1790460875000,
+   "httpOnly": false,
+   "name": "tt_c_vmt",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": null,
+   "secure": false,
+   "session": false,
+   "setBy": "https://investidorsardinha.r7.com/",
+   "site": "r7.com",
+   "sources": [
+    "js"
+   ],
+   "thirdParty": false,
+   "value": "1790459075",
+   "writes": 1
+  },
+  {
+   "domain": "investidorsardinha.r7.com",
+   "expiry": 1790545476000,
+   "httpOnly": false,
+   "name": "tt.nprf",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": null,
+   "secure": false,
+   "session": false,
+   "setBy": "https://investidorsardinha.r7.com/",
+   "site": "r7.com",
+   "sources": [
+    "js"
+   ],
+   "thirdParty": false,
+   "value": "",
+   "writes": 1
+  },
+  {
+   "domain": "investidorsardinha.r7.com",
+   "expiry": 1821995076000,
+   "httpOnly": false,
+   "name": "tt.u",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": null,
+   "secure": false,
+   "session": false,
+   "setBy": "https://investidorsardinha.r7.com/",
+   "site": "r7.com",
+   "sources": [
+    "js"
+   ],
+   "thirdParty": false,
+   "value": "0100007FC43CB86ABA06A1090254681C",
+   "writes": 1
+  },
+  {
+   "domain": "r7.com",
+   "expiry": 1813787071000,
+   "httpOnly": false,
+   "name": "_cc_id",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": "lax",
+   "secure": false,
+   "session": false,
+   "setBy": "https://investidorsardinha.r7.com/",
+   "site": "r7.com",
+   "sources": [
+    "js"
+   ],
+   "thirdParty": false,
+   "value": "f87327b1efca7f4dd54517b35863dcc0",
+   "writes": 1
+  },
+  {
+   "domain": "r7.com",
+   "expiry": 1821995068000,
+   "httpOnly": false,
+   "name": "_clck",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": null,
+   "secure": false,
+   "session": false,
+   "setBy": "https://investidorsardinha.r7.com/",
+   "site": "r7.com",
+   "sources": [
+    "js"
+   ],
+   "thirdParty": false,
+   "value": "13455jb%5E2%5Eg9s%5E0%5E2460",
+   "writes": 1
+  },
+  {
+   "domain": "r7.com",
+   "expiry": 1790545469000,
+   "httpOnly": false,
+   "name": "_clsk",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": null,
+   "secure": false,
+   "session": false,
+   "setBy": "https://investidorsardinha.r7.com/",
+   "site": "r7.com",
+   "sources": [
+    "js"
+   ],
+   "thirdParty": false,
+   "value": "1aw4yu9%5E1790459069977%5E1%5E1%5Ek.clarity.ms%2Fcollect",
+   "writes": 1
+  },
+  {
+   "domain": "r7.com",
+   "expiry": 1798235070000,
+   "httpOnly": false,
+   "name": "_fbp",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": null,
+   "secure": false,
+   "session": false,
+   "setBy": "https://investidorsardinha.r7.com/",
+   "site": "r7.com",
+   "sources": [
+    "js"
+   ],
+   "thirdParty": false,
+   "value": "fb.1.1790459068685.273012765883657852.AQYAAQMC",
+   "writes": 3
+  },
+  {
+   "domain": "r7.com",
+   "expiry": 1853531067000,
+   "httpOnly": false,
+   "name": "_ga",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": null,
+   "secure": false,
+   "session": false,
+   "setBy": "https://investidorsardinha.r7.com/",
+   "site": "r7.com",
+   "sources": [
+    "js"
+   ],
+   "thirdParty": false,
+   "value": "GA1.2.165422203.1790459065",
+   "writes": 2
+  },
+  {
+   "domain": "r7.com",
+   "expiry": 1853531065000,
+   "httpOnly": false,
+   "name": "_ga_051LS1BLM8",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": null,
+   "secure": false,
+   "session": false,
+   "setBy": "https://investidorsardinha.r7.com/",
+   "site": "r7.com",
+   "sources": [
+    "js"
+   ],
+   "thirdParty": false,
+   "value": "GS2.1.s1790459065$o1$g0$t1790459065$j60$l0$h0",
+   "writes": 2
+  },
+  {
+   "domain": "r7.com",
+   "expiry": 1790459127000,
+   "httpOnly": false,
+   "name": "_gat_gtag_UA_159842796_1",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": null,
+   "secure": false,
+   "session": false,
+   "setBy": "https://investidorsardinha.r7.com/",
+   "site": "r7.com",
+   "sources": [
+    "js"
+   ],
+   "thirdParty": false,
+   "value": "1",
+   "writes": 1
+  },
+  {
+   "domain": "r7.com",
+   "expiry": 1798235065000,
+   "httpOnly": false,
+   "name": "_gcl_au",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": null,
+   "secure": false,
+   "session": false,
+   "setBy": "https://investidorsardinha.r7.com/",
+   "site": "r7.com",
+   "sources": [
+    "js"
+   ],
+   "thirdParty": false,
+   "value": "1.1.959784092.1790459065",
+   "writes": 5
+  },
+  {
+   "domain": "r7.com",
+   "expiry": 1790545467000,
+   "httpOnly": false,
+   "name": "_gid",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": null,
+   "secure": false,
+   "session": false,
+   "setBy": "https://investidorsardinha.r7.com/",
+   "site": "r7.com",
+   "sources": [
+    "js"
+   ],
+   "thirdParty": false,
+   "value": "GA1.2.366076627.1790459067",
+   "writes": 1
+  },
+  {
+   "domain": "r7.com",
+   "expiry": 1813787070000,
+   "httpOnly": false,
+   "name": "_pubcid",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": "lax",
+   "secure": false,
+   "session": false,
+   "setBy": "https://investidorsardinha.r7.com/",
+   "site": "r7.com",
+   "sources": [
+    "js"
+   ],
+   "thirdParty": false,
+   "value": "972f7ef4-f49d-45bb-9253-ea98aaad4b59",
+   "writes": 1
+  },
+  {
+   "domain": "r7.com",
+   "expiry": 1798235067000,
+   "httpOnly": false,
+   "name": "_rdt_uuid",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": "strict",
+   "secure": true,
+   "session": false,
+   "setBy": "https://investidorsardinha.r7.com/",
+   "site": "r7.com",
+   "sources": [
+    "js"
+   ],
+   "thirdParty": false,
+   "value": "1790459067274.01aed419-b400-4a7a-8913-94b7ad038db6",
+   "writes": 1
+  },
+  {
+   "domain": "r7.com",
+   "expiry": 1824155074000,
+   "httpOnly": false,
+   "name": "cto_bundle",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": null,
+   "secure": false,
+   "session": false,
+   "setBy": "https://investidorsardinha.r7.com/",
+   "site": "r7.com",
+   "sources": [
+    "js"
+   ],
+   "thirdParty": false,
+   "value": "XtsvYF9WNjA5QXc4MzFEZzZZSVg4Nm1NcHk5TFpRSDhlZXpkNHRyWGdqdDdxTnJPTnF1dnBnMGJ1MmhXbVRzcFdDdkozQXBaeGY4UmcxQUF0UVN2VjBtWW5qRFBzNkVUSTcxJTJCc013TiUyRlRCSWJGZDZFUGU1eko5VWo3Y0dsa0x6bHl0c1B2djFuOGpTUHE2N2ZXTnVIcTd2T2NLZnBJNlpqYjZZN01ySHExNHpUdkxrJTNE",
+   "writes": 1
+  },
+  {
+   "domain": "r7.com",
+   "expiry": 1824155069000,
+   "httpOnly": false,
+   "name": "FCCDCF",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": null,
+   "secure": false,
+   "session": false,
+   "setBy": "https://investidorsardinha.r7.com/",
+   "site": "r7.com",
+   "sources": [
+    "js"
+   ],
+   "thirdParty": false,
+   "value": "%5Bnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2C%5B%5B32%2C%22%5B%5C%22c217c2e8-3aeb-494d-ade4-5bf3dc0e7644%5C%22%2C%5B1790459068%2C357000000%5D%5D%22%5D%5D%5D",
+   "writes": 2
+  },
+  {
+   "domain": "r7.com",
+   "expiry": 1821995072000,
+   "httpOnly": false,
+   "name": "FCNEC",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": null,
+   "secure": false,
+   "session": false,
+   "setBy": "https://investidorsardinha.r7.com/",
+   "site": "r7.com",
+   "sources": [
+    "js"
+   ],
+   "thirdParty": false,
+   "value": "%5B%5B%22AKsRol-ZQfSGbTFedNi2S9fIAG-sMuzh7VDLt_AS8cX6qoEbx-4wy4me-oMGPjOrtDGz0b461Cp7Ullc9uaBUdkJ5cbpcLe1VMMUqjPWQ4eVjsgxU5JNsyfXLDPz2DEjkaUpSiAlWg6-n0zjDBA8bZxjeyvQvpIIDg%3D%3D%22%5D%5D",
+   "writes": 1
+  },
+  {
+   "domain": "r7.com",
+   "expiry": 1790459080000,
+   "httpOnly": false,
+   "name": "lotame_domain_check",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": "lax",
+   "secure": false,
+   "session": false,
+   "setBy": "https://investidorsardinha.r7.com/",
+   "site": "r7.com",
+   "sources": [
+    "js"
+   ],
+   "thirdParty": false,
+   "value": "r7.com",
+   "writes": 1
+  },
+  {
+   "domain": "r7.com",
+   "expiry": 1790545472000,
+   "httpOnly": false,
+   "name": "panoramaId_expiry",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": "lax",
+   "secure": false,
+   "session": false,
+   "setBy": "https://investidorsardinha.r7.com/",
+   "site": "r7.com",
+   "sources": [
+    "js"
+   ],
+   "thirdParty": false,
+   "value": "1790545471376",
+   "writes": 1
+  }
+ ],
+ "firstPartyRequests": 40,
+ "host": "investidorsardinha.r7.com",
+ "score": {
+  "grade": "E",
+  "items": [
+   {
+    "cap": 22,
+    "id": "trackers",
+    "name": "Rastreadores de terceiros conhecidos",
+    "penalty": 19.1,
+    "value": 26,
+    "weight": 0.7333333333333333,
+    "why": "Domínios classificados como rastreadores pela Enhanced Tracking Protection (lista Disconnect). Principal vetor de perfilamento entre sites."
+   },
+   {
+    "cap": 13,
+    "id": "thirdPartyCookies",
+    "name": "Cookies de terceira parte",
+    "penalty": 12,
+    "value": 37,
+    "weight": 0.325,
+    "why": "Cookies de outros sites identificam o usuário em todas as páginas que carregam o mesmo terceiro."
+   },
+   {
+    "cap": 11,
+    "id": "canvas",
+    "name": "Canvas fingerprint",
+    "penalty": 0,
+    "value": 0,
+    "weight": 11,
+    "why": "Identifica o dispositivo sem cookies, contornando bloqueio e limpeza de cookies; o usuário não tem como apagar."
+   },
+   {
+    "cap": 8,
+    "id": "sessionRecording",
+    "name": "Gravação de sessão",
+    "penalty": 8,
+    "value": 1,
+    "weight": 8,
+    "why": "Replay de cliques, rolagem e campos digitados; pode capturar dados sensíveis antes do envio de formulários."
+   },
+   {
+    "cap": 8,
+    "id": "socialPixels",
+    "name": "Pixels de redes sociais",
+    "penalty": 6,
+    "value": 3,
+    "weight": 2,
+    "why": "Meta, TikTok, X, LinkedIn etc. associam a visita ao perfil do usuário na rede social, mesmo sem clique."
+   },
+   {
+    "cap": 4,
+    "id": "remarketing",
+    "name": "Remarketing do Google Analytics",
+    "penalty": 4,
+    "value": 1,
+    "weight": 4,
+    "why": "O Analytics envia o ID do visitante ao doubleclick.net/google.com (ads/ga-audiences) para montar públicos de anúncios."
+   },
+   {
+    "cap": 3,
+    "id": "unclassified",
+    "name": "Outros domínios de terceiros",
+    "penalty": 1.4,
+    "value": 7,
+    "weight": 0.2,
+    "why": "Terceiros sem classificação (CDNs, widgets) ainda recebem IP, User-Agent e Referer do visitante."
+   },
+   {
+    "cap": 8,
+    "id": "cookieSync",
+    "name": "Cookie sync entre terceiros",
+    "penalty": 8,
+    "value": 9,
+    "weight": 2,
+    "why": "Um rastreador repassa seu ID a outro, unindo perfis de empresas diferentes."
+   },
+   {
+    "cap": 5,
+    "id": "firstPartyIdLeak",
+    "name": "ID de 1ª parte enviado a terceiros",
+    "penalty": 5,
+    "value": 6,
+    "weight": 1.25,
+    "why": "Cookie gravado como 1ª parte (escapa do bloqueio de cookies de terceiros) mas enviado a um terceiro na URL."
+   },
+   {
+    "cap": 6,
+    "id": "bounce",
+    "name": "Bounce tracking",
+    "penalty": 0,
+    "value": 0,
+    "weight": 6,
+    "why": "Redirecionamento por um site rastreador que ganha acesso de 1ª parte sem o usuário escolher visitá-lo."
+   },
+   {
+    "cap": 8,
+    "id": "hijack",
+    "name": "Indicadores de hijacking / hook",
+    "penalty": 8,
+    "value": 2,
+    "weight": 4,
+    "why": "Canal persistente com terceiro (WebSocket/polling), captura de teclas por script de terceiro ou APIs nativas substituídas: sinais de navegador sequestrado. Assinatura de framework de hook (BeEF) zera o critério."
+   },
+   {
+    "cap": 4,
+    "id": "thirdPartyStorage",
+    "name": "Armazenamento HTML5 de terceiros",
+    "penalty": 0,
+    "value": 0,
+    "weight": 2,
+    "why": "localStorage/IndexedDB de iframes de terceiros guardam identificadores fora do alcance da limpeza de cookies."
+   }
+  ],
+  "score": 29,
+  "veto": null
+ },
+ "site": "r7.com",
+ "startedAt": 1790459061913,
+ "storage": [
+  {
+   "idb": [],
+   "local": {
+    "bytes": 3160,
+    "count": 19,
+    "items": [
+     {
+      "key": "lastExternalReferrer",
+      "preview": "empty",
+      "size": 50
+     },
+     {
+      "key": "cto_bundle",
+      "preview": "XtsvYF9WNjA5QXc4MzFEZzZZSVg4Nm1NcHk5TFpRSDhlZXpkNHRyWGdqdDdx…",
+      "size": 508
+     },
+     {
+      "key": "_cc_id_update_ts",
+      "preview": "1790459071233",
+      "size": 58
+     },
+     {
+      "key": "_cc_id",
+      "preview": "f87327b1efca7f4dd54517b35863dcc0",
+      "size": 76
+     },
+     {
+      "key": "_GUSM",
+      "preview": "[1790459068494,1790459068494,-1,1,-1,-1]",
+      "size": 90
+     },
+     {
+      "key": "_GSD",
+      "preview": "1",
+      "size": 10
+     },
+     {
+      "key": "_gcl_ls",
+      "preview": "{\"schema\":\"gcl\",\"version\":1,\"gcl_ctr\":{\"value\":{\"value\":0,\"t…",
+      "size": 568
+     },
+     {
+      "key": "_pubcid",
+      "preview": "972f7ef4-f49d-45bb-9253-ea98aaad4b59",
+      "size": 86
+     },
+     {
+      "key": "li_adsId",
+      "preview": "7b4b0560-f39e-4342-a0af-98239c057a61",
+      "size": 88
+     },
+     {
+      "key": "_GESPSK-openx",
+      "preview": "[\"openx\",null,1790459070540,null,null,null,null,null,null,[1…",
+      "size": 154
+     },
+     {
+      "key": "_GESPSK-pubcid.org",
+      "preview": "[\"pubcid.org\",null,1790459068492,null,null,null,null,null,nu…",
+      "size": 174
+     },
+     {
+      "key": "omVisitsFirst",
+      "preview": "{\"path\":\"\",\"queryArgs\":{},\"timestamp\":1790459067,\"referrer\":…",
+      "size": 152
+     },
+     {
+      "key": "_GESPSK-crwdcntrl.net",
+      "preview": "[\"crwdcntrl.net\",\"\",1790459071244]",
+      "size": 110
+     },
+     {
+      "key": "_GESPSK-id5-sync.com",
+      "preview": "[\"id5-sync.com\",null,1790459071731,null,null,null,null,null,…",
+      "size": 182
+     },
+     {
+      "key": "panoramaId_expiry",
+      "preview": "1790545471376",
+      "size": 60
+     },
+     {
+      "key": "_GESPSK-esp.criteo.com",
+      "preview": "[\"esp.criteo.com\",null,1790459068493,null,null,null,null,nul…",
+      "size": 190
+     },
+     {
+      "key": "taboola global:user-id",
+      "preview": "c765b84b-3a8e-44b7-9695-a6fd0efe43cb-tuct11b1c23c",
+      "size": 142
+     },
+     {
+      "key": "eng_mt",
+      "preview": "{\"ver\":36,\"sessionStartTime\":1790459067191,\"scrollDepth\":0,\"…",
+      "size": 388
+     },
+     {
+      "key": "lastExternalReferrerTime",
+      "preview": "1790459068658",
+      "size": 74
+     }
+    ]
+   },
+   "ops": [
+    {
+     "api": "local",
+     "key": "_gcl_ls",
+     "ops": {
+      "set": 2
+     },
+     "preview": "{\"schema\":\"gcl\",\"version\":1,\"gcl_ctr\":{\"value\":{\"value\":0,\"t…",
+     "size": 554,
+     "writes": 2
+    },
+    {
+     "api": "session",
+     "key": "wpp_ref",
+     "ops": {
+      "set": 1
+     },
+     "preview": "CG2CY",
+     "size": 10,
+     "writes": 1
+    },
+    {
+     "api": "local",
+     "key": "taboolaStorageDetection",
+     "ops": {
+      "remove": 1,
+      "set": 1
+     },
+     "preview": "detect",
+     "size": 12,
+     "writes": 1
+    },
+    {
+     "api": "local",
+     "key": "_taboolaStorageDetection",
+     "ops": {
+      "remove": 82,
+      "set": 82
+     },
+     "preview": "1790459089956",
+     "size": 26,
+     "writes": 82
+    },
+    {
+     "api": "session",
+     "key": "_taboolaStorageDetection",
+     "ops": {
+      "remove": 55,
+      "set": 55
+     },
+     "preview": "1790459087307",
+     "size": 26,
+     "writes": 55
+    },
+    {
+     "api": "local",
+     "key": "eng_mt",
+     "ops": {
+      "set": 7
+     },
+     "preview": "{\"ver\":36,\"sessionStartTime\":1790459067191,\"scrollDepth\":0,\"…",
+     "size": 376,
+     "writes": 7
+    },
+    {
+     "api": "session",
+     "key": "_rdt_cfg",
+     "ops": {
+      "set": 1
+     },
+     "preview": "{\"pixelId\":\"a2_h92bi5lx3uy4\",\"esc\":{\"page_metadata\":true}}",
+     "size": 116,
+     "writes": 1
+    },
+    {
+     "api": "session",
+     "key": "__storage_test__",
+     "ops": {
+      "remove": 7,
+      "set": 7
+     },
+     "preview": "__storage_test__",
+     "size": 32,
+     "writes": 7
+    },
+    {
+     "api": "local",
+     "key": "__storage_test__",
+     "ops": {
+      "remove": 3,
+      "set": 3
+     },
+     "preview": "__storage_test__",
+     "size": 32,
+     "writes": 3
+    },
+    {
+     "api": "local",
+     "key": "omVisits",
+     "ops": {
+      "remove": 1
+     },
+     "preview": "",
+     "size": 0,
+     "writes": 0
+    },
+    {
+     "api": "local",
+     "key": "omVisitsFirst",
+     "ops": {
+      "set": 1
+     },
+     "preview": "{\"path\":\"\",\"queryArgs\":{},\"timestamp\":1790459067,\"referrer\":…",
+     "size": 126,
+     "writes": 1
+    },
+    {
+     "api": "local",
+     "key": "_GESPSK-openx",
+     "ops": {
+      "set": 2
+     },
+     "preview": "[\"openx\",null,1790459070540,null,null,null,null,null,null,[1…",
+     "size": 128,
+     "writes": 2
+    },
+    {
+     "api": "local",
+     "key": "_GESPSK-pubcid.org",
+     "ops": {
+      "set": 1
+     },
+     "preview": "[\"pubcid.org\",null,1790459068492,null,null,null,null,null,nu…",
+     "size": 138,
+     "writes": 1
+    },
+    {
+     "api": "local",
+     "key": "_GESPSK-id5-sync.com",
+     "ops": {
+      "set": 2
+     },
+     "preview": "[\"id5-sync.com\",null,1790459071731,null,null,null,null,null,…",
+     "size": 142,
+     "writes": 2
+    },
+    {
+     "api": "local",
+     "key": "_GESPSK-crwdcntrl.net",
+     "ops": {
+      "set": 2
+     },
+     "preview": "[\"crwdcntrl.net\",\"\",1790459071244]",
+     "size": 68,
+     "writes": 2
+    },
+    {
+     "api": "local",
+     "key": "_GESPSK-esp.criteo.com",
+     "ops": {
+      "set": 1
+     },
+     "preview": "[\"esp.criteo.com\",null,1790459068493,null,null,null,null,nul…",
+     "size": 146,
+     "writes": 1
+    },
+    {
+     "api": "local",
+     "key": "_GUSM",
+     "ops": {
+      "set": 1
+     },
+     "preview": "[1790459068494,1790459068494,-1,1,-1,-1]",
+     "size": 80,
+     "writes": 1
+    },
+    {
+     "api": "session",
+     "key": "_GSD",
+     "ops": {
+      "set": 1
+     },
+     "preview": "1",
+     "size": 2,
+     "writes": 1
+    },
+    {
+     "api": "local",
+     "key": "_GSD",
+     "ops": {
+      "set": 1
+     },
+     "preview": "1",
+     "size": 2,
+     "writes": 1
+    },
+    {
+     "api": "local",
+     "key": "lastExternalReferrer",
+     "ops": {
+      "set": 1
+     },
+     "preview": "empty",
+     "size": 10,
+     "writes": 1
+    },
+    {
+     "api": "local",
+     "key": "lastExternalReferrerTime",
+     "ops": {
+      "set": 1
+     },
+     "preview": "1790459068658",
+     "size": 26,
+     "writes": 1
+    },
+    {
+     "api": "local",
+     "key": "li_adsId",
+     "ops": {
+      "set": 1
+     },
+     "preview": "7b4b0560-f39e-4342-a0af-98239c057a61",
+     "size": 72,
+     "writes": 1
+    },
+    {
+     "api": "local",
+     "key": "taboola global:user-id",
+     "ops": {
+      "set": 1
+     },
+     "preview": "c765b84b-3a8e-44b7-9695-a6fd0efe43cb-tuct11b1c23c",
+     "size": 98,
+     "writes": 1
+    },
+    {
+     "api": "session",
+     "key": "_cltk",
+     "ops": {
+      "set": 1
+     },
+     "preview": "534wwj",
+     "size": 12,
+     "writes": 1
+    },
+    {
+     "api": "local",
+     "key": "_pubcid",
+     "ops": {
+      "set": 1
+     },
+     "preview": "972f7ef4-f49d-45bb-9253-ea98aaad4b59",
+     "size": 72,
+     "writes": 1
+    },
+    {
+     "api": "local",
+     "key": "criteo_localstorage_check",
+     "ops": {
+      "remove": 1,
+      "set": 1
+     },
+     "preview": "criteo_localstorage_check",
+     "size": 50,
+     "writes": 1
+    },
+    {
+     "api": "local",
+     "key": "_cc_id_update_ts",
+     "ops": {
+      "set": 1
+     },
+     "preview": "1790459071233",
+     "size": 26,
+     "writes": 1
+    },
+    {
+     "api": "local",
+     "key": "_cc_id",
+     "ops": {
+      "set": 1
+     },
+     "preview": "f87327b1efca7f4dd54517b35863dcc0",
+     "size": 64,
+     "writes": 1
+    },
+    {
+     "api": "local",
+     "key": "panoramaId_expiry",
+     "ops": {
+      "set": 1
+     },
+     "preview": "1790545471376",
+     "size": 26,
+     "writes": 1
+    },
+    {
+     "api": "local",
+     "key": "panoramaId",
+     "ops": {
+      "remove": 1
+     },
+     "preview": "",
+     "size": 0,
+     "writes": 0
+    },
+    {
+     "api": "local",
+     "key": "panoramaId_exp",
+     "ops": {
+      "remove": 1
+     },
+     "preview": "",
+     "size": 0,
+     "writes": 0
+    },
+    {
+     "api": "local",
+     "key": "panoramaIdType",
+     "ops": {
+      "remove": 1
+     },
+     "preview": "",
+     "size": 0,
+     "writes": 0
+    },
+    {
+     "api": "local",
+     "key": "panoramaIdType_exp",
+     "ops": {
+      "remove": 1
+     },
+     "preview": "",
+     "size": 0,
+     "writes": 0
+    },
+    {
+     "api": "session",
+     "key": "omSessionStart",
+     "ops": {
+      "set": 1
+     },
+     "preview": "1790459067328",
+     "size": 26,
+     "writes": 1
+    },
+    {
+     "api": "session",
+     "key": "omSessionPageviews",
+     "ops": {
+      "set": 1
+     },
+     "preview": "1",
+     "size": 2,
+     "writes": 1
+    },
+    {
+     "api": "session",
+     "key": "omScrollHeight",
+     "ops": {
+      "set": 3
+     },
+     "preview": "2509",
+     "size": 8,
+     "writes": 3
+    },
+    {
+     "api": "local",
+     "key": "~~~",
+     "ops": {
+      "remove": 1,
+      "set": 1
+     },
+     "preview": "!",
+     "size": 2,
+     "writes": 1
+    },
+    {
+     "api": "local",
+     "key": "cto_bundle",
+     "ops": {
+      "set": 1
+     },
+     "preview": "XtsvYF9WNjA5QXc4MzFEZzZZSVg4Nm1NcHk5TFpRSDhlZXpkNHRyWGdqdDdx…",
+     "size": 488,
+     "writes": 1
+    },
+    {
+     "api": "session",
+     "key": "_ttq",
+     "ops": {
+      "set": 3
+     },
+     "preview": "{\"tt.href\":{\"t\":1790759075985,\"v\":\"https%3A%2F%2Finvestidors…",
+     "size": 382,
+     "writes": 3
+    }
+   ],
+   "origin": "https://investidorsardinha.r7.com",
+   "session": {
+    "bytes": 706,
+    "count": 8,
+    "items": [
+     {
+      "key": "_GSD",
+      "preview": "1",
+      "size": 10
+     },
+     {
+      "key": "_rdt_cfg",
+      "preview": "{\"pixelId\":\"a2_h92bi5lx3uy4\",\"esc\":{\"page_metadata\":true}}",
+      "size": 132
+     },
+     {
+      "key": "_cltk",
+      "preview": "534wwj",
+      "size": 22
+     },
+     {
+      "key": "_ttq",
+      "preview": "{\"tt.href\":{\"t\":1790759075985,\"v\":\"https%3A%2F%2Finvestidors…",
+      "size": 390
+     },
+     {
+      "key": "wpp_ref",
+      "preview": "CG2CY",
+      "size": 24
+     },
+     {
+      "key": "omSessionPageviews",
+      "preview": "1",
+      "size": 38
+     },
+     {
+      "key": "omScrollHeight",
+      "preview": "2509",
+      "size": 36
+     },
+     {
+      "key": "omSessionStart",
+      "preview": "1790459067328",
+      "size": 54
+     }
+    ]
+   },
+   "site": "r7.com",
+   "thirdParty": false,
+   "writes": 191
+  }
+ ],
+ "storageSummary": {
+  "bytes": 3866,
+  "idbDatabases": 0,
+  "localItems": 19,
+  "origins": 1,
+  "sessionItems": 8,
+  "thirdPartyOrigins": 0,
+  "writes": 191
+ },
+ "thirdParty": [
+  {
+   "blocked": {
+    "cancelled": 0,
+    "error": 0,
+    "etp": 0,
+    "plugin": 0
+   },
+   "classifications": [
+    "tracking_content",
+    "any_strict_tracking",
+    "tracking_analytics",
+    "any_basic_tracking"
+   ],
+   "cookies": 0,
+   "count": 28,
+   "hosts": [
+    "www.google.com",
+    "analytics.google.com",
+    "fundingchoicesmessages.google.com"
+   ],
+   "sample": "https://www.google.com/ccm/collect?rcb=1&frm=0&apvc=1&ae=g&auid=959784092.1790459065&dt=Investidor%20Sardinha%20%E2%80%93%20A%20ferramenta%20essencial%20para%20todos%20os%20pequenos%20investidores%20do%20Brasil&en=page_view&dl=https%3A%2F%2Finvestidorsardinha.r7.com%2F&scrsrc=www.googletagmanager.com&rnd=1658202391.1790459065&navt=n&npa=0&ep.ads_data_redaction=0&gtm=45He69n1v860311950za200zd860311950xeaxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=115616986~115938465~115938469~117776795~118897920~118897930~120385422~120469145~120469153~121280969&tft=1790459064919&tfd=3019&_gsid=tQ-LZ0QmnhtvBIlM7pkQJr3IwAffYGwfog&fmt=8",
+   "site": "google.com",
+   "tracker": true,
+   "types": {
+    "image": 4,
+    "script": 5,
+    "xmlhttprequest": 19
+   }
+  },
+  {
+   "blocked": {
+    "cancelled": 0,
+    "error": 0,
+    "etp": 0,
+    "plugin": 0
+   },
+   "classifications": [
+    "tracking_ad",
+    "any_basic_tracking",
+    "any_strict_tracking"
+   ],
+   "cookies": 0,
+   "count": 19,
+   "hosts": [
+    "a.omappapi.com",
+    "api.omappapi.com"
+   ],
+   "sample": "https://a.omappapi.com/app/js/api.min.js",
+   "site": "omappapi.com",
+   "tracker": true,
+   "types": {
+    "script": 17,
+    "stylesheet": 1,
+    "xmlhttprequest": 1
+   }
+  },
+  {
+   "blocked": {
+    "cancelled": 0,
+    "error": 0,
+    "etp": 0,
+    "plugin": 0
+   },
+   "classifications": [
+    "tracking_ad",
+    "any_basic_tracking",
+    "any_strict_tracking"
+   ],
+   "cookies": 3,
+   "count": 12,
+   "hosts": [
+    "cdn.taboola.com",
+    "trc.taboola.com",
+    "pips.taboola.com",
+    "cds.taboola.com",
+    "trc-events.taboola.com"
+   ],
+   "sample": "https://cdn.taboola.com/libtrc/unip/1541584/tfa.js",
+   "site": "taboola.com",
+   "tracker": true,
+   "types": {
+    "image": 1,
+    "script": 6,
+    "xmlhttprequest": 5
+   }
+  },
+  {
+   "blocked": {
+    "cancelled": 0,
+    "error": 0,
+    "etp": 0,
+    "plugin": 0
+   },
+   "classifications": [
+    "tracking_ad",
+    "any_basic_tracking",
+    "any_strict_tracking"
+   ],
+   "cookies": 1,
+   "count": 11,
+   "hosts": [
+    "securepubads.g.doubleclick.net",
+    "ad.doubleclick.net",
+    "stats.g.doubleclick.net",
+    "googleads.g.doubleclick.net",
+    "cm.g.doubleclick.net"
+   ],
+   "sample": "https://securepubads.g.doubleclick.net/tag/js/gpt.js",
+   "site": "doubleclick.net",
+   "tracker": true,
+   "types": {
+    "beacon": 1,
+    "image": 2,
+    "script": 7,
+    "xmlhttprequest": 1
+   }
+  },
+  {
+   "blocked": {
+    "cancelled": 0,
+    "error": 0,
+    "etp": 0,
+    "plugin": 0
+   },
+   "classifications": [
+    "tracking_analytics",
+    "any_basic_tracking",
+    "any_strict_tracking"
+   ],
+   "cookies": 5,
+   "count": 10,
+   "hosts": [
+    "www.clarity.ms",
+    "scripts.clarity.ms",
+    "k.clarity.ms",
+    "c.clarity.ms"
+   ],
+   "sample": "https://www.clarity.ms/tag/rcd75s0gl4?ref=wordpress",
+   "site": "clarity.ms",
+   "tracker": true,
+   "types": {
+    "image": 2,
+    "script": 3,
+    "xmlhttprequest": 5
+   }
+  },
+  {
+   "blocked": {
+    "cancelled": 0,
+    "error": 0,
+    "etp": 0,
+    "plugin": 0
+   },
+   "classifications": [
+    "tracking_ad",
+    "any_basic_tracking",
+    "any_strict_tracking"
+   ],
+   "cookies": 10,
+   "count": 9,
+   "hosts": [
+    "tags.t.tailtarget.com",
+    "d.tailtarget.com",
+    "tt-9964-3.seg.t.tailtarget.com",
+    "b.t.tailtarget.com",
+    "t.tailtarget.com",
+    "cm.t.tailtarget.com"
+   ],
+   "sample": "https://tags.t.tailtarget.com/t3m.js?i=TT-9964-3/CT-23",
+   "site": "tailtarget.com",
+   "tracker": true,
+   "types": {
+    "image": 3,
+    "script": 6
+   }
+  },
+  {
+   "blocked": {
+    "cancelled": 0,
+    "error": 2,
+    "etp": 0,
+    "plugin": 0
+   },
+   "classifications": [
+    "tracking_ad",
+    "any_basic_tracking",
+    "any_strict_tracking"
+   ],
+   "cookies": 0,
+   "count": 7,
+   "hosts": [
+    "amplify.outbrain.com",
+    "tr.outbrain.com",
+    "wave.outbrain.com"
+   ],
+   "sample": "https://amplify.outbrain.com/cp/obtp.js",
+   "site": "outbrain.com",
+   "tracker": true,
+   "types": {
+    "script": 6,
+    "xmlhttprequest": 1
+   }
+  },
+  {
+   "blocked": {
+    "cancelled": 0,
+    "error": 0,
+    "etp": 0,
+    "plugin": 0
+   },
+   "classifications": [
+    "tracking_content",
+    "any_strict_tracking"
+   ],
+   "cookies": 0,
+   "count": 5,
+   "hosts": [
+    "www.google.com.br"
+   ],
+   "sample": "https://www.google.com.br/ads/ga-audiences?v=1&t=sr&slf_rd=1&_r=4&tid=G-051LS1BLM8&cid=165422203.1790459065&gtm=45je69n1v9134727897za20gxf1&rcb=11&aip=1&dma=0&gcd=13l3l3l3l1l1&npa=0&frm=0&tag_exp=115938465~115938469~118897920~118897930~120213116~120385423~120412528~120469145~120469153~121280969&z=874302424",
+   "site": "google.com.br",
+   "tracker": true,
+   "types": {
+    "image": 5
+   }
+  },
+  {
+   "blocked": {
+    "cancelled": 0,
+    "error": 0,
+    "etp": 0,
+    "plugin": 0
+   },
+   "classifications": [
+    "tracking_social",
+    "any_basic_tracking",
+    "any_strict_tracking",
+    "any_social_tracking"
+   ],
+   "cookies": 7,
+   "count": 5,
+   "hosts": [
+    "px.ads.linkedin.com",
+    "www.linkedin.com"
+   ],
+   "sample": "https://px.ads.linkedin.com/wa/?medium=fetch&fmt=g",
+   "site": "linkedin.com",
+   "tracker": true,
+   "types": {
+    "image": 4,
+    "xmlhttprequest": 1
+   }
+  },
+  {
+   "blocked": {
+    "cancelled": 0,
+    "error": 0,
+    "etp": 0,
+    "plugin": 0
+   },
+   "classifications": [
+    "tracking_content",
+    "any_strict_tracking"
+   ],
+   "cookies": 0,
+   "count": 4,
+   "hosts": [
+    "fonts.googleapis.com"
+   ],
+   "sample": "https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap",
+   "site": "googleapis.com",
+   "tracker": true,
+   "types": {
+    "stylesheet": 4
+   }
+  },
+  {
+   "blocked": {
+    "cancelled": 0,
+    "error": 0,
+    "etp": 0,
+    "plugin": 0
+   },
+   "classifications": [
+    "tracking_content",
+    "any_strict_tracking"
+   ],
+   "cookies": 0,
+   "count": 4,
+   "hosts": [
+    "fonts.gstatic.com"
+   ],
+   "sample": "https://fonts.gstatic.com/s/roboto/v51/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3yUBA.woff2",
+   "site": "gstatic.com",
+   "tracker": true,
+   "types": {
+    "font": 4
+   }
+  },
+  {
+   "blocked": {
+    "cancelled": 0,
+    "error": 0,
+    "etp": 0,
+    "plugin": 0
+   },
+   "classifications": [
+    "tracking_ad",
+    "any_basic_tracking",
+    "any_strict_tracking"
+   ],
+   "cookies": 1,
+   "count": 4,
+   "hosts": [
+    "gum.criteo.com",
+    "ag.gbc.criteo.com",
+    "gem.gbc.criteo.com"
+   ],
+   "sample": "https://gum.criteo.com/syncframe?origin=publishertagids&topUrl=investidorsardinha.r7.com&gdpr=0&gdpr_consent=#{%22bundle%22:{%22origin%22:0},%22optout%22:{%22value%22:false,%22origin%22:0},%22tld%22:%22r7.com%22,%22topUrl%22:%22investidorsardinha.r7.com%22,%22version%22:109327,%22origin%22:%22publishertagids%22,%22requestId%22:%220.34426566056266594%22}",
+   "site": "criteo.com",
+   "tracker": true,
+   "types": {
+    "sub_frame": 1,
+    "xmlhttprequest": 3
+   }
+  },
+  {
+   "blocked": {
+    "cancelled": 0,
+    "error": 0,
+    "etp": 0,
+    "plugin": 0
+   },
+   "classifications": [
+    "tracking_analytics",
+    "any_basic_tracking",
+    "any_strict_tracking"
+   ],
+   "cookies": 0,
+   "count": 3,
+   "hosts": [
+    "www.google-analytics.com",
+    "ssl.google-analytics.com"
+   ],
+   "sample": "https://www.google-analytics.com/analytics.js",
+   "site": "google-analytics.com",
+   "tracker": true,
+   "types": {
+    "image": 1,
+    "script": 2
+   }
+  },
+  {
+   "blocked": {
+    "cancelled": 0,
+    "error": 0,
+    "etp": 0,
+    "plugin": 0
+   },
+   "classifications": [
+    "tracking_social",
+    "any_basic_tracking",
+    "any_strict_tracking",
+    "any_social_tracking"
+   ],
+   "cookies": 0,
+   "count": 3,
+   "hosts": [
+    "connect.facebook.net"
+   ],
+   "sample": "https://connect.facebook.net/en_US/fbevents.js",
+   "site": "facebook.net",
+   "tracker": true,
+   "types": {
+    "script": 3
+   }
+  },
+  {
+   "blocked": {
+    "cancelled": 0,
+    "error": 0,
+    "etp": 0,
+    "plugin": 0
+   },
+   "classifications": [
+    "tracking_social",
+    "any_basic_tracking",
+    "any_strict_tracking",
+    "any_social_tracking"
+   ],
+   "cookies": 1,
+   "count": 3,
+   "hosts": [
+    "www.facebook.com"
+   ],
+   "sample": "https://www.facebook.com/tr/?id=3298309077105940&ev=PageView&dl=https%3A%2F%2Finvestidorsardinha.r7.com&rl=&if=false&ts=1790459068692&iw=false&sw=1366&sh=768&v=2.9.408&r=stable&ec=0&o=4124&aems=0%3B0&fbp=fb.1.1790459068685.273012765883657852&eid=ob3_plugin-set_891082739f05cb78dba5d953119292ebc65a78927e2596d5703b8ee3e9a12d92&cs_est=true&pm=1&hrl=85d1fe&ler=empty&plt=1855&ups[pv]=%7B%7D&ups[rpv]=%7B%7D&it=1790459067132&coo=false&cs_cc=1&cas=28366423103043698%2C26890472097299028%2C29221081644161353%2C25095094483432685%2C24430990536539372%2C7373800502712550%2C24815018864826059%2C24777807005204438%2C23865189189757429%2C9991709200895161%2C24379363801651053%2C9842802189107819%2C24114563238167968%2C9966888116724383%2C9908876985811722%2C9483341645075545%2C9650300935032065%2C9517094641689645%2C9179524642173297%2C29854807237451568%2C9984793088209302%2C9487106581343233%2C9554840261205594%2C9447690488632906%2C9609692002424550%2C23936273219312690%2C9447469958680727%2C9469781003116239%2C8984443498328229%2C9476044695824213%2C29604588252473139%2C9892931480758313%2C28860194470294575%2C9210894135688521%2C9721023371279610%2C9523548114365500%2C9020121851411527%2C9470207902992420%2C9497457290274787%2C8652823681492857%2C8666425583485741%2C8994613303965762%2C8137170359652500%2C5926725997347504%2C8402933096445343&dlc=1&cf=1&expv2[0]=pl0&expv2[1]=el2&expv2[2]=bc1&expv2[3]=ra0&expv2[4]=rp0&expv2[5]=im1&expv2[6]=hf1&expv2[7]=sd1&expv2[8]=sp1&expv2[9]=ek1&expv2[10]=pc1&expv2[11]=gs1&expv2[12]=zs1&expv2[13]=cp1&expv2[14]=es1&expv2[15]=ac1&expv2[16]=so1&expv2[17]=wc1&expv2[18]=la1&expv2[19]=sf1&expv2[20]=da1&expv2[21]=io1&expv2[22]=ae1&expv2[23]=sx1&expv2[24]=if1&expv2[25]=fd1&expv2[26]=bg1&expv2[27]=mg1&expv2[28]=kl1&expv2[29]=sg1&expv2[30]=mk1&expv2[31]=sn1&expv2[32]=ec1&expv2[33]=mp1&expv2[34]=ps1&expv2[35]=fx1&expv2[36]=vt1&expv2[37]=dp1&expv2[38]=fw1&expv2[39]=cn1&expv2[40]=tz1&expv2[41]=pe1&expv2[42]=ee1&expv2[43]=bu1&expv2[44]=ta1&expv2[45]=ot1&expv2[46]=hv0&expv2[47]=ep1&rqm=GET",
+   "site": "facebook.com",
+   "tracker": true,
+   "types": {
+    "beacon": 1,
+    "image": 2
+   }
+  },
+  {
+   "blocked": {
+    "cancelled": 0,
+    "error": 0,
+    "etp": 0,
+    "plugin": 0
+   },
+   "classifications": [
+    "tracking_analytics",
+    "any_basic_tracking",
+    "any_strict_tracking"
+   ],
+   "cookies": 1,
+   "count": 2,
+   "hosts": [
+    "sb.scorecardresearch.com"
+   ],
+   "sample": "https://sb.scorecardresearch.com/beacon.js",
+   "site": "scorecardresearch.com",
+   "tracker": true,
+   "types": {
+    "image": 1,
+    "script": 1
+   }
+  },
+  {
+   "blocked": {
+    "cancelled": 0,
+    "error": 0,
+    "etp": 0,
+    "plugin": 0
+   },
+   "classifications": [
+    "tracking_social",
+    "any_basic_tracking",
+    "any_strict_tracking",
+    "any_social_tracking"
+   ],
+   "cookies": 0,
+   "count": 2,
+   "hosts": [
+    "snap.licdn.com"
+   ],
+   "sample": "https://snap.licdn.com/li.lms-analytics/insight.min.js",
+   "site": "licdn.com",
+   "tracker": true,
+   "types": {
+    "script": 2
+   }
+  },
+  {
+   "blocked": {
+    "cancelled": 0,
+    "error": 0,
+    "etp": 0,
+    "plugin": 0
+   },
+   "classifications": [
+    "tracking_ad",
+    "any_basic_tracking",
+    "any_strict_tracking"
+   ],
+   "cookies": 0,
+   "count": 2,
+   "hosts": [
+    "pagead2.googlesyndication.com"
+   ],
+   "sample": "https://pagead2.googlesyndication.com/pagead/ping?e=1",
+   "site": "googlesyndication.com",
+   "tracker": true,
+   "types": {
+    "script": 1,
+    "xmlhttprequest": 1
+   }
+  },
+  {
+   "blocked": {
+    "cancelled": 0,
+    "error": 0,
+    "etp": 0,
+    "plugin": 0
+   },
+   "classifications": [
+    "tracking_ad",
+    "any_basic_tracking",
+    "any_strict_tracking"
+   ],
+   "cookies": 0,
+   "count": 2,
+   "hosts": [
+    "cdn.id5-sync.com",
+    "id5-sync.com"
+   ],
+   "sample": "https://cdn.id5-sync.com/api/1.0/esp.js",
+   "site": "id5-sync.com",
+   "tracker": true,
+   "types": {
+    "script": 1,
+    "xmlhttprequest": 1
+   }
+  },
+  {
+   "blocked": {
+    "cancelled": 0,
+    "error": 0,
+    "etp": 0,
+    "plugin": 0
+   },
+   "classifications": [
+    "tracking_ad",
+    "any_basic_tracking",
+    "any_strict_tracking"
+   ],
+   "cookies": 2,
+   "count": 2,
+   "hosts": [
+    "tags.crwdcntrl.net",
+    "bcp.crwdcntrl.net"
+   ],
+   "sample": "https://tags.crwdcntrl.net/lt/c/16589/sync.min.js",
+   "site": "crwdcntrl.net",
+   "tracker": true,
+   "types": {
+    "script": 1,
+    "xmlhttprequest": 1
+   }
+  },
+  {
+   "blocked": {
+    "cancelled": 0,
+    "error": 0,
+    "etp": 0,
+    "plugin": 0
+   },
+   "classifications": [
+    "tracking_ad",
+    "any_basic_tracking",
+    "any_strict_tracking"
+   ],
+   "cookies": 0,
+   "count": 1,
+   "hosts": [
+    "www.redditstatic.com"
+   ],
+   "sample": "https://www.redditstatic.com/ads/pixel.js?pixel_id=a2_h92bi5lx3uy4",
+   "site": "redditstatic.com",
+   "tracker": true,
+   "types": {
+    "script": 1
+   }
+  },
+  {
+   "blocked": {
+    "cancelled": 0,
+    "error": 0,
+    "etp": 0,
+    "plugin": 0
+   },
+   "classifications": [
+    "tracking_content",
+    "any_strict_tracking"
+   ],
+   "cookies": 0,
+   "count": 1,
+   "hosts": [
+    "alb.reddit.com"
+   ],
+   "sample": "https://alb.reddit.com/rp?id=a2_h92bi5lx3uy4&event=PageVisit",
+   "site": "reddit.com",
+   "tracker": true,
+   "types": {
+    "xmlhttprequest": 1
+   }
+  },
+  {
+   "blocked": {
+    "cancelled": 0,
+    "error": 0,
+    "etp": 0,
+    "plugin": 0
+   },
+   "classifications": [
+    "tracking_ad",
+    "any_basic_tracking",
+    "any_strict_tracking"
+   ],
+   "cookies": 0,
+   "count": 1,
+   "hosts": [
+    "oa.openxcdn.net"
+   ],
+   "sample": "https://oa.openxcdn.net/esp.js",
+   "site": "openxcdn.net",
+   "tracker": true,
+   "types": {
+    "script": 1
+   }
+  },
+  {
+   "blocked": {
+    "cancelled": 0,
+    "error": 0,
+    "etp": 0,
+    "plugin": 0
+   },
+   "classifications": [
+    "tracking_content",
+    "any_strict_tracking"
+   ],
+   "cookies": 0,
+   "count": 1,
+   "hosts": [
+    "cdn.jsdelivr.net"
+   ],
+   "sample": "https://cdn.jsdelivr.net/gh/prebid/shared-id/pubcid.js/docs/pubcid.min.js",
+   "site": "jsdelivr.net",
+   "tracker": true,
+   "types": {
+    "script": 1
+   }
+  },
+  {
+   "blocked": {
+    "cancelled": 0,
+    "error": 0,
+    "etp": 0,
+    "plugin": 0
+   },
+   "classifications": [
+    "tracking_ad",
+    "any_basic_tracking",
+    "any_strict_tracking"
+   ],
+   "cookies": 0,
+   "count": 1,
+   "hosts": [
+    "static.criteo.net"
+   ],
+   "sample": "https://static.criteo.net/js/ld/publishertag.ids.js",
+   "site": "criteo.net",
+   "tracker": true,
+   "types": {
+    "script": 1
+   }
+  },
+  {
+   "blocked": {
+    "cancelled": 0,
+    "error": 0,
+    "etp": 0,
+    "plugin": 0
+   },
+   "classifications": [
+    "tracking_content",
+    "any_strict_tracking"
+   ],
+   "cookies": 3,
+   "count": 1,
+   "hosts": [
+    "c.bing.com"
+   ],
+   "sample": "https://c.bing.com/c.gif?ctsa=mr&CtsSyncId=43052A037C914E7FBE5A8A30C4ABFFCA&RedC=c.clarity.ms&MXFR=3C9289A63E7065120D4B9E463A706B27",
+   "site": "bing.com",
+   "tracker": true,
+   "types": {
+    "image": 1
+   }
+  },
+  {
+   "blocked": {
+    "cancelled": 0,
+    "error": 0,
+    "etp": 0,
+    "plugin": 0
+   },
+   "classifications": [],
+   "cookies": 0,
+   "count": 16,
+   "hosts": [
+    "cdn.asupernova.com.br",
+    "pulse-backend.asupernova.com.br"
+   ],
+   "sample": "https://cdn.asupernova.com.br/calculadoras-investidor-sardinha/build/static/css/main.css?ver=6.8.2",
+   "site": "asupernova.com.br",
+   "tracker": false,
+   "types": {
+    "image": 13,
+    "script": 2,
+    "stylesheet": 1
+   }
+  },
+  {
+   "blocked": {
+    "cancelled": 0,
+    "error": 0,
+    "etp": 0,
+    "plugin": 0
+   },
+   "classifications": [],
+   "cookies": 0,
+   "count": 13,
+   "hosts": [
+    "analitica.auvp.com.br"
+   ],
+   "sample": "https://analitica.auvp.com.br/api/cdn/images/assets/EQPA3.svg",
+   "site": "auvp.com.br",
+   "tracker": false,
+   "types": {
+    "image": 13
+   }
+  },
+  {
+   "blocked": {
+    "cancelled": 0,
+    "error": 0,
+    "etp": 0,
+    "plugin": 0
+   },
+   "classifications": [],
+   "cookies": 0,
+   "count": 11,
+   "hosts": [
+    "www.googletagmanager.com"
+   ],
+   "sample": "https://www.googletagmanager.com/gtag/js?id=UA-159842796-1",
+   "site": "googletagmanager.com",
+   "tracker": false,
+   "types": {
+    "script": 11
+   }
+  },
+  {
+   "blocked": {
+    "cancelled": 0,
+    "error": 0,
+    "etp": 0,
+    "plugin": 0
+   },
+   "classifications": [],
+   "cookies": 0,
+   "count": 2,
+   "hosts": [
+    "v5-b75ccb2b73c54aa4a5098ab7f8533696.ecs.us-east-2.on.aws"
+   ],
+   "sample": "https://v5-b75ccb2b73c54aa4a5098ab7f8533696.ecs.us-east-2.on.aws/events?cee=no",
+   "site": "on.aws",
+   "tracker": false,
+   "types": {
+    "xmlhttprequest": 2
+   }
+  },
+  {
+   "blocked": {
+    "cancelled": 0,
+    "error": 0,
+    "etp": 0,
+    "plugin": 0
+   },
+   "classifications": [],
+   "cookies": 1,
+   "count": 2,
+   "hosts": [
+    "dnacdn.net"
+   ],
+   "sample": "https://dnacdn.net/dna",
+   "site": "dnacdn.net",
+   "tracker": false,
+   "types": {
+    "xmlhttprequest": 2
+   }
+  },
+  {
+   "blocked": {
+    "cancelled": 0,
+    "error": 0,
+    "etp": 0,
+    "plugin": 0
+   },
+   "classifications": [],
+   "cookies": 2,
+   "count": 1,
+   "hosts": [
+    "images.pexels.com"
+   ],
+   "sample": "https://images.pexels.com/photos/4386366/pexels-photo-4386366.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+   "site": "pexels.com",
+   "tracker": false,
+   "types": {
+    "image": 1
+   }
+  },
+  {
+   "blocked": {
+    "cancelled": 0,
+    "error": 0,
+    "etp": 0,
+    "plugin": 0
+   },
+   "classifications": [],
+   "cookies": 0,
+   "count": 1,
+   "hosts": [
+    "capi-automation.s3.us-east-2.amazonaws.com"
+   ],
+   "sample": "https://capi-automation.s3.us-east-2.amazonaws.com/public/client_js/capiParamBuilder/clientParamBuilder.bundle.js",
+   "site": "amazonaws.com",
+   "tracker": false,
+   "types": {
+    "script": 1
+   }
+  }
+ ],
+ "thirdPartyRequests": 189,
+ "totalRequests": 229,
+ "tracking": {
+  "bounce": {
+   "detected": false,
+   "hops": [],
+   "leaks": [],
+   "origin": null,
+   "trackers": []
+  },
+  "canvas": {
+   "fingerprinting": false,
+   "reads": [],
+   "scripts": []
+  },
+  "hijack": {
+   "detected": true,
+   "globals": {
+    "addedCount": 277,
+    "addedSample": [
+     "0",
+     "1",
+     "2",
+     "3",
+     "4",
+     "$",
+     "jQuery",
+     "clarity",
+     "dataLayer",
+     "googletag",
+     "gtag",
+     "_comscore",
+     "WP_Data",
+     "xmo3tjtcrlwbfi4ganch_shortcode",
+     "React",
+     "ReactDOM",
+     "wp",
+     "ilm_ajax",
+     "stockRankings",
+     "stockNavbarData",
+     "stockData",
+     "stockDataSheet",
+     "RankingElement",
+     "BoxContainer",
+     "sliderData",
+     "_l10n",
+     "jQuery3710126529255775783561",
+     "Noty",
+     "pulseTracker",
+     "slideIndex",
+     "plusSlides",
+     "currentSlide",
+     "showSlides",
+     "OMAPI_Helper",
+     "omapi_localized",
+     "omapi_data",
+     "google_tag_data",
+     "google_tag_manager",
+     "objectifyForm",
+     "GoogleAnalyticsObject",
+     "ga",
+     "_gaq",
+     "fbq",
+     "_fbq",
+     "rdt",
+     "__tfa_pixel_init",
+     "_tfa",
+     "_randomPageId",
+     "_fbq_gtm_ids",
+     "_fbq_gtm_cidparams_initialized",
+     "_linkedin_data_partner_ids",
+     "_already_called_lintrk",
+     "obApi",
+     "__wppRefAtivo",
+     "gaGlobal",
+     "GooglebQhCsO",
+     "goog_pvsid",
+     "ggeac",
+     "google_js_reporting_queue",
+     "google_measure_js_timing"
+    ],
+    "overwritten": [
+     "open",
+     "HTMLFormElement.prototype.submit"
+    ],
+    "signatures": []
+   },
+   "indicators": [
+    {
+     "id": "keylogger",
+     "severity": "média",
+     "text": "Script de terceiro ouvindo teclas: googletagmanager.com, clarity.ms"
+    },
+    {
+     "id": "overwritten",
+     "severity": "média",
+     "text": "APIs nativas substituídas pela página: open, HTMLFormElement.prototype.submit"
+    }
+   ],
+   "keyListeners": [
+    {
+     "frameUrl": "https://investidorsardinha.r7.com/",
+     "script": "https://investidorsardinha.r7.com/wp-includes/js/jquery/jquery.min.js?ver=3.7.1",
+     "target": "document",
+     "thirdParty": false,
+     "type": "keydown"
+    },
+    {
+     "frameUrl": "https://investidorsardinha.r7.com/",
+     "script": "https://investidorsardinha.r7.com/wp-includes/js/jquery/jquery.min.js?ver=3.7.1",
+     "target": "document",
+     "thirdParty": false,
+     "type": "keyup"
+    },
+    {
+     "frameUrl": "https://investidorsardinha.r7.com/",
+     "script": "https://investidorsardinha.r7.com/wp-includes/js/dist/vendor/react-dom.min.js?ver=18.3.1.1",
+     "target": "div",
+     "thirdParty": false,
+     "type": "input"
+    },
+    {
+     "frameUrl": "https://investidorsardinha.r7.com/",
+     "script": "https://investidorsardinha.r7.com/wp-includes/js/dist/vendor/react-dom.min.js?ver=18.3.1.1",
+     "target": "div",
+     "thirdParty": false,
+     "type": "keydown"
+    },
+    {
+     "frameUrl": "https://investidorsardinha.r7.com/",
+     "script": "https://investidorsardinha.r7.com/wp-includes/js/dist/vendor/react-dom.min.js?ver=18.3.1.1",
+     "target": "div",
+     "thirdParty": false,
+     "type": "keypress"
+    },
+    {
+     "frameUrl": "https://investidorsardinha.r7.com/",
+     "script": "https://investidorsardinha.r7.com/wp-includes/js/dist/vendor/react-dom.min.js?ver=18.3.1.1",
+     "target": "div",
+     "thirdParty": false,
+     "type": "keyup"
+    },
+    {
+     "frameUrl": "https://investidorsardinha.r7.com/",
+     "script": "https://investidorsardinha.r7.com/wp-includes/js/dist/vendor/react-dom.min.js?ver=18.3.1.1",
+     "target": "div",
+     "thirdParty": false,
+     "type": "paste"
+    },
+    {
+     "frameUrl": "https://investidorsardinha.r7.com/",
+     "script": "https://www.googletagmanager.com/gtag/js?id=AW-993110830&cx=c&gtm=4e69n1",
+     "target": "document",
+     "thirdParty": true,
+     "type": "keyup"
+    },
+    {
+     "frameUrl": "https://investidorsardinha.r7.com/",
+     "script": "https://scripts.clarity.ms/0.8.70/clarity.js",
+     "target": "document",
+     "thirdParty": true,
+     "type": "paste"
+    },
+    {
+     "frameUrl": "https://investidorsardinha.r7.com/",
+     "script": "https://scripts.clarity.ms/0.8.70/clarity.js",
+     "target": "document",
+     "thirdParty": true,
+     "type": "input"
+    },
+    {
+     "frameUrl": "https://investidorsardinha.r7.com/",
+     "script": "https://scripts.clarity.ms/0.8.70/clarity.js",
+     "target": "document",
+     "thirdParty": true,
+     "type": "keydown"
+    }
+   ],
+   "polling": [],
+   "websockets": []
+  },
+  "idSharing": [
+   {
+    "cookie": "t_pt_gid",
+    "count": 1,
+    "from": "taboola.com",
+    "kind": "cookie-sync",
+    "param": "ui",
+    "to": "doubleclick.net",
+    "url": "https://cm.g.doubleclick.net/pixel?google_nid=realize&google_hm=Yzc2NWI4NGItM2E4ZS00NGI3LTk2OTUtYTZmZDBlZmU0M2NiLXR1Y3QxMWIxYzIzYw&google_cm&&gdpr=0&gdpr_consent=&ui=c765b84b-3a8e-44b7-9695-a6fd0efe43cb-tuct11b1c23c",
+    "value": "c765b84b-3a8e-44b7-9695-a6fd0efe43cb-tuct11b1c23c"
+   },
+   {
+    "cookie": "browser_data",
+    "count": 1,
+    "from": "dnacdn.net",
+    "kind": "cookie-sync",
+    "param": "info",
+    "to": "criteo.com",
+    "url": "https://gum.criteo.com/sid/json?origin=publishertagids&domain=r7.com&sn=FirefoxSyncframe&so=0&topUrl=investidorsardinha.r7.com&info=dmVno19WNjA5QXc4MzFEZzZZSVg4Nm1NcHkzS2NqTngxUUVnT2lzU1hON2ZLSWFMRkYzaWNYVG8xMGNIbXBhVTBYZXAyZzRydDM1diUyRmlmeDFyVTEwaFUzcmNBJTNEJTNE&idsd=872170406,1023168977&idsdctx=PMSuO3w5ZlBOcDliSUs4WXc0UjFnQ2o0ZHY3UEg3aXl4NmYzOXl0TXNsazlLbGM0am1MemZnMnc4WjdrVE1KNjFOWXl1VHBmMEFFUGpnbm8rakptWlIwcCtDQT09fA,PMSuO3w5ZlBOcDliSUs4WXc0UjFnQ2o0ZHY3UEg3aXl4NmYzOXl0TXNsazlLbGM0am1MemZnMnc4WjdrVE1KNjFOWXl1VHBmMEFFUGpnbm8rakptWlIwcCtDQT09fA",
+    "value": "dmVno19WNjA5QXc4MzFEZzZZSVg4Nm1NcHkzS2NqTngxUUVnT2lzU1hON2ZLSWFMRkYzaWNYVG8xMGNIbXBhVTBYZXAyZzRydDM1diUyRmlmeDFyVTEwaFUzcmNBJTNEJTNE"
+   },
+   {
+    "cookie": "MUID",
+    "count": 1,
+    "from": "clarity.ms",
+    "kind": "cookie-sync",
+    "param": "MXFR",
+    "to": "bing.com",
+    "url": "https://c.bing.com/c.gif?ctsa=mr&CtsSyncId=43052A037C914E7FBE5A8A30C4ABFFCA&RedC=c.clarity.ms&MXFR=3C9289A63E7065120D4B9E463A706B27",
+    "value": "3C9289A63E7065120D4B9E463A706B27"
+   },
+   {
+    "cookie": "SRM_B",
+    "count": 1,
+    "from": "bing.com",
+    "kind": "cookie-sync",
+    "param": "MUID",
+    "to": "clarity.ms",
+    "url": "https://c.clarity.ms/c.gif?ctsa=mr&CtsSyncId=43052A037C914E7FBE5A8A30C4ABFFCA&MUID=2E89B8EF78936CAE0690AF0F79D96DA9",
+    "value": "2E89B8EF78936CAE0690AF0F79D96DA9"
+   },
+   {
+    "cookie": "_ga",
+    "count": 1,
+    "from": "r7.com",
+    "kind": "id-1a-parte",
+    "param": "cid",
+    "to": "google.com",
+    "url": "https://analytics.google.com/g/collect?v=2&tid=G-051LS1BLM8&gtm=45je69n1v9134727897za20gxf1&_p=1790459063468&_gaz=1&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AAAIAGA&cid=165422203.1790459065&frm=0&pscdl=noapi&rcb=11&sr=1366x768&ul=en-us&gaf=2&_s=1&tag_exp=115938465~115938469~118897920~118897930~120213116~120385423~120412528~120469145~120469153~121280969&sid=1790459065&sct=1&seg=0&dl=https%3A%2F%2Finvestidorsardinha.r7.com%2F&dt=Investidor%20Sardinha%20%E2%80%93%20A%20ferramenta%20essencial%20para%20todos%20os%20pequenos%20investidores%20do%20Brasil&en=page_view&_fv=1&_nsi=1&_ss=1&tfd=3228",
+    "value": "165422203.1790459065"
+   },
+   {
+    "cookie": "_ga",
+    "count": 1,
+    "from": "r7.com",
+    "kind": "id-1a-parte",
+    "param": "cid",
+    "to": "doubleclick.net",
+    "url": "https://stats.g.doubleclick.net/g/collect?v=2&tid=G-051LS1BLM8&cid=165422203.1790459065&gtm=45je69n1v9134727897za20gxf1&rcb=11&aip=1&dma=0&gcd=13l3l3l3l1l1&npa=0&frm=0&tag_exp=115938465~115938469~118897920~118897930~120213116~120385423~120412528~120469145~120469153~121280969",
+    "value": "165422203.1790459065"
+   },
+   {
+    "cookie": "_ga",
+    "count": 1,
+    "from": "r7.com",
+    "kind": "id-1a-parte",
+    "param": "cid",
+    "to": "google.com.br",
+    "url": "https://www.google.com.br/ads/ga-audiences?v=1&t=sr&slf_rd=1&_r=4&tid=G-051LS1BLM8&cid=165422203.1790459065&gtm=45je69n1v9134727897za20gxf1&rcb=11&aip=1&dma=0&gcd=13l3l3l3l1l1&npa=0&frm=0&tag_exp=115938465~115938469~118897920~118897930~120213116~120385423~120412528~120469145~120469153~121280969&z=874302424",
+    "value": "165422203.1790459065"
+   },
+   {
+    "cookie": "__utma",
+    "count": 1,
+    "from": "r7.com",
+    "kind": "id-1a-parte",
+    "param": "utmcc",
+    "to": "google-analytics.com",
+    "url": "https://ssl.google-analytics.com/r/__utm.gif?utmwv=5.7.2&utms=1&utmn=1988933587&utmhn=investidorsardinha.r7.com&utmcs=UTF-8&utmsr=1366x768&utmvp=1366x385&utmsc=24-bit&utmul=en-us&utmje=0&utmfl=-&utmdt=Investidor%20Sardinha%20%E2%80%93%20A%20ferramenta%20essencial%20para%20todos%20os%20pequenos%20investidores%20do%20Brasil&utmhid=945233000&utmr=-&utmp=%2F&utmht=1790459067261&utmac=UA-159842796-1&utmgtm=45He69n1h1n815JRFMRHv893871899za200zd893871899xf1&utmcc=__utma%3D193617781.165422203.1790459065.1790459067.1790459067.1%3B%2B__utmz%3D193617781.1790459067.1.1.utmcsr%3D(direct)%7Cutmccn%3D(direct)%7Cutmcmd%3D(none)%3B&utmjid=1086416417&utmredir=1&utmu=qmAgAABAAAGBAAAAAgABAAAE~",
+    "value": "193617781.165422203.1790459065.1790459067.1790459067.1"
+   },
+   {
+    "cookie": "_fbp",
+    "count": 1,
+    "from": "r7.com",
+    "kind": "id-1a-parte",
+    "param": "fbp",
+    "to": "facebook.com",
+    "url": "https://www.facebook.com/tr/?id=3298309077105940&ev=PageView&dl=https%3A%2F%2Finvestidorsardinha.r7.com&rl=&if=false&ts=1790459068692&iw=false&sw=1366&sh=768&v=2.9.408&r=stable&ec=0&o=4124&aems=0%3B0&fbp=fb.1.1790459068685.273012765883657852&eid=ob3_plugin-set_891082739f05cb78dba5d953119292ebc65a78927e2596d5703b8ee3e9a12d92&cs_est=true&pm=1&hrl=85d1fe&ler=empty&plt=1855&ups[pv]=%7B%7D&ups[rpv]=%7B%7D&it=1790459067132&coo=false&cs_cc=1&cas=28366423103043698%2C26890472097299028%2C29221081644161353%2C25095094483432685%2C24430990536539372%2C7373800502712550%2C24815018864826059%2C24777807005204438%2C23865189189757429%2C9991709200895161%2C24379363801651053%2C9842802189107819%2C24114563238167968%2C9966888116724383%2C9908876985811722%2C9483341645075545%2C9650300935032065%2C9517094641689645%2C9179524642173297%2C29854807237451568%2C9984793088209302%2C9487106581343233%2C9554840261205594%2C9447690488632906%2C9609692002424550%2C23936273219312690%2C9447469958680727%2C9469781003116239%2C8984443498328229%2C9476044695824213%2C29604588252473139%2C9892931480758313%2C28860194470294575%2C9210894135688521%2C9721023371279610%2C9523548114365500%2C9020121851411527%2C9470207902992420%2C9497457290274787%2C8652823681492857%2C8666425583485741%2C8994613303965762%2C8137170359652500%2C5926725997347504%2C8402933096445343&dlc=1&cf=1&expv2[0]=pl0&expv2[1]=el2&expv2[2]=bc1&expv2[3]=ra0&expv2[4]=rp0&expv2[5]=im1&expv2[6]=hf1&expv2[7]=sd1&expv2[8]=sp1&expv2[9]=ek1&expv2[10]=pc1&expv2[11]=gs1&expv2[12]=zs1&expv2[13]=cp1&expv2[14]=es1&expv2[15]=ac1&expv2[16]=so1&expv2[17]=wc1&expv2[18]=la1&expv2[19]=sf1&expv2[20]=da1&expv2[21]=io1&expv2[22]=ae1&expv2[23]=sx1&expv2[24]=if1&expv2[25]=fd1&expv2[26]=bg1&expv2[27]=mg1&expv2[28]=kl1&expv2[29]=sg1&expv2[30]=mk1&expv2[31]=sn1&expv2[32]=ec1&expv2[33]=mp1&expv2[34]=ps1&expv2[35]=fx1&expv2[36]=vt1&expv2[37]=dp1&expv2[38]=fw1&expv2[39]=cn1&expv2[40]=tz1&expv2[41]=pe1&expv2[42]=ee1&expv2[43]=bu1&expv2[44]=ta1&expv2[45]=ot1&expv2[46]=hv0&expv2[47]=ep1&rqm=GET",
+    "value": "fb.1.1790459068685.273012765883657852"
+   },
+   {
+    "cookie": "tt.u",
+    "count": 2,
+    "from": "r7.com",
+    "kind": "id-1a-parte",
+    "param": "tU",
+    "to": "tailtarget.com",
+    "url": "https://b.t.tailtarget.com/b?tA=TT-9964-3&tY=1&tS=4&tU=0100007FC43CB86ABA06A1090254681C&tX=b.52&tZ=340722878",
+    "value": "0100007FC43CB86ABA06A1090254681C"
+   }
+  ],
+  "syncRedirects": [
+   {
+    "count": 13,
+    "from": "auvp.com.br",
+    "sample": "https://cdn.asupernova.com.br/stocks/icons/BSLI4.svg",
+    "to": "asupernova.com.br"
+   },
+   {
+    "count": 1,
+    "from": "doubleclick.net",
+    "sample": "https://trc.taboola.com/sg/google-authorized-buyers/1/um?gdpr=0&gdpr_consent=&ui=c765b84b-3a8e-44b7-9695-a6fd0efe43cb-tuct11b1c23c&google_gid=CAESEGI6cmj1Kpc4oD7evg85kOg&google_cver=1",
+    "to": "taboola.com"
+   },
+   {
+    "count": 1,
+    "from": "clarity.ms",
+    "sample": "https://c.bing.com/c.gif?ctsa=mr&CtsSyncId=43052A037C914E7FBE5A8A30C4ABFFCA&RedC=c.clarity.ms&MXFR=3C9289A63E7065120D4B9E463A706B27",
+    "to": "bing.com"
+   },
+   {
+    "count": 1,
+    "from": "bing.com",
+    "sample": "https://c.clarity.ms/c.gif?ctsa=mr&CtsSyncId=43052A037C914E7FBE5A8A30C4ABFFCA&MUID=2E89B8EF78936CAE0690AF0F79D96DA9",
+    "to": "clarity.ms"
+   },
+   {
+    "count": 1,
+    "from": "doubleclick.net",
+    "sample": "https://cm.t.tailtarget.com/doubleclick?google_gid=CAESEG__1FukQ3KwKmGEvjCFSTI&google_cver=1&google_ula=862479430,0",
+    "to": "tailtarget.com"
+   }
+  ],
+  "trackingParams": {
+   "page": [],
+   "requests": []
+  }
+ },
+ "url": "https://investidorsardinha.r7.com/"
+}

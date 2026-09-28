@@ -1,0 +1,2073 @@
+{
+ "cookieRejected": [
+  {
+   "attempts": 1,
+   "domain": "com.br",
+   "name": "bm_lso",
+   "reason": "sufixo público",
+   "setBy": "https://www.magazineluiza.com.br/",
+   "source": "js"
+  },
+  {
+   "attempts": 1,
+   "domain": "com.br",
+   "name": "_gcl_au",
+   "reason": "sufixo público",
+   "setBy": "https://www.magazineluiza.com.br/",
+   "source": "js"
+  },
+  {
+   "attempts": 1,
+   "domain": "rgr.bob-recs.com",
+   "name": "stwu",
+   "reason": "domínio não corresponde ao host",
+   "setBy": "https://roger.magazineluiza.com.br/register/?a=ping&u=temp_d9b2a7bc-63bb-486e-988b-1fb8c35e5592&c=45",
+   "source": "http"
+  },
+  {
+   "attempts": 2,
+   "domain": "br",
+   "name": "cto_tld_test",
+   "reason": "sufixo público",
+   "setBy": "https://www.magazineluiza.com.br/",
+   "source": "js"
+  },
+  {
+   "attempts": 2,
+   "domain": "com.br",
+   "name": "cto_tld_test",
+   "reason": "sufixo público",
+   "setBy": "https://www.magazineluiza.com.br/",
+   "source": "js"
+  },
+  {
+   "attempts": 1,
+   "domain": "br",
+   "name": "_tt_enable_cookie",
+   "reason": "sufixo público",
+   "setBy": "https://www.magazineluiza.com.br/",
+   "source": "js"
+  },
+  {
+   "attempts": 1,
+   "domain": "com.br",
+   "name": "_tt_enable_cookie",
+   "reason": "sufixo público",
+   "setBy": "https://www.magazineluiza.com.br/",
+   "source": "js"
+  },
+  {
+   "attempts": 1,
+   "domain": "com.br",
+   "name": "ttcsid_C1I87V1T0U322RQPSRKG",
+   "reason": "sufixo público",
+   "setBy": "https://www.magazineluiza.com.br/",
+   "source": "js"
+  }
+ ],
+ "cookieSummary": {
+  "deletions": 763,
+  "firstParty": 64,
+  "persistent": 29,
+  "rejected": 8,
+  "session": 35,
+  "thirdParty": 0,
+  "total": 64,
+  "viaHttp": 48,
+  "viaJs": 20
+ },
+ "cookies": [
+  {
+   "domain": "m.magazineluiza.com.br",
+   "expiry": null,
+   "httpOnly": false,
+   "name": "filter_categories_modal_added_to_bag",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": "strict",
+   "secure": false,
+   "session": true,
+   "setBy": "https://m.magazineluiza.com.br/mixer-web/static/v1.208.2/_next/static/chunks/apollo-c2c0ea3b9ef8b881.js",
+   "site": "magazineluiza.com.br",
+   "sources": [
+    "http"
+   ],
+   "thirdParty": false,
+   "value": "%5B%22AM%22%5D%5B%22AF%22%5D%5B%22AU%22%5D%5B%22BS%22%5D%5B%22CM%22%5D%5B%22PI%22%5D%5B%22DE%22%5D%5B%22FM%22%5D%5B%22FJ%22%5D%5B%22LI%22%5D%5B%22MD%22%5D%5B%22ME%22%5D%5B%22MS%22%5D%5B%22PA%22%5D%5B%22PE%22%5D%5B%22RG%22%5D%5B%22RE%22%5D%5B%22SE%22%5D%5B%22SA%22%5D",
+   "writes": 26
+  },
+  {
+   "domain": "m.magazineluiza.com.br",
+   "expiry": null,
+   "httpOnly": false,
+   "name": "toggle_add_basket_success_drawer_showcase",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": "strict",
+   "secure": false,
+   "session": true,
+   "setBy": "https://m.magazineluiza.com.br/mixer-web/static/v1.208.2/_next/static/chunks/apollo-c2c0ea3b9ef8b881.js",
+   "site": "magazineluiza.com.br",
+   "sources": [
+    "http"
+   ],
+   "thirdParty": false,
+   "value": "true",
+   "writes": 26
+  },
+  {
+   "domain": "m.magazineluiza.com.br",
+   "expiry": null,
+   "httpOnly": false,
+   "name": "toggle_modal_added_to_bag",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": "strict",
+   "secure": false,
+   "session": true,
+   "setBy": "https://m.magazineluiza.com.br/mixer-web/static/v1.208.2/_next/static/chunks/apollo-c2c0ea3b9ef8b881.js",
+   "site": "magazineluiza.com.br",
+   "sources": [
+    "http"
+   ],
+   "thirdParty": false,
+   "value": "true",
+   "writes": 26
+  },
+  {
+   "domain": "magazineluiza.com.br",
+   "expiry": 3682617899000,
+   "httpOnly": false,
+   "name": "__bid",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": null,
+   "secure": false,
+   "session": false,
+   "setBy": "https://www.magazineluiza.com.br/",
+   "site": "magazineluiza.com.br",
+   "sources": [
+    "js"
+   ],
+   "thirdParty": false,
+   "value": "7d3ecfd6-9039-4761-9095-2e6fcb739dd2",
+   "writes": 1
+  },
+  {
+   "domain": "magazineluiza.com.br",
+   "expiry": 1821993899894,
+   "httpOnly": false,
+   "name": "_abck",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": "none",
+   "secure": true,
+   "session": false,
+   "setBy": "https://www.magazineluiza.com.br/",
+   "site": "magazineluiza.com.br",
+   "sources": [
+    "http"
+   ],
+   "thirdParty": false,
+   "value": "1AA428CA8BDA6365DE7E689C512EC6B2~-1~YAAQjSoRAiDroNagAQAAY2yb3xCbyZzyyY5vyJ3kvskz5viHuLcdKChBUN4bOg5PoabE4+inEjfDFd2mqDuflRcwV9uKhjGQaFBi6qEg+myac3F+GMOI7UvIkXaCVo9ddKjERXy2cQXpyitChcxFj1BiXNX8esx+yGmPLjdMdFoP1d0kD2zHPsah0eLETqW5xii+QLPpc2nCpwtn5E/8XItFWXwb3t7Zy5Y9abGhfJfXMacW0akDJgeb+TcC9DkcAYNgo1DEXTckxyokJkTiF+tJTu77q0Wloto968h81QYvwIHgWiQEhaokngTJCquJttng2PA/3bdIh7hfAtFm9JEFdDhwob9CoPy9mb9vWu5sd5qVECD5cPUlpvOtE9n5aIf1ZQkenH3OF2URAhCtKTuFM4SB6pZePFz8v5GqtMLulZmdg6C3dXedIoPiyqSF8c2O4lnO26YvCEmzB31mC8WFqBFBtvCJEKlRpzcGjV58WoG1eCJTxoSQDMir//9iZEmAjl55lLb4UvYBIxVlHXHLpdmiJzoDbcZ/NoAmtrrc9W61cZwYkM35YWpM7g2Ky71msQniFtuaTiqRup8av4TRFA83H8I88Tit8XjKYKWWj58TrF3WSppNXCvR5fgb0f98tMZmVA==~-1~-1~-1~AAQAAAAG%2f%2f%2f%2f%2f6ndW6nPGesYIuLb0906liqobM+zr4Xmu9wplJYcVTKSjKRYrGKNPPAOOZh%2f5tS4An0yNU3yarwrG0bkJF%2fpCVXn9GgvUU0FdMXq~-1",
+   "writes": 18
+  },
+  {
+   "domain": "magazineluiza.com.br",
+   "expiry": 1798233893000,
+   "httpOnly": false,
+   "name": "_gcl_au",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": null,
+   "secure": false,
+   "session": false,
+   "setBy": "https://www.magazineluiza.com.br/",
+   "site": "magazineluiza.com.br",
+   "sources": [
+    "js"
+   ],
+   "thirdParty": false,
+   "value": "1.1.874291216.1790457894",
+   "writes": 1
+  },
+  {
+   "domain": "magazineluiza.com.br",
+   "expiry": 1824153898000,
+   "httpOnly": false,
+   "name": "_tt_enable_cookie",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": null,
+   "secure": false,
+   "session": false,
+   "setBy": "https://www.magazineluiza.com.br/",
+   "site": "magazineluiza.com.br",
+   "sources": [
+    "js"
+   ],
+   "thirdParty": false,
+   "value": "1",
+   "writes": 1
+  },
+  {
+   "domain": "magazineluiza.com.br",
+   "expiry": 1824153898000,
+   "httpOnly": false,
+   "name": "_ttp",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": null,
+   "secure": false,
+   "session": false,
+   "setBy": "https://www.magazineluiza.com.br/",
+   "site": "magazineluiza.com.br",
+   "sources": [
+    "js"
+   ],
+   "thirdParty": false,
+   "value": "01M3FSPSAXM15G3H6D9J0F0AHD_.tt.2.1790457898352",
+   "writes": 1
+  },
+  {
+   "domain": "magazineluiza.com.br",
+   "expiry": 1790544292000,
+   "httpOnly": false,
+   "name": "abtest_prebasket",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": null,
+   "secure": false,
+   "session": false,
+   "setBy": "https://www.magazineluiza.com.br/",
+   "site": "magazineluiza.com.br",
+   "sources": [
+    "http"
+   ],
+   "thirdParty": false,
+   "value": "B",
+   "writes": 3
+  },
+  {
+   "domain": "magazineluiza.com.br",
+   "expiry": 1790461491000,
+   "httpOnly": true,
+   "name": "AKA_A2",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": null,
+   "secure": true,
+   "session": false,
+   "setBy": "https://www.magazineluiza.com.br/",
+   "site": "magazineluiza.com.br",
+   "sources": [
+    "http"
+   ],
+   "thirdParty": false,
+   "value": "A",
+   "writes": 1
+  },
+  {
+   "domain": "magazineluiza.com.br",
+   "expiry": 1821993891743,
+   "httpOnly": false,
+   "name": "alternative_zipcode",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": null,
+   "secure": false,
+   "session": false,
+   "setBy": "https://www.magazineluiza.com.br/",
+   "site": "magazineluiza.com.br",
+   "sources": [
+    "http"
+   ],
+   "thirdParty": false,
+   "value": "01320010",
+   "writes": 1
+  },
+  {
+   "domain": "magazineluiza.com.br",
+   "expiry": 1790465092000,
+   "httpOnly": false,
+   "name": "basket_abtest",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": null,
+   "secure": false,
+   "session": false,
+   "setBy": "https://www.magazineluiza.com.br/",
+   "site": "magazineluiza.com.br",
+   "sources": [
+    "http"
+   ],
+   "thirdParty": false,
+   "value": "B",
+   "writes": 3
+  },
+  {
+   "domain": "magazineluiza.com.br",
+   "expiry": 1793136306217,
+   "httpOnly": true,
+   "name": "bm_s",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": "none",
+   "secure": true,
+   "session": false,
+   "setBy": "https://www.magazineluiza.com.br/",
+   "site": "magazineluiza.com.br",
+   "sources": [
+    "http"
+   ],
+   "thirdParty": false,
+   "value": "YAAQkyoRAkceJ6GgAQAAHoWb3wY42m3btlvioyau8rYptnN71UeVntLPKfcKNH4UF2ovje+HNVBKXTviqKzAe/Up2dUkqjjr+ZpVgPZjH39hTZ08MbDopa/K8pbZbw1dTfoaeveP2/ZFVOkOsIphHmysVBWXX8E9K9oUapKbEAhjEp98ZlBsN8ITVjCCYhK0PUooB6B0819kKpl4RfbCNuxC7kyQtbTnVBlgeab+VXHq7GJw9WOrrrJeHMowIa3L4JueSzky+18yX5A6LnSVKsIIMXlPUlCSzIMHPKmFWZaw0aAsBHC/cBYb+e7DnhWDDneMxCrhkMwPFfNiDLHbhief8fDSoyqD+G2CKSaq67KNOeMiq+KCp6T3eRcGIW0/EiEmuiVF3PE6wpar/yY2J1kCA6rUDt59olU4AXJDXhkBtgT2qZJoksGuDqhwhQJTUWYtKJOTUkKxZNdy4oqOGYmFvntWiuBCdvlJO9m/3TkwnjkFxHPHGdtbAlc6a+svZFruH0MXs+9lcUEaAQRoOTyMwcMALHDTfN1GCllW6Re7fWxzTGpCze2jPWADplWraRShNIX4BmDoPJCmVtGpFlu1RmmnvMLvPQrpxb7IeRV+BUFihV211arrbgN/xjI2oOfdgbOdZ6df2Xj0TqxdZ5SSCChEMmVaaO8VmVKRRiGEQ8vRSPOKyJNqmtZ01N3ae3Xwl0/Jv9aJT4fYZAWz4cWErev2v6MVA3wkHzzPn9bARUtD2QXUoRvkSfO3YZWV3Naob4Y1XWds7VWGWoVK7RjcQ9Ao/8MjFT3WBOlCjicaIad2NOReLvfwAQoAJFKyFB6bU57WuGdWV78UTHg6pvzjpgYoyORSkDU5+1XGDurUdFfYSrvWLdX8NkBgbUVn3Qq6QZmQ7YXiSL9kEO+rh16Id5lSnKi9R1jALhBhEQpPGnHQ7tu/JbgXfZp5bxsppDW0C8Jy5zLu",
+   "writes": 13
+  },
+  {
+   "domain": "magazineluiza.com.br",
+   "expiry": 1790544291743,
+   "httpOnly": false,
+   "name": "bm_so",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": "none",
+   "secure": true,
+   "session": false,
+   "setBy": "https://www.magazineluiza.com.br/",
+   "site": "magazineluiza.com.br",
+   "sources": [
+    "http"
+   ],
+   "thirdParty": false,
+   "value": "5723B888825ACA9DD62392EEDAC174F4809E4480E0213BA94BF36AFC696CCC66~YAAQjCoRApAiX56gAQAAh0yb3wk+M9qPX7sQVTh7t5Nvv6XKnlIPOuXAb08UxZeEf3O0O0a/hXeDIWV6FXuzQZTZ3I2begkhLsoma+Rp1fO3D12Kiv7uc4D97eIP1+PtraPrYbBRwnwFAJyWB3GWLLd7RhTvDVWS3mBC/HWA/BdaYXx+PbbmA7VZL7sm0qtWR/syIMu2y3pK0t0y7fVFcyJT35ylHhTn+nbPXiK6bf1/DfONkDHlBS9F2jdmP7EE3tDkQp1fgY4kcDkgBnnRMN7eD+pfyS+PFcqJf7R3+au3DP7ko1Qbl9Fmg0hKNtX3YOX75rKXeKElCnBldvXnqNUYHvTFnclFUOu2GNM3nBooPgZU3KJWVw1cJ1sJ7EnS6FYASg1TIhK+RPfnd11rjl3EHFnq1sbalVsHYQbneUr3FSW0nmn8tWJC7RTk7SjX5k1wikmyWKjdbiWNDmR5j2pIAlRi/iiUIjYNBoEJtJJ9frpynCv38ChRomaozQ==~2",
+   "writes": 1
+  },
+  {
+   "domain": "magazineluiza.com.br",
+   "expiry": 1790472290976,
+   "httpOnly": false,
+   "name": "bm_sz",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": "none",
+   "secure": true,
+   "session": false,
+   "setBy": "https://www.magazineluiza.com.br/",
+   "site": "magazineluiza.com.br",
+   "sources": [
+    "http"
+   ],
+   "thirdParty": false,
+   "value": "D78E998EFA7895BEFA9CEAB291AB8E2D~YAAQjSoRAgbgoNagAQAAXVGb3wGPuyJcE2AGTcqIHGaXYJnf4lUpNH3H3e68KZRe4TGZEu9Ski0m9omoiybjwQ9UkaIbk9YsHV5S3AswdGR9NxOpcu0fROx35CAizKVSY3IiKFL2azpYM//fy/9Ko658GzxGWJicX4LtbEi70NFZZEv381TskG3mG5xt57ZpVEthd24/ETdfy3ghcgLIK9qt4SlzQPc7YUPRCCs+y1EKPAEFemg9gvgtyCi2I8xNXykW40qqDDHJvS84EdKnDTdWFnZ5AuAvuBMtX5Rlycm4aIJ4yRGWsdBq6tJZia7SB+9N3R3VAZky+fKSnnjQyWTgqYPcxNN0tr09adakfvciWNIG5RUn75fXtOJptnLFWmGhWCGWEFCJw6VK1aug3oQWCUdsyW9vxiH0agDbQ+gFpEKwh6Y0~3162419~3159361",
+   "writes": 2
+  },
+  {
+   "domain": "magazineluiza.com.br",
+   "expiry": 1821993891743,
+   "httpOnly": false,
+   "name": "city_zipcode",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": null,
+   "secure": false,
+   "session": false,
+   "setBy": "https://www.magazineluiza.com.br/",
+   "site": "magazineluiza.com.br",
+   "sources": [
+    "http"
+   ],
+   "thirdParty": false,
+   "value": "01320010",
+   "writes": 1
+  },
+  {
+   "domain": "magazineluiza.com.br",
+   "expiry": null,
+   "httpOnly": false,
+   "name": "enable_fallback_banner",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": null,
+   "secure": false,
+   "session": true,
+   "setBy": "https://www.magazineluiza.com.br/",
+   "site": "magazineluiza.com.br",
+   "sources": [
+    "http"
+   ],
+   "thirdParty": false,
+   "value": "0",
+   "writes": 19
+  },
+  {
+   "domain": "magazineluiza.com.br",
+   "expiry": null,
+   "httpOnly": false,
+   "name": "FCCDCF",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": null,
+   "secure": false,
+   "session": true,
+   "setBy": "https://www.magazineluiza.com.br/",
+   "site": "magazineluiza.com.br",
+   "sources": [
+    "http"
+   ],
+   "thirdParty": false,
+   "value": "1",
+   "writes": 19
+  },
+  {
+   "domain": "magazineluiza.com.br",
+   "expiry": null,
+   "httpOnly": false,
+   "name": "FCNEC",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": null,
+   "secure": false,
+   "session": true,
+   "setBy": "https://www.magazineluiza.com.br/",
+   "site": "magazineluiza.com.br",
+   "sources": [
+    "http"
+   ],
+   "thirdParty": false,
+   "value": "1",
+   "writes": 19
+  },
+  {
+   "domain": "magazineluiza.com.br",
+   "expiry": null,
+   "httpOnly": false,
+   "name": "filter_categories_basket_button",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": null,
+   "secure": false,
+   "session": true,
+   "setBy": "https://www.magazineluiza.com.br/",
+   "site": "magazineluiza.com.br",
+   "sources": [
+    "http"
+   ],
+   "thirdParty": false,
+   "value": "%5B%22CRED%22%2C%22SEGR%22%2C%22SPEP%22%2C%22SMOV%22%2C%22STAV%22%2C%22SARV%22%2C%22SEIF%22%2C%22SELA%22%2C%22SVAU%22%2C%22PEET%22%2C%22SPSD%22%2C%22SGRS%22%2C%22REFR%22%2C%22FORN%22%2C%22MOND%22%2C%22LALO%22%2C%22ELA1%22%2C%22LAVA%22%2C%22MMLP%22%2C%22SELT%22%2C%22FREE%22%2C%22CEDO%22%2C%22ADEG%22%2C%22ARAR%22%2C%22AR%22%2C%22AM%22%2C%22AF%22%2C%22EA%22%2C%22AU%22%2C%22BB%22%2C%22PF%22%2C%22BS%22%2C%22BR%22%2C%22CM%22%2C%22CF%22%2C%22CJ%22%2C%22CI%22%2C%22TE%22%2C%22CO%22%2C%22PI%22%2C%22CR%22%2C%22DE%22%2C%22ED%22%2C%22EP%22%2C%22ES%22%2C%22FS%22%2C%22FM%22%2C%22FJ%22%2C%22GA%22%2C%22IN%22%2C%22IM%22%2C%22MD%22%2C%22MO%22%2C%22MS%22%2C%22NA%22%2C%22PA%22%2C%22RG%22%2C%22CP%22%2C%22SE%22%2C%22SA%22%2C%22TB%22%2C%22TF%22%2C%22ET%22%2C%22UD%22%5D",
+   "writes": 45
+  },
+  {
+   "domain": "magazineluiza.com.br",
+   "expiry": null,
+   "httpOnly": false,
+   "name": "filter_categories_modal_added_to_bag",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": "strict",
+   "secure": false,
+   "session": true,
+   "setBy": "https://www.magazineluiza.com.br/",
+   "site": "magazineluiza.com.br",
+   "sources": [
+    "http"
+   ],
+   "thirdParty": false,
+   "value": "%5B%22AM%22%5D%5B%22AF%22%5D%5B%22AU%22%5D%5B%22BS%22%5D%5B%22CM%22%5D%5B%22PI%22%5D%5B%22DE%22%5D%5B%22FM%22%5D%5B%22FJ%22%5D%5B%22LI%22%5D%5B%22MD%22%5D%5B%22ME%22%5D%5B%22MS%22%5D%5B%22PA%22%5D%5B%22PE%22%5D%5B%22RG%22%5D%5B%22RE%22%5D%5B%22SE%22%5D%5B%22SA%22%5D",
+   "writes": 19
+  },
+  {
+   "domain": "magazineluiza.com.br",
+   "expiry": null,
+   "httpOnly": false,
+   "name": "mixer_hub_shipping",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": null,
+   "secure": false,
+   "session": true,
+   "setBy": "https://www.magazineluiza.com.br/",
+   "site": "magazineluiza.com.br",
+   "sources": [
+    "http"
+   ],
+   "thirdParty": false,
+   "value": "true",
+   "writes": 45
+  },
+  {
+   "domain": "magazineluiza.com.br",
+   "expiry": null,
+   "httpOnly": false,
+   "name": "mixer_shipping",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": null,
+   "secure": false,
+   "session": true,
+   "setBy": "https://www.magazineluiza.com.br/",
+   "site": "magazineluiza.com.br",
+   "sources": [
+    "http"
+   ],
+   "thirdParty": false,
+   "value": "AUTO",
+   "writes": 45
+  },
+  {
+   "domain": "magazineluiza.com.br",
+   "expiry": 1821993893000,
+   "httpOnly": false,
+   "name": "ml_tid",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": null,
+   "secure": false,
+   "session": false,
+   "setBy": "https://www.magazineluiza.com.br/",
+   "site": "magazineluiza.com.br",
+   "sources": [
+    "js"
+   ],
+   "thirdParty": false,
+   "value": "b18ee773-8827-4145-9265-6486c5b514b5",
+   "writes": 1
+  },
+  {
+   "domain": "magazineluiza.com.br",
+   "expiry": null,
+   "httpOnly": false,
+   "name": "ml2_redirect_8020",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": null,
+   "secure": false,
+   "session": true,
+   "setBy": "https://www.magazineluiza.com.br/",
+   "site": "magazineluiza.com.br",
+   "sources": [
+    "http"
+   ],
+   "thirdParty": false,
+   "value": "0",
+   "writes": 19
+  },
+  {
+   "domain": "magazineluiza.com.br",
+   "expiry": 1793049892000,
+   "httpOnly": false,
+   "name": "mlparceiro",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": null,
+   "secure": false,
+   "session": false,
+   "setBy": "https://www.magazineluiza.com.br/",
+   "site": "magazineluiza.com.br",
+   "sources": [
+    "http"
+   ],
+   "thirdParty": false,
+   "value": "3653",
+   "writes": 3
+  },
+  {
+   "domain": "magazineluiza.com.br",
+   "expiry": null,
+   "httpOnly": false,
+   "name": "page_before_login",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": null,
+   "secure": false,
+   "session": true,
+   "setBy": "https://www.magazineluiza.com.br/",
+   "site": "magazineluiza.com.br",
+   "sources": [
+    "js"
+   ],
+   "thirdParty": false,
+   "value": "home",
+   "writes": 1
+  },
+  {
+   "domain": "magazineluiza.com.br",
+   "expiry": 1821993891743,
+   "httpOnly": false,
+   "name": "region_zipcode",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": null,
+   "secure": false,
+   "session": false,
+   "setBy": "https://www.magazineluiza.com.br/",
+   "site": "magazineluiza.com.br",
+   "sources": [
+    "http"
+   ],
+   "thirdParty": false,
+   "value": "01430000",
+   "writes": 1
+  },
+  {
+   "domain": "magazineluiza.com.br",
+   "expiry": null,
+   "httpOnly": false,
+   "name": "show_seller_score_above",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": null,
+   "secure": false,
+   "session": true,
+   "setBy": "https://www.magazineluiza.com.br/",
+   "site": "magazineluiza.com.br",
+   "sources": [
+    "http"
+   ],
+   "thirdParty": false,
+   "value": "5",
+   "writes": 45
+  },
+  {
+   "domain": "magazineluiza.com.br",
+   "expiry": null,
+   "httpOnly": false,
+   "name": "stwt",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": null,
+   "secure": false,
+   "session": true,
+   "setBy": "https://www.magazineluiza.com.br/",
+   "site": "magazineluiza.com.br",
+   "sources": [
+    "js"
+   ],
+   "thirdParty": false,
+   "value": "1",
+   "writes": 1
+  },
+  {
+   "domain": "magazineluiza.com.br",
+   "expiry": null,
+   "httpOnly": false,
+   "name": "stwu",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": null,
+   "secure": false,
+   "session": true,
+   "setBy": "https://www.magazineluiza.com.br/",
+   "site": "magazineluiza.com.br",
+   "sources": [
+    "js"
+   ],
+   "thirdParty": false,
+   "value": "temp_d9b2a7bc-63bb-486e-988b-1fb8c35e5592",
+   "writes": 1
+  },
+  {
+   "domain": "magazineluiza.com.br",
+   "expiry": 1790459708000,
+   "httpOnly": false,
+   "name": "theme",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": null,
+   "secure": false,
+   "session": false,
+   "setBy": "https://www.magazineluiza.com.br/",
+   "site": "magazineluiza.com.br",
+   "sources": [
+    "http"
+   ],
+   "thirdParty": false,
+   "value": "theme-default",
+   "writes": 19
+  },
+  {
+   "domain": "magazineluiza.com.br",
+   "expiry": null,
+   "httpOnly": false,
+   "name": "toggle_add_basket_success_drawer_showcase",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": "strict",
+   "secure": false,
+   "session": true,
+   "setBy": "https://www.magazineluiza.com.br/",
+   "site": "magazineluiza.com.br",
+   "sources": [
+    "http"
+   ],
+   "thirdParty": false,
+   "value": "true",
+   "writes": 19
+  },
+  {
+   "domain": "magazineluiza.com.br",
+   "expiry": null,
+   "httpOnly": false,
+   "name": "toggle_ads",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": null,
+   "secure": false,
+   "session": true,
+   "setBy": "https://www.magazineluiza.com.br/",
+   "site": "magazineluiza.com.br",
+   "sources": [
+    "http"
+   ],
+   "thirdParty": false,
+   "value": "true",
+   "writes": 19
+  },
+  {
+   "domain": "magazineluiza.com.br",
+   "expiry": null,
+   "httpOnly": false,
+   "name": "toggle_agatha",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": null,
+   "secure": false,
+   "session": true,
+   "setBy": "https://www.magazineluiza.com.br/",
+   "site": "magazineluiza.com.br",
+   "sources": [
+    "http"
+   ],
+   "thirdParty": false,
+   "value": "true",
+   "writes": 19
+  },
+  {
+   "domain": "magazineluiza.com.br",
+   "expiry": null,
+   "httpOnly": false,
+   "name": "toggle_basket_button",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": null,
+   "secure": false,
+   "session": true,
+   "setBy": "https://www.magazineluiza.com.br/",
+   "site": "magazineluiza.com.br",
+   "sources": [
+    "http"
+   ],
+   "thirdParty": false,
+   "value": "true",
+   "writes": 45
+  },
+  {
+   "domain": "magazineluiza.com.br",
+   "expiry": null,
+   "httpOnly": false,
+   "name": "toggle_enable_product_review",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": null,
+   "secure": false,
+   "session": true,
+   "setBy": "https://m.magazineluiza.com.br/mixer-web/static/v1.208.2/_next/static/chunks/apollo-c2c0ea3b9ef8b881.js",
+   "site": "magazineluiza.com.br",
+   "sources": [
+    "http"
+   ],
+   "thirdParty": false,
+   "value": "false",
+   "writes": 26
+  },
+  {
+   "domain": "magazineluiza.com.br",
+   "expiry": null,
+   "httpOnly": false,
+   "name": "toggle_header_basket_counter",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": null,
+   "secure": false,
+   "session": true,
+   "setBy": "https://www.magazineluiza.com.br/",
+   "site": "magazineluiza.com.br",
+   "sources": [
+    "http"
+   ],
+   "thirdParty": false,
+   "value": "true",
+   "writes": 45
+  },
+  {
+   "domain": "magazineluiza.com.br",
+   "expiry": null,
+   "httpOnly": false,
+   "name": "toggle_header_trends",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": null,
+   "secure": false,
+   "session": true,
+   "setBy": "https://www.magazineluiza.com.br/",
+   "site": "magazineluiza.com.br",
+   "sources": [
+    "http"
+   ],
+   "thirdParty": false,
+   "value": "true",
+   "writes": 45
+  },
+  {
+   "domain": "magazineluiza.com.br",
+   "expiry": null,
+   "httpOnly": false,
+   "name": "toggle_modal_added_to_bag",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": "strict",
+   "secure": false,
+   "session": true,
+   "setBy": "https://www.magazineluiza.com.br/",
+   "site": "magazineluiza.com.br",
+   "sources": [
+    "http"
+   ],
+   "thirdParty": false,
+   "value": "true",
+   "writes": 19
+  },
+  {
+   "domain": "magazineluiza.com.br",
+   "expiry": null,
+   "httpOnly": false,
+   "name": "toggle_new_service_page",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": null,
+   "secure": false,
+   "session": true,
+   "setBy": "https://www.magazineluiza.com.br/",
+   "site": "magazineluiza.com.br",
+   "sources": [
+    "http"
+   ],
+   "thirdParty": false,
+   "value": "true",
+   "writes": 45
+  },
+  {
+   "domain": "magazineluiza.com.br",
+   "expiry": 1790461508000,
+   "httpOnly": false,
+   "name": "toggle_new_service_page_spa",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": null,
+   "secure": false,
+   "session": false,
+   "setBy": "https://www.magazineluiza.com.br/",
+   "site": "magazineluiza.com.br",
+   "sources": [
+    "http"
+   ],
+   "thirdParty": false,
+   "value": "false",
+   "writes": 19
+  },
+  {
+   "domain": "magazineluiza.com.br",
+   "expiry": null,
+   "httpOnly": false,
+   "name": "toggle_offer_timer",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": null,
+   "secure": false,
+   "session": true,
+   "setBy": "https://m.magazineluiza.com.br/mixer-web/static/v1.208.2/_next/static/chunks/apollo-c2c0ea3b9ef8b881.js",
+   "site": "magazineluiza.com.br",
+   "sources": [
+    "http"
+   ],
+   "thirdParty": false,
+   "value": "true",
+   "writes": 26
+  },
+  {
+   "domain": "magazineluiza.com.br",
+   "expiry": null,
+   "httpOnly": false,
+   "name": "toggle_pdp_seller_score",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": null,
+   "secure": false,
+   "session": true,
+   "setBy": "https://www.magazineluiza.com.br/",
+   "site": "magazineluiza.com.br",
+   "sources": [
+    "http"
+   ],
+   "thirdParty": false,
+   "value": "true",
+   "writes": 45
+  },
+  {
+   "domain": "magazineluiza.com.br",
+   "expiry": null,
+   "httpOnly": false,
+   "name": "toggle_quick_click",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": null,
+   "secure": false,
+   "session": true,
+   "setBy": "https://www.magazineluiza.com.br/",
+   "site": "magazineluiza.com.br",
+   "sources": [
+    "http"
+   ],
+   "thirdParty": false,
+   "value": "false",
+   "writes": 19
+  },
+  {
+   "domain": "magazineluiza.com.br",
+   "expiry": null,
+   "httpOnly": false,
+   "name": "toggle_show_luiza_installment_plan",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": null,
+   "secure": false,
+   "session": true,
+   "setBy": "https://www.magazineluiza.com.br/",
+   "site": "magazineluiza.com.br",
+   "sources": [
+    "http"
+   ],
+   "thirdParty": false,
+   "value": "true",
+   "writes": 45
+  },
+  {
+   "domain": "magazineluiza.com.br",
+   "expiry": null,
+   "httpOnly": false,
+   "name": "toggle_trending_showcase",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": null,
+   "secure": false,
+   "session": true,
+   "setBy": "https://www.magazineluiza.com.br/",
+   "site": "magazineluiza.com.br",
+   "sources": [
+    "http"
+   ],
+   "thirdParty": false,
+   "value": "true",
+   "writes": 45
+  },
+  {
+   "domain": "magazineluiza.com.br",
+   "expiry": null,
+   "httpOnly": false,
+   "name": "toggle_vwo",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": null,
+   "secure": false,
+   "session": true,
+   "setBy": "https://www.magazineluiza.com.br/",
+   "site": "magazineluiza.com.br",
+   "sources": [
+    "http"
+   ],
+   "thirdParty": false,
+   "value": "true",
+   "writes": 45
+  },
+  {
+   "domain": "magazineluiza.com.br",
+   "expiry": null,
+   "httpOnly": false,
+   "name": "toggle_whatsapp_button",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": null,
+   "secure": false,
+   "session": true,
+   "setBy": "https://m.magazineluiza.com.br/mixer-web/static/v1.208.2/_next/static/chunks/apollo-c2c0ea3b9ef8b881.js",
+   "site": "magazineluiza.com.br",
+   "sources": [
+    "http"
+   ],
+   "thirdParty": false,
+   "value": "true",
+   "writes": 26
+  },
+  {
+   "domain": "magazineluiza.com.br",
+   "expiry": null,
+   "httpOnly": false,
+   "name": "toggle_wishlist",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": null,
+   "secure": false,
+   "session": true,
+   "setBy": "https://www.magazineluiza.com.br/",
+   "site": "magazineluiza.com.br",
+   "sources": [
+    "http"
+   ],
+   "thirdParty": false,
+   "value": "false",
+   "writes": 45
+  },
+  {
+   "domain": "magazineluiza.com.br",
+   "expiry": null,
+   "httpOnly": false,
+   "name": "toggleAutoShipping",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": null,
+   "secure": false,
+   "session": true,
+   "setBy": "https://www.magazineluiza.com.br/",
+   "site": "magazineluiza.com.br",
+   "sources": [
+    "http"
+   ],
+   "thirdParty": false,
+   "value": "AUTO",
+   "writes": 45
+  },
+  {
+   "domain": "magazineluiza.com.br",
+   "expiry": 1824153900000,
+   "httpOnly": false,
+   "name": "ttcsid",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": null,
+   "secure": false,
+   "session": false,
+   "setBy": "https://www.magazineluiza.com.br/",
+   "site": "magazineluiza.com.br",
+   "sources": [
+    "js"
+   ],
+   "thirdParty": false,
+   "value": "1790457899512::TK0M9Plg4vDPWPpjAc1k.1.1790457900394.0::1.-5191.0::0.0.0.0::0.0.0",
+   "writes": 6
+  },
+  {
+   "domain": "magazineluiza.com.br",
+   "expiry": 1824153900000,
+   "httpOnly": false,
+   "name": "ttcsid_C1I87V1T0U322RQPSRKG",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": null,
+   "secure": false,
+   "session": false,
+   "setBy": "https://www.magazineluiza.com.br/",
+   "site": "magazineluiza.com.br",
+   "sources": [
+    "js"
+   ],
+   "thirdParty": false,
+   "value": "1790457899435::hEBlu0og4Wtn7iw7qKMx.1.1790457900395.0",
+   "writes": 5
+  },
+  {
+   "domain": "magazineluiza.com.br",
+   "expiry": null,
+   "httpOnly": false,
+   "name": "whatsapp_text",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": null,
+   "secure": false,
+   "session": true,
+   "setBy": "https://m.magazineluiza.com.br/mixer-web/static/v1.208.2/_next/static/chunks/apollo-c2c0ea3b9ef8b881.js",
+   "site": "magazineluiza.com.br",
+   "sources": [
+    "http"
+   ],
+   "thirdParty": false,
+   "value": "Me%20ajude%20a%20escolher%20a%20melhor%20promo%C3%A7%C3%A3o%2C%20Lu",
+   "writes": 26
+  },
+  {
+   "domain": "magazineluiza.com.br",
+   "expiry": 1821993894000,
+   "httpOnly": false,
+   "name": "zipcode",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": null,
+   "secure": false,
+   "session": false,
+   "setBy": "https://www.magazineluiza.com.br/",
+   "site": "magazineluiza.com.br",
+   "sources": [
+    "http",
+    "js"
+   ],
+   "thirdParty": false,
+   "value": "01320010",
+   "writes": 2
+  },
+  {
+   "domain": "magazineluiza.com.br",
+   "expiry": 1821993894000,
+   "httpOnly": false,
+   "name": "zipcode_city",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": null,
+   "secure": false,
+   "session": false,
+   "setBy": "https://www.magazineluiza.com.br/",
+   "site": "magazineluiza.com.br",
+   "sources": [
+    "http",
+    "js"
+   ],
+   "thirdParty": false,
+   "value": "Sao%2520Paulo",
+   "writes": 2
+  },
+  {
+   "domain": "magazineluiza.com.br",
+   "expiry": 1821993894000,
+   "httpOnly": false,
+   "name": "zipcode_latitude",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": null,
+   "secure": false,
+   "session": false,
+   "setBy": "https://www.magazineluiza.com.br/",
+   "site": "magazineluiza.com.br",
+   "sources": [
+    "js"
+   ],
+   "thirdParty": false,
+   "value": "-23.5617327",
+   "writes": 1
+  },
+  {
+   "domain": "magazineluiza.com.br",
+   "expiry": 1821993894000,
+   "httpOnly": false,
+   "name": "zipcode_longitude",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": null,
+   "secure": false,
+   "session": false,
+   "setBy": "https://www.magazineluiza.com.br/",
+   "site": "magazineluiza.com.br",
+   "sources": [
+    "js"
+   ],
+   "thirdParty": false,
+   "value": "-46.6369215",
+   "writes": 1
+  },
+  {
+   "domain": "magazineluiza.com.br",
+   "expiry": 1821993894000,
+   "httpOnly": false,
+   "name": "zipcode_mode",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": null,
+   "secure": false,
+   "session": false,
+   "setBy": "https://www.magazineluiza.com.br/",
+   "site": "magazineluiza.com.br",
+   "sources": [
+    "http",
+    "js"
+   ],
+   "thirdParty": false,
+   "value": "system",
+   "writes": 3
+  },
+  {
+   "domain": "magazineluiza.com.br",
+   "expiry": 1821993894000,
+   "httpOnly": false,
+   "name": "zipcode_state",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": null,
+   "secure": false,
+   "session": false,
+   "setBy": "https://www.magazineluiza.com.br/",
+   "site": "magazineluiza.com.br",
+   "sources": [
+    "http",
+    "js"
+   ],
+   "thirdParty": false,
+   "value": "SP",
+   "writes": 2
+  },
+  {
+   "domain": "magazineluiza.com.br",
+   "expiry": 1821993894000,
+   "httpOnly": false,
+   "name": "zipcode_street",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": null,
+   "secure": false,
+   "session": false,
+   "setBy": "https://www.magazineluiza.com.br/",
+   "site": "magazineluiza.com.br",
+   "sources": [
+    "js"
+   ],
+   "thirdParty": false,
+   "value": "Rua%2520Conde%2520de%2520Sao%2520Joaquim",
+   "writes": 1
+  },
+  {
+   "domain": "www.magazineluiza.com.br",
+   "expiry": 1821993900000,
+   "httpOnly": false,
+   "name": "__spdt",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": "strict",
+   "secure": false,
+   "session": false,
+   "setBy": "https://www.magazineluiza.com.br/",
+   "site": "magazineluiza.com.br",
+   "sources": [
+    "js"
+   ],
+   "thirdParty": false,
+   "value": "8ef915bd29fd4129afd18afed4018d38",
+   "writes": 1
+  },
+  {
+   "domain": "www.magazineluiza.com.br",
+   "expiry": null,
+   "httpOnly": false,
+   "name": "_azfp_sc",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": null,
+   "secure": false,
+   "session": true,
+   "setBy": "https://www.magazineluiza.com.br/",
+   "site": "magazineluiza.com.br",
+   "sources": [
+    "js"
+   ],
+   "thirdParty": false,
+   "value": "dea507667c37a6701757d840d24631b716dce8157f3be7771329960eb632c1a3",
+   "writes": 1
+  },
+  {
+   "domain": "www.magazineluiza.com.br",
+   "expiry": 1793049893000,
+   "httpOnly": false,
+   "name": "bm_lso",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": null,
+   "secure": false,
+   "session": false,
+   "setBy": "https://www.magazineluiza.com.br/",
+   "site": "magazineluiza.com.br",
+   "sources": [
+    "js"
+   ],
+   "thirdParty": false,
+   "value": "5723B888825ACA9DD62392EEDAC174F4809E4480E0213BA94BF36AFC696CCC66~YAAQjCoRApAiX56gAQAAh0yb3wk+M9qPX7sQVTh7t5Nvv6XKnlIPOuXAb08UxZeEf3O0O0a/hXeDIWV6FXuzQZTZ3I2begkhLsoma+Rp1fO3D12Kiv7uc4D97eIP1+PtraPrYbBRwnwFAJyWB3GWLLd7RhTvDVWS3mBC/HWA/BdaYXx+PbbmA7VZL7sm0qtWR/syIMu2y3pK0t0y7fVFcyJT35ylHhTn+nbPXiK6bf1/DfONkDHlBS9F2jdmP7EE3tDkQp1fgY4kcDkgBnnRMN7eD+pfyS+PFcqJf7R3+au3DP7ko1Qbl9Fmg0hKNtX3YOX75rKXeKElCnBldvXnqNUYHvTFnclFUOu2GNM3nBooPgZU3KJWVw1cJ1sJ7EnS6FYASg1TIhK+RPfnd11rjl3EHFnq1sbalVsHYQbneUr3FSW0nmn8tWJC7RTk7SjX5k1wikmyWKjdbiWNDmR5j2pIAlRi/iiUIjYNBoEJtJJ9frpynCv38ChRomaozQ==~2~1790457893185",
+   "writes": 1
+  }
+ ],
+ "firstPartyRequests": 403,
+ "host": "www.magazineluiza.com.br",
+ "site": "magazineluiza.com.br",
+ "startedAt": 1790457891625,
+ "storage": [
+  {
+   "idb": [],
+   "local": {
+    "bytes": 2074,
+    "count": 10,
+    "items": [
+     {
+      "key": "cart",
+      "preview": "{}",
+      "size": 12
+     },
+     {
+      "key": "_vwo_eventHistSession",
+      "preview": "{\"vwo_pageView\":[{\"page\":{\"url\":\"https://www.magazineluiza.c…",
+      "size": 330
+     },
+     {
+      "key": "bagCount",
+      "preview": "{\"value\":0}",
+      "size": 38
+     },
+     {
+      "key": "wishlist",
+      "preview": "{\"expireIn\":1790461493493,\"items\":[]}",
+      "size": 90
+     },
+     {
+      "key": "_gcl_ls",
+      "preview": "{\"schema\":\"gcl\",\"version\":1,\"gcl_ctr\":{\"value\":{\"value\":0,\"t…",
+      "size": 568
+     },
+     {
+      "key": "vwoSn",
+      "preview": "{\"v\":\"0.1.0\",\"lt\":\"1790457897\",\"r\":\"\",\"cu\":\"https%3A%2F%2Fww…",
+      "size": 184
+     },
+     {
+      "key": "searched_term",
+      "preview": "[\"\"]",
+      "size": 34
+     },
+     {
+      "key": "_vwo",
+      "preview": "ts~q3vCS0F(MR0)u~DA65A3485B74D9E3DDBF1E5FA43ECAEC8(8WI)m~3$1…",
+      "size": 308
+     },
+     {
+      "key": "_vwo_uuid_v2",
+      "preview": "DA65A3485B74D9E3DDBF1E5FA43ECAEC8|819907765600a710b560d3c437…",
+      "size": 156
+     },
+     {
+      "key": "_vwo_eventHist",
+      "preview": "{\"vwo_pageView\":[{\"page\":{\"url\":\"https://www.magazineluiza.c…",
+      "size": 354
+     }
+    ]
+   },
+   "ops": [
+    {
+     "api": "local",
+     "key": "dummy",
+     "ops": {
+      "remove": 1,
+      "set": 1
+     },
+     "preview": "test",
+     "size": 8,
+     "writes": 1
+    },
+    {
+     "api": "local",
+     "key": "ak_a",
+     "ops": {
+      "remove": 1
+     },
+     "preview": "",
+     "size": 0,
+     "writes": 0
+    },
+    {
+     "api": "local",
+     "key": "ak_ax",
+     "ops": {
+      "remove": 1
+     },
+     "preview": "",
+     "size": 0,
+     "writes": 0
+    },
+    {
+     "api": "local",
+     "key": "searched_term",
+     "ops": {
+      "set": 1
+     },
+     "preview": "[\"\"]",
+     "size": 8,
+     "writes": 1
+    },
+    {
+     "api": "local",
+     "key": "wishlist",
+     "ops": {
+      "set": 1
+     },
+     "preview": "{\"expireIn\":1790461493493,\"items\":[]}",
+     "size": 74,
+     "writes": 1
+    },
+    {
+     "api": "local",
+     "key": "_gcl_ls",
+     "ops": {
+      "set": 2
+     },
+     "preview": "{\"schema\":\"gcl\",\"version\":1,\"gcl_ctr\":{\"value\":{\"value\":0,\"t…",
+     "size": 554,
+     "writes": 2
+    },
+    {
+     "api": "local",
+     "key": "cart",
+     "ops": {
+      "set": 1
+     },
+     "preview": "{}",
+     "size": 4,
+     "writes": 1
+    },
+    {
+     "api": "local",
+     "key": "bagCount",
+     "ops": {
+      "set": 1
+     },
+     "preview": "{\"value\":0}",
+     "size": 22,
+     "writes": 1
+    },
+    {
+     "api": "session",
+     "key": "dummy",
+     "ops": {
+      "remove": 1,
+      "set": 1
+     },
+     "preview": "test",
+     "size": 8,
+     "writes": 1
+    },
+    {
+     "api": "session",
+     "key": "ak_bm_tab_id",
+     "ops": {
+      "set": 1
+     },
+     "preview": "muiweif6rr8051urajo",
+     "size": 38,
+     "writes": 1
+    },
+    {
+     "api": "local",
+     "key": "criteo_localstorage_check",
+     "ops": {
+      "remove": 1,
+      "set": 1
+     },
+     "preview": "test_value",
+     "size": 20,
+     "writes": 1
+    },
+    {
+     "api": "local",
+     "key": "_vwo_uuid_v2",
+     "ops": {
+      "set": 1
+     },
+     "preview": "DA65A3485B74D9E3DDBF1E5FA43ECAEC8|819907765600a710b560d3c437…",
+     "size": 132,
+     "writes": 1
+    },
+    {
+     "api": "local",
+     "key": "_vwo",
+     "ops": {
+      "set": 25
+     },
+     "preview": "ts~q3vCS0F(MR0)u~DA65A3485B74D9E3DDBF1E5FA43ECAEC8(8WI)m~3$1…",
+     "size": 300,
+     "writes": 25
+    },
+    {
+     "api": "local",
+     "key": "vwoSn",
+     "ops": {
+      "set": 2
+     },
+     "preview": "{\"v\":\"0.1.0\",\"lt\":\"1790457897\",\"r\":\"\",\"cu\":\"https%3A%2F%2Fww…",
+     "size": 174,
+     "writes": 2
+    },
+    {
+     "api": "local",
+     "key": "_vwo_eventHistSession",
+     "ops": {
+      "set": 1
+     },
+     "preview": "{\"vwo_pageView\":[{\"page\":{\"url\":\"https://www.magazineluiza.c…",
+     "size": 288,
+     "writes": 1
+    },
+    {
+     "api": "local",
+     "key": "_vwo_eventHist",
+     "ops": {
+      "set": 1
+     },
+     "preview": "{\"vwo_pageView\":[{\"page\":{\"url\":\"https://www.magazineluiza.c…",
+     "size": 326,
+     "writes": 1
+    },
+    {
+     "api": "session",
+     "key": "tt_sessionId",
+     "ops": {
+      "set": 1
+     },
+     "preview": "\"e4341f0b-b963-11f1-b299-d28287c5974b::d25AUsFh60htZRpRFrRx\"",
+     "size": 120,
+     "writes": 1
+    },
+    {
+     "api": "session",
+     "key": "tt_appInfo",
+     "ops": {
+      "set": 1
+     },
+     "preview": "{\"platform\":\"pc\"}",
+     "size": 34,
+     "writes": 1
+    },
+    {
+     "api": "session",
+     "key": "tt_pixel_session_index",
+     "ops": {
+      "set": 1
+     },
+     "preview": "{\"index\":0,\"main\":0}",
+     "size": 40,
+     "writes": 1
+    },
+    {
+     "api": "session",
+     "key": "__spdt",
+     "ops": {
+      "set": 1
+     },
+     "preview": "1ed2c74e2a584c00badf3f54e40b169b",
+     "size": 64,
+     "writes": 1
+    },
+    {
+     "api": "local",
+     "key": "spdt-1790457900.513-788",
+     "ops": {
+      "remove": 1,
+      "set": 1
+     },
+     "preview": "{\"order\":10,\"pid\":\"98c4c6e995e542d7be7c8cf7b6da5230\",\"sid\":\"…",
+     "size": 736,
+     "writes": 1
+    },
+    {
+     "api": "local",
+     "key": "spdt-1790457900.644-830",
+     "ops": {
+      "remove": 1,
+      "set": 1
+     },
+     "preview": "{\"order\":11,\"pid\":\"98c4c6e995e542d7be7c8cf7b6da5230\",\"sid\":\"…",
+     "size": 648,
+     "writes": 1
+    }
+   ],
+   "origin": "https://www.magazineluiza.com.br",
+   "session": {
+    "bytes": 420,
+    "count": 5,
+    "items": [
+     {
+      "key": "ak_bm_tab_id",
+      "preview": "muiweif6rr8051urajo",
+      "size": 62
+     },
+     {
+      "key": "__spdt",
+      "preview": "1ed2c74e2a584c00badf3f54e40b169b",
+      "size": 76
+     },
+     {
+      "key": "tt_appInfo",
+      "preview": "{\"platform\":\"pc\"}",
+      "size": 54
+     },
+     {
+      "key": "tt_pixel_session_index",
+      "preview": "{\"index\":0,\"main\":0}",
+      "size": 84
+     },
+     {
+      "key": "tt_sessionId",
+      "preview": "\"e4341f0b-b963-11f1-b299-d28287c5974b::d25AUsFh60htZRpRFrRx\"",
+      "size": 144
+     }
+    ]
+   },
+   "site": "magazineluiza.com.br",
+   "thirdParty": false,
+   "writes": 46
+  }
+ ],
+ "storageSummary": {
+  "bytes": 2494,
+  "idbDatabases": 0,
+  "localItems": 10,
+  "origins": 1,
+  "sessionItems": 5,
+  "thirdPartyOrigins": 0,
+  "writes": 46
+ },
+ "thirdParty": [
+  {
+   "blocked": {
+    "cancelled": 1,
+    "error": 0,
+    "etp": 0
+   },
+   "classifications": [
+    "tracking_analytics",
+    "any_basic_tracking",
+    "any_strict_tracking"
+   ],
+   "cookies": 0,
+   "count": 6,
+   "hosts": [
+    "dev.visualwebsiteoptimizer.com"
+   ],
+   "sample": "https://dev.visualwebsiteoptimizer.com/j.php?a=752930&u=https%3A%2F%2Fwww.magazineluiza.com.br%2F&f=1&vn=1.5",
+   "site": "visualwebsiteoptimizer.com",
+   "tracker": true,
+   "types": {
+    "image": 1,
+    "script": 5
+   }
+  },
+  {
+   "blocked": {
+    "cancelled": 6,
+    "error": 0,
+    "etp": 0
+   },
+   "classifications": [
+    "tracking_ad",
+    "any_basic_tracking",
+    "any_strict_tracking"
+   ],
+   "cookies": 0,
+   "count": 6,
+   "hosts": [
+    "analytics.tiktok.com"
+   ],
+   "sample": "https://analytics.tiktok.com/api/v2/pixel",
+   "site": "tiktok.com",
+   "tracker": true,
+   "types": {
+    "xmlhttprequest": 6
+   }
+  },
+  {
+   "blocked": {
+    "cancelled": 0,
+    "error": 0,
+    "etp": 0
+   },
+   "classifications": [
+    "tracking_ad",
+    "any_basic_tracking",
+    "any_strict_tracking"
+   ],
+   "cookies": 0,
+   "count": 5,
+   "hosts": [
+    "pixels.spotify.com"
+   ],
+   "sample": "https://pixels.spotify.com/v1/config/66f417c2d2344c0980e19d4e7f996073",
+   "site": "spotify.com",
+   "tracker": true,
+   "types": {
+    "xmlhttprequest": 5
+   }
+  },
+  {
+   "blocked": {
+    "cancelled": 2,
+    "error": 0,
+    "etp": 0
+   },
+   "classifications": [
+    "tracking_analytics",
+    "any_basic_tracking",
+    "any_strict_tracking"
+   ],
+   "cookies": 0,
+   "count": 2,
+   "hosts": [
+    "s.go-mpulse.net"
+   ],
+   "sample": "https://s.go-mpulse.net/boomerang/7NWWZ-QTX5S-W4TRK-CT6RN-DNXLL",
+   "site": "go-mpulse.net",
+   "tracker": true,
+   "types": {
+    "script": 2
+   }
+  },
+  {
+   "blocked": {
+    "cancelled": 2,
+    "error": 0,
+    "etp": 0
+   },
+   "classifications": [
+    "tracking_ad",
+    "any_basic_tracking",
+    "any_strict_tracking",
+    "any_social_tracking"
+   ],
+   "cookies": 0,
+   "count": 2,
+   "hosts": [
+    "static.ads-twitter.com"
+   ],
+   "sample": "https://static.ads-twitter.com/uwt.js",
+   "site": "ads-twitter.com",
+   "tracker": true,
+   "types": {
+    "script": 2
+   }
+  },
+  {
+   "blocked": {
+    "cancelled": 2,
+    "error": 0,
+    "etp": 0
+   },
+   "classifications": [
+    "tracking_content",
+    "any_strict_tracking"
+   ],
+   "cookies": 0,
+   "count": 2,
+   "hosts": [
+    "www.google.com"
+   ],
+   "sample": "https://www.google.com/ccm/collect?rcb=7&frm=0&apvc=1&ae=g&auid=874291216.1790457894&dt=Magazine%20Luiza%20%7C%20Pra%20voc%C3%AA%20%C3%A9%20Magalu!&en=page_view&dl=https%3A%2F%2Fwww.magazineluiza.com.br%2F&scrsrc=www.googletagmanager.com&rnd=248987291.1790457894&navt=n&npa=0&ep.ads_data_redaction=0&gtm=45He69o0h2v9170898603za200zd9170898603xeaxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=115616985~115938465~115938468~118897920~118897930~119317811~120385422~120469145~120469153&tft=1790457893638&tfd=2023&fmt=8",
+   "site": "google.com",
+   "tracker": true,
+   "types": {
+    "image": 1,
+    "xmlhttprequest": 1
+   }
+  },
+  {
+   "blocked": {
+    "cancelled": 1,
+    "error": 0,
+    "etp": 0
+   },
+   "classifications": [
+    "tracking_content",
+    "any_strict_tracking"
+   ],
+   "cookies": 0,
+   "count": 1,
+   "hosts": [
+    "www.datadoghq-browser-agent.com"
+   ],
+   "sample": "https://www.datadoghq-browser-agent.com/us5/v7/datadog-rum.js",
+   "site": "datadoghq-browser-agent.com",
+   "tracker": true,
+   "types": {
+    "script": 1
+   }
+  },
+  {
+   "blocked": {
+    "cancelled": 0,
+    "error": 0,
+    "etp": 0
+   },
+   "classifications": [
+    "tracking_ad",
+    "any_basic_tracking",
+    "any_strict_tracking"
+   ],
+   "cookies": 0,
+   "count": 1,
+   "hosts": [
+    "ad.doubleclick.net"
+   ],
+   "sample": "https://ad.doubleclick.net/ccm/s/collect?auid=874291216.1790457894&gtm=45He69o0h2v9170898603za200zd9170898603xeaxf1&fmt=8",
+   "site": "doubleclick.net",
+   "tracker": true,
+   "types": {
+    "xmlhttprequest": 1
+   }
+  },
+  {
+   "blocked": {
+    "cancelled": 1,
+    "error": 0,
+    "etp": 0
+   },
+   "classifications": [
+    "tracking_social",
+    "any_basic_tracking",
+    "any_strict_tracking",
+    "any_social_tracking"
+   ],
+   "cookies": 0,
+   "count": 1,
+   "hosts": [
+    "connect.facebook.net"
+   ],
+   "sample": "https://connect.facebook.net/en_US/fbevents.js",
+   "site": "facebook.net",
+   "tracker": true,
+   "types": {
+    "script": 1
+   }
+  },
+  {
+   "blocked": {
+    "cancelled": 1,
+    "error": 0,
+    "etp": 0
+   },
+   "classifications": [
+    "tracking_content",
+    "any_strict_tracking"
+   ],
+   "cookies": 0,
+   "count": 1,
+   "hosts": [
+    "s.pinimg.com"
+   ],
+   "sample": "https://s.pinimg.com/ct/core.js",
+   "site": "pinimg.com",
+   "tracker": true,
+   "types": {
+    "script": 1
+   }
+  },
+  {
+   "blocked": {
+    "cancelled": 1,
+    "error": 0,
+    "etp": 0
+   },
+   "classifications": [
+    "tracking_ad",
+    "any_basic_tracking",
+    "any_strict_tracking"
+   ],
+   "cookies": 0,
+   "count": 1,
+   "hosts": [
+    "bat.bing.com"
+   ],
+   "sample": "https://bat.bing.com/bat.js",
+   "site": "bing.com",
+   "tracker": true,
+   "types": {
+    "script": 1
+   }
+  },
+  {
+   "blocked": {
+    "cancelled": 1,
+    "error": 0,
+    "etp": 0
+   },
+   "classifications": [
+    "tracking_ad",
+    "any_basic_tracking",
+    "any_strict_tracking"
+   ],
+   "cookies": 0,
+   "count": 1,
+   "hosts": [
+    "tags.creativecdn.com"
+   ],
+   "sample": "https://tags.creativecdn.com/msWukR4UlwKQouZSY8IT.js",
+   "site": "creativecdn.com",
+   "tracker": true,
+   "types": {
+    "script": 1
+   }
+  },
+  {
+   "blocked": {
+    "cancelled": 0,
+    "error": 0,
+    "etp": 0
+   },
+   "classifications": [],
+   "cookies": 0,
+   "count": 23,
+   "hosts": [
+    "wx.mlcdn.com.br",
+    "a-static.mlcdn.com.br",
+    "assets.mlcdn.com.br"
+   ],
+   "sample": "https://wx.mlcdn.com.br/site/shared/sellers/netshoes-2.png?ims=fit-in%2F40x40",
+   "site": "mlcdn.com.br",
+   "tracker": false,
+   "types": {
+    "image": 21,
+    "script": 2
+   }
+  },
+  {
+   "blocked": {
+    "cancelled": 0,
+    "error": 0,
+    "etp": 0
+   },
+   "classifications": [],
+   "cookies": 0,
+   "count": 3,
+   "hosts": [
+    "www.googletagmanager.com"
+   ],
+   "sample": "https://www.googletagmanager.com/gtm.js?id=GTM-N9NRZNKX",
+   "site": "googletagmanager.com",
+   "tracker": false,
+   "types": {
+    "script": 3
+   }
+  },
+  {
+   "blocked": {
+    "cancelled": 0,
+    "error": 0,
+    "etp": 0
+   },
+   "classifications": [],
+   "cookies": 0,
+   "count": 3,
+   "hosts": [
+    "topsortassets.com"
+   ],
+   "sample": "https://topsortassets.com/asset_01kqzgqmw3exravkydsp3as426.png",
+   "site": "topsortassets.com",
+   "tracker": false,
+   "types": {
+    "image": 3
+   }
+  },
+  {
+   "blocked": {
+    "cancelled": 1,
+    "error": 0,
+    "etp": 0
+   },
+   "classifications": [],
+   "cookies": 0,
+   "count": 1,
+   "hosts": [
+    "intercept-widget.questionpro.com"
+   ],
+   "sample": "https://intercept-widget.questionpro.com/static/js/loader.js",
+   "site": "questionpro.com",
+   "tracker": false,
+   "types": {
+    "script": 1
+   }
+  },
+  {
+   "blocked": {
+    "cancelled": 1,
+    "error": 0,
+    "etp": 0
+   },
+   "classifications": [],
+   "cookies": 0,
+   "count": 1,
+   "hosts": [
+    "c.btg360.com.br"
+   ],
+   "sample": "https://c.btg360.com.br/__client.gif?btgId=353:1&cookieBid=7d3ecfd6-9039-4761-9095-2e6fcb739dd2&url=https%3A%2F%2Fwww.magazineluiza.com.br%2F&rand=6159728371808074undefined&email=&facebookId=&webPushId=&phone=&token=&encrypt=&isOptin=true",
+   "site": "btg360.com.br",
+   "tracker": false,
+   "types": {
+    "xmlhttprequest": 1
+   }
+  }
+ ],
+ "thirdPartyRequests": 60,
+ "totalRequests": 463,
+ "tracking": {
+  "bounce": {
+   "detected": false,
+   "hops": [],
+   "leaks": [],
+   "origin": null,
+   "trackers": []
+  },
+  "canvas": {
+   "fingerprinting": true,
+   "reads": [
+    {
+     "api": "toDataURL",
+     "area": null,
+     "colors": 2,
+     "distinctChars": 23,
+     "frameUrl": "https://www.magazineluiza.com.br/",
+     "height": 80,
+     "sample": "SomeCanvasFingerPrint.65@345876",
+     "script": "https://www.magazineluiza.com.br/7_Q5X6LdDQJBNTNZhdhzFgrhmCg/XcYLmNO1uE/BDlLcw/bUQ/6TztxVnQ5?v=1d5206de-dfad-bf3e-ac65-eda7acfb0211",
+     "suspect": true,
+     "thirdParty": false,
+     "width": 250
+    },
+    {
+     "api": "toDataURL",
+     "area": null,
+     "colors": 1,
+     "distinctChars": 5,
+     "frameUrl": "https://www.magazineluiza.com.br/",
+     "height": 150,
+     "sample": "Azion",
+     "script": "https://wx.mlcdn.com.br/shared/azion/azfp-63fe5.min.js",
+     "suspect": false,
+     "thirdParty": true,
+     "width": 300
+    }
+   ],
+   "scripts": [
+    "https://www.magazineluiza.com.br/7_Q5X6LdDQJBNTNZhdhzFgrhmCg/XcYLmNO1uE/BDlLcw/bUQ/6TztxVnQ5?v=1d5206de-dfad-bf3e-ac65-eda7acfb0211"
+   ]
+  },
+  "idSharing": [],
+  "syncRedirects": [
+   {
+    "count": 2,
+    "from": "googletagmanager.com",
+    "sample": "moz-extension://99999999-8888-7777-6666-555555555555/web_accessible_resources/google-analytics_analytics.js?secret=2h7sc9",
+    "to": "99999999-8888-7777-6666-555555555555"
+   }
+  ],
+  "trackingParams": {
+   "page": [],
+   "requests": []
+  }
+ },
+ "url": "https://www.magazineluiza.com.br/"
+}

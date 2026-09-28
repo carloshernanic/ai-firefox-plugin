@@ -1,0 +1,637 @@
+{
+ "blocklist": [],
+ "cookieRejected": [
+  {
+   "attempts": 4,
+   "domain": "gov.br",
+   "name": "_ga_TPS4R7DC1S",
+   "reason": "sufixo público",
+   "setBy": "https://www.bcb.gov.br/",
+   "source": "js"
+  },
+  {
+   "attempts": 3,
+   "domain": "gov.br",
+   "name": "_ga",
+   "reason": "sufixo público",
+   "setBy": "https://www.bcb.gov.br/",
+   "source": "js"
+  },
+  {
+   "attempts": 4,
+   "domain": "gov.br",
+   "name": "_ga_G9V8SXZR8W",
+   "reason": "sufixo público",
+   "setBy": "https://www.bcb.gov.br/",
+   "source": "js"
+  }
+ ],
+ "cookieSummary": {
+  "deletions": 0,
+  "firstParty": 9,
+  "persistent": 5,
+  "rejected": 3,
+  "session": 4,
+  "thirdParty": 0,
+  "total": 9,
+  "viaHttp": 4,
+  "viaJs": 5
+ },
+ "cookies": [
+  {
+   "domain": "bcb.gov.br",
+   "expiry": 1853530864000,
+   "httpOnly": false,
+   "name": "_ga",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": null,
+   "secure": false,
+   "session": false,
+   "setBy": "https://www.bcb.gov.br/",
+   "site": "bcb.gov.br",
+   "sources": [
+    "js"
+   ],
+   "thirdParty": false,
+   "value": "GA1.3.595635504.1790458863",
+   "writes": 2
+  },
+  {
+   "domain": "bcb.gov.br",
+   "expiry": 1853530863000,
+   "httpOnly": false,
+   "name": "_ga_G9V8SXZR8W",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": null,
+   "secure": false,
+   "session": false,
+   "setBy": "https://www.bcb.gov.br/",
+   "site": "bcb.gov.br",
+   "sources": [
+    "js"
+   ],
+   "thirdParty": false,
+   "value": "GS2.1.s1790458863$o1$g0$t1790458863$j60$l0$h0",
+   "writes": 4
+  },
+  {
+   "domain": "bcb.gov.br",
+   "expiry": 1853530863000,
+   "httpOnly": false,
+   "name": "_ga_TPS4R7DC1S",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": null,
+   "secure": false,
+   "session": false,
+   "setBy": "https://www.bcb.gov.br/",
+   "site": "bcb.gov.br",
+   "sources": [
+    "js"
+   ],
+   "thirdParty": false,
+   "value": "GS2.1.s1790458863$o1$g0$t1790458863$j60$l0$h0",
+   "writes": 4
+  },
+  {
+   "domain": "bcb.gov.br",
+   "expiry": 1790458924000,
+   "httpOnly": false,
+   "name": "_gat_gtag_UA_65460906_3",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": null,
+   "secure": false,
+   "session": false,
+   "setBy": "https://www.bcb.gov.br/",
+   "site": "bcb.gov.br",
+   "sources": [
+    "js"
+   ],
+   "thirdParty": false,
+   "value": "1",
+   "writes": 1
+  },
+  {
+   "domain": "bcb.gov.br",
+   "expiry": 1790545264000,
+   "httpOnly": false,
+   "name": "_gid",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": null,
+   "secure": false,
+   "session": false,
+   "setBy": "https://www.bcb.gov.br/",
+   "site": "bcb.gov.br",
+   "sources": [
+    "js"
+   ],
+   "thirdParty": false,
+   "value": "GA1.3.1006019944.1790458864",
+   "writes": 1
+  },
+  {
+   "domain": "www3.bcb.gov.br",
+   "expiry": null,
+   "httpOnly": true,
+   "name": "415ac6b663c69aeba6f2226b43c7f16d",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": "none",
+   "secure": true,
+   "session": true,
+   "setBy": "https://www3.bcb.gov.br/bc_moeda/rest/cotacao/fechamento/ultima/1/220/2026-09-26",
+   "site": "bcb.gov.br",
+   "sources": [
+    "http"
+   ],
+   "thirdParty": false,
+   "value": "5028a1d090b223591598cc760e4334b2",
+   "writes": 2
+  },
+  {
+   "domain": "www3.bcb.gov.br",
+   "expiry": null,
+   "httpOnly": true,
+   "name": "BIGipServer~cloud_p_as3~ocp~pool_cloud_443_p",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": null,
+   "secure": true,
+   "session": true,
+   "setBy": "https://www3.bcb.gov.br/bc_moeda/rest/cotacao/fechamento/ultima/1/220/2026-09-26",
+   "site": "bcb.gov.br",
+   "sources": [
+    "http"
+   ],
+   "thirdParty": false,
+   "value": "187109804.47873.0000",
+   "writes": 2
+  },
+  {
+   "domain": "www3.bcb.gov.br",
+   "expiry": null,
+   "httpOnly": true,
+   "name": "BIGipServer~proxy-reverso-dmz_p_as3~proxy-reverso-dmz_p~pool_dmz-vs-cloud_443_p",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": null,
+   "secure": true,
+   "session": true,
+   "setBy": "https://www3.bcb.gov.br/bc_moeda/rest/cotacao/fechamento/ultima/1/220/2026-09-26",
+   "site": "bcb.gov.br",
+   "sources": [
+    "http"
+   ],
+   "thirdParty": false,
+   "value": "!PJthImbI+s/SN3JV8W0f74IkD3RYoMaQm1r3rD4B6p8gRXj39FVIhb9xKkaXoAme5i1PazzOzwUKv+k=",
+   "writes": 2
+  },
+  {
+   "domain": "www3.bcb.gov.br",
+   "expiry": null,
+   "httpOnly": false,
+   "name": "TS012b7e98",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": null,
+   "secure": false,
+   "session": true,
+   "setBy": "https://www3.bcb.gov.br/bc_moeda/rest/cotacao/fechamento/ultima/1/220/2026-09-26",
+   "site": "bcb.gov.br",
+   "sources": [
+    "http"
+   ],
+   "thirdParty": false,
+   "value": "012e4f88b3d1b64fc0e69032643070f5fd23fa6e32e381a49087fba3270468b86ead1ee9d9ee32be1d104a31a0d1eb47756c522fd975ba2a8dda6ca591af957a338409db55cd8894c5781d4a3e85fae62ca09f236bf84a168c3c9e706032b3254cb874d60d",
+   "writes": 2
+  }
+ ],
+ "firstPartyRequests": 136,
+ "host": "www.bcb.gov.br",
+ "score": {
+  "grade": "B",
+  "items": [
+   {
+    "cap": 22,
+    "id": "trackers",
+    "name": "Rastreadores de terceiros conhecidos",
+    "penalty": 2.9,
+    "value": 4,
+    "weight": 0.7333333333333333,
+    "why": "Domínios classificados como rastreadores pela Enhanced Tracking Protection (lista Disconnect). Principal vetor de perfilamento entre sites."
+   },
+   {
+    "cap": 13,
+    "id": "thirdPartyCookies",
+    "name": "Cookies de terceira parte",
+    "penalty": 0,
+    "value": 0,
+    "weight": 0.325,
+    "why": "Cookies de outros sites identificam o usuário em todas as páginas que carregam o mesmo terceiro."
+   },
+   {
+    "cap": 11,
+    "id": "canvas",
+    "name": "Canvas fingerprint",
+    "penalty": 0,
+    "value": 0,
+    "weight": 11,
+    "why": "Identifica o dispositivo sem cookies, contornando bloqueio e limpeza de cookies; o usuário não tem como apagar."
+   },
+   {
+    "cap": 8,
+    "id": "sessionRecording",
+    "name": "Gravação de sessão",
+    "penalty": 0,
+    "value": 0,
+    "weight": 8,
+    "why": "Replay de cliques, rolagem e campos digitados; pode capturar dados sensíveis antes do envio de formulários."
+   },
+   {
+    "cap": 8,
+    "id": "socialPixels",
+    "name": "Pixels de redes sociais",
+    "penalty": 0,
+    "value": 0,
+    "weight": 2,
+    "why": "Meta, TikTok, X, LinkedIn etc. associam a visita ao perfil do usuário na rede social, mesmo sem clique."
+   },
+   {
+    "cap": 4,
+    "id": "remarketing",
+    "name": "Remarketing do Google Analytics",
+    "penalty": 4,
+    "value": 1,
+    "weight": 4,
+    "why": "O Analytics envia o ID do visitante ao doubleclick.net/google.com (ads/ga-audiences) para montar públicos de anúncios."
+   },
+   {
+    "cap": 3,
+    "id": "unclassified",
+    "name": "Outros domínios de terceiros",
+    "penalty": 0.4,
+    "value": 2,
+    "weight": 0.2,
+    "why": "Terceiros sem classificação (CDNs, widgets) ainda recebem IP, User-Agent e Referer do visitante."
+   },
+   {
+    "cap": 8,
+    "id": "cookieSync",
+    "name": "Cookie sync entre terceiros",
+    "penalty": 0,
+    "value": 0,
+    "weight": 2,
+    "why": "Um rastreador repassa seu ID a outro, unindo perfis de empresas diferentes."
+   },
+   {
+    "cap": 5,
+    "id": "firstPartyIdLeak",
+    "name": "ID de 1ª parte enviado a terceiros",
+    "penalty": 1.3,
+    "value": 1,
+    "weight": 1.25,
+    "why": "Cookie gravado como 1ª parte (escapa do bloqueio de cookies de terceiros) mas enviado a um terceiro na URL."
+   },
+   {
+    "cap": 6,
+    "id": "bounce",
+    "name": "Bounce tracking",
+    "penalty": 0,
+    "value": 0,
+    "weight": 6,
+    "why": "Redirecionamento por um site rastreador que ganha acesso de 1ª parte sem o usuário escolher visitá-lo."
+   },
+   {
+    "cap": 8,
+    "id": "hijack",
+    "name": "Indicadores de hijacking / hook",
+    "penalty": 4,
+    "value": 1,
+    "weight": 4,
+    "why": "Canal persistente com terceiro (WebSocket/polling), captura de teclas por script de terceiro ou APIs nativas substituídas: sinais de navegador sequestrado. Assinatura de framework de hook (BeEF) zera o critério."
+   },
+   {
+    "cap": 4,
+    "id": "thirdPartyStorage",
+    "name": "Armazenamento HTML5 de terceiros",
+    "penalty": 0,
+    "value": 0,
+    "weight": 2,
+    "why": "localStorage/IndexedDB de iframes de terceiros guardam identificadores fora do alcance da limpeza de cookies."
+   }
+  ],
+  "score": 87,
+  "veto": null
+ },
+ "site": "bcb.gov.br",
+ "startedAt": 1790458860043,
+ "storage": [],
+ "storageSummary": {
+  "bytes": 0,
+  "idbDatabases": 0,
+  "localItems": 0,
+  "origins": 0,
+  "sessionItems": 0,
+  "thirdPartyOrigins": 0,
+  "writes": 0
+ },
+ "thirdParty": [
+  {
+   "blocked": {
+    "cancelled": 0,
+    "error": 0,
+    "etp": 0,
+    "plugin": 0
+   },
+   "classifications": [
+    "tracking_analytics",
+    "any_basic_tracking",
+    "any_strict_tracking"
+   ],
+   "cookies": 0,
+   "count": 4,
+   "hosts": [
+    "analytics.google.com"
+   ],
+   "sample": "https://analytics.google.com/g/collect?v=2&tid=G-TPS4R7DC1S&gtm=45je69o0h2v9103562362za200zd9103562362xf1&_p=1790458861349&_gaz=1&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AAAAAGA&cid=595635504.1790458863&frm=0&pscdl=noapi&rcb=13&sr=1366x768&ul=en-us&gaf=2&_s=1&tag_exp=115938466~115938469~118897920~118897930~120213116~120385422~120469145~120469153~121280970&sid=1790458863&sct=1&seg=0&dl=https%3A%2F%2Fwww.bcb.gov.br%2F&dt=Banco%20Central%20do%20Brasil&en=page_view&_fv=1&_nsi=1&_ss=1&_ee=1&tfd=3203",
+   "site": "google.com",
+   "tracker": true,
+   "types": {
+    "xmlhttprequest": 4
+   }
+  },
+  {
+   "blocked": {
+    "cancelled": 0,
+    "error": 0,
+    "etp": 0,
+    "plugin": 0
+   },
+   "classifications": [
+    "tracking_ad",
+    "any_basic_tracking",
+    "any_strict_tracking"
+   ],
+   "cookies": 0,
+   "count": 2,
+   "hosts": [
+    "stats.g.doubleclick.net"
+   ],
+   "sample": "https://stats.g.doubleclick.net/g/collect?v=2&tid=G-TPS4R7DC1S&cid=595635504.1790458863&gtm=45je69o0h2v9103562362za200zd9103562362xf1&rcb=13&aip=1&dma=0&gcd=13l3l3l3l1l1&npa=0&frm=0&tag_exp=115938466~115938469~118897920~118897930~120213116~120385422~120469145~120469153~121280970",
+   "site": "doubleclick.net",
+   "tracker": true,
+   "types": {
+    "beacon": 2
+   }
+  },
+  {
+   "blocked": {
+    "cancelled": 0,
+    "error": 0,
+    "etp": 0,
+    "plugin": 0
+   },
+   "classifications": [
+    "tracking_content",
+    "any_strict_tracking"
+   ],
+   "cookies": 0,
+   "count": 2,
+   "hosts": [
+    "www.google.com.br"
+   ],
+   "sample": "https://www.google.com.br/ads/ga-audiences?v=1&t=sr&slf_rd=1&_r=4&tid=G-TPS4R7DC1S&cid=595635504.1790458863&gtm=45je69o0h2v9103562362za200zd9103562362xf1&rcb=13&aip=1&dma=0&gcd=13l3l3l3l1l1&npa=0&frm=0&tag_exp=115938466~115938469~118897920~118897930~120213116~120385422~120469145~120469153~121280970&z=1474350253",
+   "site": "google.com.br",
+   "tracker": true,
+   "types": {
+    "image": 2
+   }
+  },
+  {
+   "blocked": {
+    "cancelled": 0,
+    "error": 0,
+    "etp": 0,
+    "plugin": 0
+   },
+   "classifications": [
+    "tracking_analytics",
+    "any_basic_tracking",
+    "any_strict_tracking"
+   ],
+   "cookies": 0,
+   "count": 1,
+   "hosts": [
+    "www.google-analytics.com"
+   ],
+   "sample": "https://www.google-analytics.com/analytics.js",
+   "site": "google-analytics.com",
+   "tracker": true,
+   "types": {
+    "script": 1
+   }
+  },
+  {
+   "blocked": {
+    "cancelled": 0,
+    "error": 1,
+    "etp": 0,
+    "plugin": 0
+   },
+   "classifications": [],
+   "cookies": 0,
+   "count": 4,
+   "hosts": [
+    "www.googletagmanager.com"
+   ],
+   "sample": "https://www.googletagmanager.com/gtag/js?id=G-TPS4R7DC1S&l=dataLayer",
+   "site": "googletagmanager.com",
+   "tracker": false,
+   "types": {
+    "script": 4
+   }
+  },
+  {
+   "blocked": {
+    "cancelled": 0,
+    "error": 0,
+    "etp": 0,
+    "plugin": 0
+   },
+   "classifications": [],
+   "cookies": 0,
+   "count": 1,
+   "hosts": [
+    "barra.brasil.gov.br"
+   ],
+   "sample": "https://barra.brasil.gov.br/static/Raleway-Bold.woff",
+   "site": "brasil.gov.br",
+   "tracker": false,
+   "types": {
+    "font": 1
+   }
+  }
+ ],
+ "thirdPartyRequests": 14,
+ "totalRequests": 150,
+ "tracking": {
+  "bounce": {
+   "detected": false,
+   "hops": [],
+   "leaks": [],
+   "origin": null,
+   "trackers": []
+  },
+  "canvas": {
+   "fingerprinting": false,
+   "reads": [],
+   "scripts": []
+  },
+  "hijack": {
+   "detected": true,
+   "globals": {
+    "addedCount": 190,
+    "addedSample": [
+     "webpackChunkVLibras",
+     "VLibras",
+     "ng",
+     "__core-js_shared__",
+     "Zone",
+     "__zone_symbol__Promise",
+     "__zone_symbol__fetch",
+     "__zone_symbol__setTimeout",
+     "__zone_symbol__clearTimeout",
+     "__zone_symbol__setInterval",
+     "__zone_symbol__clearInterval",
+     "__zone_symbol__requestAnimationFrame",
+     "__zone_symbol__cancelAnimationFrame",
+     "__zone_symbol__alert",
+     "__zone_symbol__prompt",
+     "__zone_symbol__confirm",
+     "__zone_symbol__MutationObserver",
+     "__zone_symbol__IntersectionObserver",
+     "__zone_symbol__FileReader",
+     "__zone_symbol__onondevicemotionpatched",
+     "__zone_symbol__onondeviceorientationpatched",
+     "__zone_symbol__onondeviceorientationabsolutepatched",
+     "__zone_symbol__ononabortpatched",
+     "__zone_symbol__ononblurpatched",
+     "__zone_symbol__ononfocuspatched",
+     "__zone_symbol__ononcancelpatched",
+     "__zone_symbol__ononauxclickpatched",
+     "__zone_symbol__ononbeforeinputpatched",
+     "__zone_symbol__ononbeforematchpatched",
+     "__zone_symbol__ononbeforetogglepatched",
+     "__zone_symbol__ononcanplaypatched",
+     "__zone_symbol__ononcanplaythroughpatched",
+     "__zone_symbol__ononchangepatched",
+     "__zone_symbol__ononclickpatched",
+     "__zone_symbol__ononclosepatched",
+     "__zone_symbol__ononcontentvisibilityautostatechangepatched",
+     "__zone_symbol__ononcontextlostpatched",
+     "__zone_symbol__ononcontextmenupatched",
+     "__zone_symbol__ononcommandpatched",
+     "__zone_symbol__ononcontextrestoredpatched",
+     "__zone_symbol__ononcopypatched",
+     "__zone_symbol__ononcuechangepatched",
+     "__zone_symbol__ononcutpatched",
+     "__zone_symbol__onondblclickpatched",
+     "__zone_symbol__onondragpatched",
+     "__zone_symbol__onondragendpatched",
+     "__zone_symbol__onondragenterpatched",
+     "__zone_symbol__onondragexitpatched",
+     "__zone_symbol__onondragleavepatched",
+     "__zone_symbol__onondragoverpatched",
+     "__zone_symbol__onondragstartpatched",
+     "__zone_symbol__onondroppatched",
+     "__zone_symbol__onondurationchangepatched",
+     "__zone_symbol__ononemptiedpatched",
+     "__zone_symbol__ononendedpatched",
+     "__zone_symbol__ononformdatapatched",
+     "__zone_symbol__ononinputpatched",
+     "__zone_symbol__ononinvalidpatched",
+     "__zone_symbol__ononkeydownpatched",
+     "__zone_symbol__ononkeypresspatched"
+    ],
+    "overwritten": [
+     "fetch",
+     "alert",
+     "XMLHttpRequest.prototype.open",
+     "XMLHttpRequest.prototype.send",
+     "EventTarget.prototype.addEventListener",
+     "HTMLFormElement.prototype.submit",
+     "Function.prototype.toString"
+    ],
+    "signatures": []
+   },
+   "indicators": [
+    {
+     "id": "overwritten",
+     "severity": "média",
+     "text": "APIs nativas substituídas pela página: fetch, alert, XMLHttpRequest.prototype.open, XMLHttpRequest.prototype.send, EventTarget.prototype.addEventListener, HTMLFormElement.prototype.submit, Function.prototype.toString"
+    }
+   ],
+   "keyListeners": [
+    {
+     "frameUrl": "https://www.bcb.gov.br/",
+     "script": "https://www.bcb.gov.br/polyfills-CJXZNNOE.js",
+     "target": "document",
+     "thirdParty": false,
+     "type": "keydown"
+    },
+    {
+     "frameUrl": "https://www.bcb.gov.br/",
+     "script": "https://www.bcb.gov.br/polyfills-CJXZNNOE.js",
+     "target": "document",
+     "thirdParty": false,
+     "type": "keyup"
+    },
+    {
+     "frameUrl": "https://www.bcb.gov.br/",
+     "script": "https://www.bcb.gov.br/polyfills-CJXZNNOE.js",
+     "target": "input",
+     "thirdParty": false,
+     "type": "input"
+    },
+    {
+     "frameUrl": "https://www.bcb.gov.br/",
+     "script": "https://www.bcb.gov.br/polyfills-CJXZNNOE.js",
+     "target": "input",
+     "thirdParty": false,
+     "type": "keypress"
+    },
+    {
+     "frameUrl": "https://www.bcb.gov.br/",
+     "script": "https://www.bcb.gov.br/polyfills-CJXZNNOE.js",
+     "target": "input",
+     "thirdParty": false,
+     "type": "paste"
+    }
+   ],
+   "polling": [],
+   "websockets": []
+  },
+  "idSharing": [
+   {
+    "cookie": "_ga",
+    "count": 2,
+    "from": "bcb.gov.br",
+    "kind": "id-1a-parte",
+    "param": "cid",
+    "to": "google.com",
+    "url": "https://analytics.google.com/g/collect?v=2&tid=G-TPS4R7DC1S&gtm=45je69o0h2v9103562362za200zd9103562362xf1&_p=1790458861349&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AEAAAGQ&ae=a&cid=595635504.1790458863&frm=0&pscdl=noapi&rcb=13&sr=1366x768&ul=en-us&gaf=2&_s=2&tag_exp=115938466~115938469~118897920~118897930~120213116~120385422~120469145~120469153~121280970&sid=1790458863&sct=1&seg=0&dl=https%3A%2F%2Fwww.bcb.gov.br%2F&dt=Banco%20Central%20do%20Brasil&en=scroll&epn.percent_scrolled=90&_et=195&tfd=8403",
+    "value": "595635504.1790458863"
+   }
+  ],
+  "syncRedirects": [],
+  "trackingParams": {
+   "page": [],
+   "requests": []
+  }
+ },
+ "url": "https://www.bcb.gov.br/"
+}

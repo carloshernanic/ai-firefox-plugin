@@ -1,0 +1,351 @@
+{
+ "blocklist": [],
+ "cookieRejected": [],
+ "cookieSummary": {
+  "deletions": 0,
+  "firstParty": 2,
+  "persistent": 2,
+  "rejected": 0,
+  "session": 0,
+  "thirdParty": 0,
+  "total": 2,
+  "viaHttp": 1,
+  "viaJs": 1
+ },
+ "cookies": [
+  {
+   "domain": "www.first-party.site",
+   "expiry": 1913572800000,
+   "httpOnly": false,
+   "name": "partition_test",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": null,
+   "secure": false,
+   "session": false,
+   "setBy": "https://www.first-party.site/privacy-protections/storage-partitioning/iframe.html?mode=store&sessionId=390b019b-6239-4618-ac3e-097283507a66",
+   "site": "first-party.site",
+   "sources": [
+    "js"
+   ],
+   "thirdParty": false,
+   "value": "390b019b-6239-4618-ac3e-097283507a66",
+   "writes": 2
+  },
+  {
+   "domain": "www.first-party.site",
+   "expiry": 1913572800000,
+   "httpOnly": true,
+   "name": "partition_test_http",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": "none",
+   "secure": true,
+   "session": false,
+   "setBy": "https://www.first-party.site/partitioning/set-cookie?cookieName=partition_test_http&cookieValue=390b019b-6239-4618-ac3e-097283507a66",
+   "site": "first-party.site",
+   "sources": [
+    "http"
+   ],
+   "thirdParty": false,
+   "value": "390b019b-6239-4618-ac3e-097283507a66",
+   "writes": 1
+  }
+ ],
+ "firstPartyRequests": 26,
+ "host": "www.first-party.site",
+ "score": {
+  "grade": "A",
+  "items": [
+   {
+    "cap": 22,
+    "id": "trackers",
+    "name": "Rastreadores de terceiros conhecidos",
+    "penalty": 0,
+    "value": 0,
+    "weight": 0.7333333333333333,
+    "why": "Domínios classificados como rastreadores pela Enhanced Tracking Protection (lista Disconnect). Principal vetor de perfilamento entre sites."
+   },
+   {
+    "cap": 13,
+    "id": "thirdPartyCookies",
+    "name": "Cookies de terceira parte",
+    "penalty": 0,
+    "value": 0,
+    "weight": 0.325,
+    "why": "Cookies de outros sites identificam o usuário em todas as páginas que carregam o mesmo terceiro."
+   },
+   {
+    "cap": 11,
+    "id": "canvas",
+    "name": "Canvas fingerprint",
+    "penalty": 0,
+    "value": 0,
+    "weight": 11,
+    "why": "Identifica o dispositivo sem cookies, contornando bloqueio e limpeza de cookies; o usuário não tem como apagar."
+   },
+   {
+    "cap": 8,
+    "id": "sessionRecording",
+    "name": "Gravação de sessão",
+    "penalty": 0,
+    "value": 0,
+    "weight": 8,
+    "why": "Replay de cliques, rolagem e campos digitados; pode capturar dados sensíveis antes do envio de formulários."
+   },
+   {
+    "cap": 8,
+    "id": "socialPixels",
+    "name": "Pixels de redes sociais",
+    "penalty": 0,
+    "value": 0,
+    "weight": 2,
+    "why": "Meta, TikTok, X, LinkedIn etc. associam a visita ao perfil do usuário na rede social, mesmo sem clique."
+   },
+   {
+    "cap": 4,
+    "id": "remarketing",
+    "name": "Remarketing do Google Analytics",
+    "penalty": 0,
+    "value": 0,
+    "weight": 4,
+    "why": "O Analytics envia o ID do visitante ao doubleclick.net/google.com (ads/ga-audiences) para montar públicos de anúncios."
+   },
+   {
+    "cap": 3,
+    "id": "unclassified",
+    "name": "Outros domínios de terceiros",
+    "penalty": 0.2,
+    "value": 1,
+    "weight": 0.2,
+    "why": "Terceiros sem classificação (CDNs, widgets) ainda recebem IP, User-Agent e Referer do visitante."
+   },
+   {
+    "cap": 8,
+    "id": "cookieSync",
+    "name": "Cookie sync entre terceiros",
+    "penalty": 0,
+    "value": 0,
+    "weight": 2,
+    "why": "Um rastreador repassa seu ID a outro, unindo perfis de empresas diferentes."
+   },
+   {
+    "cap": 5,
+    "id": "firstPartyIdLeak",
+    "name": "ID de 1ª parte enviado a terceiros",
+    "penalty": 0,
+    "value": 0,
+    "weight": 1.25,
+    "why": "Cookie gravado como 1ª parte (escapa do bloqueio de cookies de terceiros) mas enviado a um terceiro na URL."
+   },
+   {
+    "cap": 6,
+    "id": "bounce",
+    "name": "Bounce tracking",
+    "penalty": 0,
+    "value": 0,
+    "weight": 6,
+    "why": "Redirecionamento por um site rastreador que ganha acesso de 1ª parte sem o usuário escolher visitá-lo."
+   },
+   {
+    "cap": 8,
+    "id": "hijack",
+    "name": "Indicadores de hijacking / hook",
+    "penalty": 0,
+    "value": 0,
+    "weight": 4,
+    "why": "Canal persistente com terceiro (WebSocket/polling), captura de teclas por script de terceiro ou APIs nativas substituídas: sinais de navegador sequestrado. Assinatura de framework de hook (BeEF) zera o critério."
+   },
+   {
+    "cap": 4,
+    "id": "thirdPartyStorage",
+    "name": "Armazenamento HTML5 de terceiros",
+    "penalty": 0,
+    "value": 0,
+    "weight": 2,
+    "why": "localStorage/IndexedDB de iframes de terceiros guardam identificadores fora do alcance da limpeza de cookies."
+   }
+  ],
+  "score": 100,
+  "veto": null
+ },
+ "site": "first-party.site",
+ "startedAt": 1790459715999,
+ "storage": [
+  {
+   "idb": [
+    "partition_test"
+   ],
+   "local": {
+    "bytes": 100,
+    "count": 1,
+    "items": [
+     {
+      "key": "partition_test",
+      "preview": "390b019b-6239-4618-ac3e-097283507a66",
+      "size": 100
+     }
+    ]
+   },
+   "ops": [
+    {
+     "api": "session",
+     "key": "partition_test",
+     "ops": {
+      "set": 2
+     },
+     "preview": "390b019b-6239-4618-ac3e-097283507a66",
+     "size": 72,
+     "writes": 2
+    },
+    {
+     "api": "local",
+     "key": "partition_test",
+     "ops": {
+      "set": 1
+     },
+     "preview": "390b019b-6239-4618-ac3e-097283507a66",
+     "size": 72,
+     "writes": 1
+    },
+    {
+     "api": "idb",
+     "key": "partition_test",
+     "ops": {
+      "open": 1
+     },
+     "preview": "",
+     "size": 0,
+     "writes": 0
+    },
+    {
+     "api": "idb",
+     "key": "partition_test/partition_test_store",
+     "ops": {
+      "write": 1
+     },
+     "preview": "",
+     "size": 0,
+     "writes": 1
+    },
+    {
+     "api": "local",
+     "key": "390b019b-6239-4618-ac3e-097283507a66",
+     "ops": {
+      "remove": 1,
+      "set": 1
+     },
+     "preview": "ready",
+     "size": 10,
+     "writes": 1
+    }
+   ],
+   "origin": "https://www.first-party.site",
+   "session": {
+    "bytes": 100,
+    "count": 1,
+    "items": [
+     {
+      "key": "partition_test",
+      "preview": "390b019b-6239-4618-ac3e-097283507a66",
+      "size": 100
+     }
+    ]
+   },
+   "site": "first-party.site",
+   "thirdParty": false,
+   "writes": 5
+  }
+ ],
+ "storageSummary": {
+  "bytes": 200,
+  "idbDatabases": 1,
+  "localItems": 1,
+  "origins": 1,
+  "sessionItems": 1,
+  "thirdPartyOrigins": 0,
+  "writes": 5
+ },
+ "thirdParty": [
+  {
+   "blocked": {
+    "cancelled": 0,
+    "error": 0,
+    "etp": 0,
+    "plugin": 0
+   },
+   "classifications": [],
+   "cookies": 0,
+   "count": 3,
+   "hosts": [
+    "privacy-test-pages.site"
+   ],
+   "sample": "https://privacy-test-pages.site/partitioning/clear_hsts.png",
+   "site": "privacy-test-pages.site",
+   "tracker": false,
+   "types": {
+    "image": 3
+   }
+  }
+ ],
+ "thirdPartyRequests": 3,
+ "totalRequests": 29,
+ "tracking": {
+  "bounce": {
+   "detected": false,
+   "hops": [
+    {
+     "cookiesSent": [],
+     "cookiesSet": [],
+     "crossSite": true,
+     "dwellMs": 2797,
+     "interacted": false,
+     "site": "privacy-test-pages.site",
+     "storageKeys": [],
+     "url": "https://privacy-test-pages.site/privacy-protections/storage-partitioning/",
+     "via": "js"
+    }
+   ],
+   "leaks": [],
+   "origin": null,
+   "trackers": []
+  },
+  "canvas": {
+   "fingerprinting": false,
+   "reads": [],
+   "scripts": []
+  },
+  "hijack": {
+   "detected": false,
+   "globals": {
+    "addedCount": 11,
+    "addedSample": [
+     "uuidv4",
+     "getURL",
+     "validateStorageAPI",
+     "validateCacheAPI",
+     "accessStorageInIframe",
+     "downloadTheResults",
+     "validateResults",
+     "displayResults",
+     "runTests",
+     "addUnhideHandler",
+     "addHideHandler"
+    ],
+    "overwritten": [],
+    "signatures": []
+   },
+   "indicators": [],
+   "keyListeners": [],
+   "polling": [],
+   "websockets": []
+  },
+  "idSharing": [],
+  "syncRedirects": [],
+  "trackingParams": {
+   "page": [],
+   "requests": []
+  }
+ },
+ "url": "https://www.first-party.site/privacy-protections/storage-partitioning/"
+}

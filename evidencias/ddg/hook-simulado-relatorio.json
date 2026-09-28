@@ -1,0 +1,282 @@
+{
+ "blocklist": [],
+ "cookieRejected": [],
+ "cookieSummary": {
+  "deletions": 0,
+  "firstParty": 0,
+  "persistent": 0,
+  "rejected": 0,
+  "session": 0,
+  "thirdParty": 0,
+  "total": 0,
+  "viaHttp": 0,
+  "viaJs": 0
+ },
+ "cookies": [],
+ "firstPartyRequests": 1,
+ "host": "localhost",
+ "score": {
+  "grade": "E",
+  "items": [
+   {
+    "cap": 22,
+    "id": "trackers",
+    "name": "Rastreadores de terceiros conhecidos",
+    "penalty": 0,
+    "value": 0,
+    "weight": 0.7333333333333333,
+    "why": "Domínios classificados como rastreadores pela Enhanced Tracking Protection (lista Disconnect). Principal vetor de perfilamento entre sites."
+   },
+   {
+    "cap": 13,
+    "id": "thirdPartyCookies",
+    "name": "Cookies de terceira parte",
+    "penalty": 0,
+    "value": 0,
+    "weight": 0.325,
+    "why": "Cookies de outros sites identificam o usuário em todas as páginas que carregam o mesmo terceiro."
+   },
+   {
+    "cap": 11,
+    "id": "canvas",
+    "name": "Canvas fingerprint",
+    "penalty": 0,
+    "value": 0,
+    "weight": 11,
+    "why": "Identifica o dispositivo sem cookies, contornando bloqueio e limpeza de cookies; o usuário não tem como apagar."
+   },
+   {
+    "cap": 8,
+    "id": "sessionRecording",
+    "name": "Gravação de sessão",
+    "penalty": 0,
+    "value": 0,
+    "weight": 8,
+    "why": "Replay de cliques, rolagem e campos digitados; pode capturar dados sensíveis antes do envio de formulários."
+   },
+   {
+    "cap": 8,
+    "id": "socialPixels",
+    "name": "Pixels de redes sociais",
+    "penalty": 0,
+    "value": 0,
+    "weight": 2,
+    "why": "Meta, TikTok, X, LinkedIn etc. associam a visita ao perfil do usuário na rede social, mesmo sem clique."
+   },
+   {
+    "cap": 4,
+    "id": "remarketing",
+    "name": "Remarketing do Google Analytics",
+    "penalty": 0,
+    "value": 0,
+    "weight": 4,
+    "why": "O Analytics envia o ID do visitante ao doubleclick.net/google.com (ads/ga-audiences) para montar públicos de anúncios."
+   },
+   {
+    "cap": 3,
+    "id": "unclassified",
+    "name": "Outros domínios de terceiros",
+    "penalty": 0.4,
+    "value": 2,
+    "weight": 0.2,
+    "why": "Terceiros sem classificação (CDNs, widgets) ainda recebem IP, User-Agent e Referer do visitante."
+   },
+   {
+    "cap": 8,
+    "id": "cookieSync",
+    "name": "Cookie sync entre terceiros",
+    "penalty": 0,
+    "value": 0,
+    "weight": 2,
+    "why": "Um rastreador repassa seu ID a outro, unindo perfis de empresas diferentes."
+   },
+   {
+    "cap": 5,
+    "id": "firstPartyIdLeak",
+    "name": "ID de 1ª parte enviado a terceiros",
+    "penalty": 0,
+    "value": 0,
+    "weight": 1.25,
+    "why": "Cookie gravado como 1ª parte (escapa do bloqueio de cookies de terceiros) mas enviado a um terceiro na URL."
+   },
+   {
+    "cap": 6,
+    "id": "bounce",
+    "name": "Bounce tracking",
+    "penalty": 0,
+    "value": 0,
+    "weight": 6,
+    "why": "Redirecionamento por um site rastreador que ganha acesso de 1ª parte sem o usuário escolher visitá-lo."
+   },
+   {
+    "cap": 8,
+    "id": "hijack",
+    "name": "Indicadores de hijacking / hook",
+    "penalty": 8,
+    "value": 2,
+    "weight": 4,
+    "why": "Canal persistente com terceiro (WebSocket/polling), captura de teclas por script de terceiro ou APIs nativas substituídas: sinais de navegador sequestrado. Assinatura de framework de hook (BeEF) zera o critério."
+   },
+   {
+    "cap": 4,
+    "id": "thirdPartyStorage",
+    "name": "Armazenamento HTML5 de terceiros",
+    "penalty": 0,
+    "value": 0,
+    "weight": 2,
+    "why": "localStorage/IndexedDB de iframes de terceiros guardam identificadores fora do alcance da limpeza de cookies."
+   }
+  ],
+  "score": 20,
+  "veto": "Assinatura de framework de hook detectada: nota limitada a 20."
+ },
+ "site": "localhost",
+ "startedAt": 1790459416276,
+ "storage": [],
+ "storageSummary": {
+  "bytes": 0,
+  "idbDatabases": 0,
+  "localItems": 0,
+  "origins": 0,
+  "sessionItems": 0,
+  "thirdPartyOrigins": 0,
+  "writes": 0
+ },
+ "thirdParty": [
+  {
+   "blocked": {
+    "cancelled": 0,
+    "error": 1,
+    "etp": 0,
+    "plugin": 0
+   },
+   "classifications": [],
+   "cookies": 0,
+   "count": 13,
+   "hosts": [
+    "127.0.0.1"
+   ],
+   "sample": "http://127.0.0.1:8001/hook.js",
+   "site": "127.0.0.1",
+   "tracker": false,
+   "types": {
+    "image": 1,
+    "script": 1,
+    "xmlhttprequest": 11
+   }
+  },
+  {
+   "blocked": {
+    "cancelled": 0,
+    "error": 0,
+    "etp": 0,
+    "plugin": 0
+   },
+   "classifications": [],
+   "cookies": 0,
+   "count": 1,
+   "hosts": [
+    "echo.websocket.org"
+   ],
+   "sample": "wss://echo.websocket.org/",
+   "site": "websocket.org",
+   "tracker": false,
+   "types": {
+    "websocket": 1
+   }
+  }
+ ],
+ "thirdPartyRequests": 14,
+ "totalRequests": 15,
+ "tracking": {
+  "bounce": {
+   "detected": false,
+   "hops": [],
+   "leaks": [],
+   "origin": null,
+   "trackers": []
+  },
+  "canvas": {
+   "fingerprinting": false,
+   "reads": [],
+   "scripts": []
+  },
+  "hijack": {
+   "detected": true,
+   "globals": {
+    "addedCount": 1,
+    "addedSample": [
+     "beef"
+    ],
+    "overwritten": [
+     "XMLHttpRequest.prototype.open"
+    ],
+    "signatures": [
+     "beef",
+     "script http://127.0.0.1:8001/hook.js"
+    ]
+   },
+   "indicators": [
+    {
+     "id": "websocket",
+     "severity": "alta",
+     "text": "WebSocket para terceiro: websocket.org"
+    },
+    {
+     "id": "polling",
+     "severity": "alta",
+     "text": "Polling persistente para terceiro: 127.0.0.1"
+    },
+    {
+     "id": "keylogger",
+     "severity": "média",
+     "text": "Script de terceiro ouvindo teclas: 127.0.0.1"
+    },
+    {
+     "id": "overwritten",
+     "severity": "média",
+     "text": "APIs nativas substituídas pela página: XMLHttpRequest.prototype.open"
+    },
+    {
+     "id": "signature",
+     "severity": "crítica",
+     "text": "Assinatura de framework de hook: beef, script http://127.0.0.1:8001/hook.js"
+    }
+   ],
+   "keyListeners": [
+    {
+     "frameUrl": "http://localhost:8000/",
+     "script": "http://127.0.0.1:8001/hook.js",
+     "target": "document",
+     "thirdParty": true,
+     "type": "keydown"
+    }
+   ],
+   "polling": [
+    {
+     "cv": 0.14,
+     "endpoint": "127.0.0.1/poll",
+     "hits": 11,
+     "intervalMs": 2130,
+     "site": "127.0.0.1",
+     "type": "xmlhttprequest"
+    }
+   ],
+   "websockets": [
+    {
+     "at": 152,
+     "site": "websocket.org",
+     "thirdParty": true,
+     "url": "wss://echo.websocket.org/"
+    }
+   ]
+  },
+  "idSharing": [],
+  "syncRedirects": [],
+  "trackingParams": {
+   "page": [],
+   "requests": []
+  }
+ },
+ "url": "http://localhost:8000/"
+}

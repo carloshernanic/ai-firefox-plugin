@@ -1,0 +1,191 @@
+{
+ "blocklist": [],
+ "cookieRejected": [],
+ "cookieSummary": {
+  "deletions": 0,
+  "firstParty": 0,
+  "persistent": 0,
+  "rejected": 0,
+  "session": 0,
+  "thirdParty": 0,
+  "total": 0,
+  "viaHttp": 0,
+  "viaJs": 0
+ },
+ "cookies": [],
+ "firstPartyRequests": 2,
+ "host": "privacy-test-pages.site",
+ "score": {
+  "grade": "A",
+  "items": [
+   {
+    "cap": 22,
+    "id": "trackers",
+    "name": "Rastreadores de terceiros conhecidos",
+    "penalty": 0,
+    "value": 0,
+    "weight": 0.7333333333333333,
+    "why": "Domínios classificados como rastreadores pela Enhanced Tracking Protection (lista Disconnect). Principal vetor de perfilamento entre sites."
+   },
+   {
+    "cap": 13,
+    "id": "thirdPartyCookies",
+    "name": "Cookies de terceira parte",
+    "penalty": 0,
+    "value": 0,
+    "weight": 0.325,
+    "why": "Cookies de outros sites identificam o usuário em todas as páginas que carregam o mesmo terceiro."
+   },
+   {
+    "cap": 11,
+    "id": "canvas",
+    "name": "Canvas fingerprint",
+    "penalty": 0,
+    "value": 0,
+    "weight": 11,
+    "why": "Identifica o dispositivo sem cookies, contornando bloqueio e limpeza de cookies; o usuário não tem como apagar."
+   },
+   {
+    "cap": 8,
+    "id": "sessionRecording",
+    "name": "Gravação de sessão",
+    "penalty": 0,
+    "value": 0,
+    "weight": 8,
+    "why": "Replay de cliques, rolagem e campos digitados; pode capturar dados sensíveis antes do envio de formulários."
+   },
+   {
+    "cap": 8,
+    "id": "socialPixels",
+    "name": "Pixels de redes sociais",
+    "penalty": 0,
+    "value": 0,
+    "weight": 2,
+    "why": "Meta, TikTok, X, LinkedIn etc. associam a visita ao perfil do usuário na rede social, mesmo sem clique."
+   },
+   {
+    "cap": 4,
+    "id": "remarketing",
+    "name": "Remarketing do Google Analytics",
+    "penalty": 0,
+    "value": 0,
+    "weight": 4,
+    "why": "O Analytics envia o ID do visitante ao doubleclick.net/google.com (ads/ga-audiences) para montar públicos de anúncios."
+   },
+   {
+    "cap": 3,
+    "id": "unclassified",
+    "name": "Outros domínios de terceiros",
+    "penalty": 0,
+    "value": 0,
+    "weight": 0.2,
+    "why": "Terceiros sem classificação (CDNs, widgets) ainda recebem IP, User-Agent e Referer do visitante."
+   },
+   {
+    "cap": 8,
+    "id": "cookieSync",
+    "name": "Cookie sync entre terceiros",
+    "penalty": 0,
+    "value": 0,
+    "weight": 2,
+    "why": "Um rastreador repassa seu ID a outro, unindo perfis de empresas diferentes."
+   },
+   {
+    "cap": 5,
+    "id": "firstPartyIdLeak",
+    "name": "ID de 1ª parte enviado a terceiros",
+    "penalty": 0,
+    "value": 0,
+    "weight": 1.25,
+    "why": "Cookie gravado como 1ª parte (escapa do bloqueio de cookies de terceiros) mas enviado a um terceiro na URL."
+   },
+   {
+    "cap": 6,
+    "id": "bounce",
+    "name": "Bounce tracking",
+    "penalty": 0,
+    "value": 0,
+    "weight": 6,
+    "why": "Redirecionamento por um site rastreador que ganha acesso de 1ª parte sem o usuário escolher visitá-lo."
+   },
+   {
+    "cap": 8,
+    "id": "hijack",
+    "name": "Indicadores de hijacking / hook",
+    "penalty": 0,
+    "value": 0,
+    "weight": 4,
+    "why": "Canal persistente com terceiro (WebSocket/polling), captura de teclas por script de terceiro ou APIs nativas substituídas: sinais de navegador sequestrado. Assinatura de framework de hook (BeEF) zera o critério."
+   },
+   {
+    "cap": 4,
+    "id": "thirdPartyStorage",
+    "name": "Armazenamento HTML5 de terceiros",
+    "penalty": 0,
+    "value": 0,
+    "weight": 2,
+    "why": "localStorage/IndexedDB de iframes de terceiros guardam identificadores fora do alcance da limpeza de cookies."
+   }
+  ],
+  "score": 100,
+  "veto": null
+ },
+ "site": "privacy-test-pages.site",
+ "startedAt": 1790459321184,
+ "storage": [],
+ "storageSummary": {
+  "bytes": 0,
+  "idbDatabases": 0,
+  "localItems": 0,
+  "origins": 0,
+  "sessionItems": 0,
+  "thirdPartyOrigins": 0,
+  "writes": 0
+ },
+ "thirdParty": [],
+ "thirdPartyRequests": 0,
+ "totalRequests": 2,
+ "tracking": {
+  "bounce": {
+   "detected": false,
+   "hops": [],
+   "leaks": [],
+   "origin": null,
+   "trackers": []
+  },
+  "canvas": {
+   "fingerprinting": false,
+   "reads": [],
+   "scripts": []
+  },
+  "hijack": {
+   "detected": false,
+   "globals": {
+    "addedCount": 0,
+    "addedSample": [],
+    "overwritten": [],
+    "signatures": []
+   },
+   "indicators": [],
+   "keyListeners": [],
+   "polling": [],
+   "websockets": []
+  },
+  "idSharing": [],
+  "syncRedirects": [],
+  "trackingParams": {
+   "page": [
+    {
+     "name": "fbclid",
+     "value": "12345"
+    },
+    {
+     "name": "fb_source",
+     "value": "someting"
+    }
+   ],
+   "requests": []
+  }
+ },
+ "url": "https://privacy-test-pages.site/privacy-protections/query-parameters/query.html?fbclid=12345&fb_source=someting&u=14"
+}

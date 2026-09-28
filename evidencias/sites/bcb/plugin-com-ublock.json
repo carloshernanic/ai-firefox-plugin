@@ -1,0 +1,176 @@
+{
+ "cookieRejected": [],
+ "cookieSummary": {
+  "deletions": 0,
+  "firstParty": 4,
+  "persistent": 0,
+  "rejected": 0,
+  "session": 4,
+  "thirdParty": 0,
+  "total": 4,
+  "viaHttp": 4,
+  "viaJs": 0
+ },
+ "cookies": [
+  {
+   "domain": "www3.bcb.gov.br",
+   "expiry": null,
+   "httpOnly": true,
+   "name": "415ac6b663c69aeba6f2226b43c7f16d",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": "none",
+   "secure": true,
+   "session": true,
+   "setBy": "https://www3.bcb.gov.br/bc_moeda/rest/cotacao/fechamento/ultima/1/220/2026-09-26",
+   "site": "bcb.gov.br",
+   "sources": [
+    "http"
+   ],
+   "thirdParty": false,
+   "value": "5028a1d090b223591598cc760e4334b2",
+   "writes": 2
+  },
+  {
+   "domain": "www3.bcb.gov.br",
+   "expiry": null,
+   "httpOnly": true,
+   "name": "BIGipServer~cloud_p_as3~ocp~pool_cloud_443_p",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": null,
+   "secure": true,
+   "session": true,
+   "setBy": "https://www3.bcb.gov.br/bc_moeda/rest/cotacao/fechamento/ultima/1/220/2026-09-26",
+   "site": "bcb.gov.br",
+   "sources": [
+    "http"
+   ],
+   "thirdParty": false,
+   "value": "187109804.47873.0000",
+   "writes": 2
+  },
+  {
+   "domain": "www3.bcb.gov.br",
+   "expiry": null,
+   "httpOnly": true,
+   "name": "BIGipServer~proxy-reverso-dmz_p_as3~proxy-reverso-dmz_p~pool_dmz-vs-cloud_443_p",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": null,
+   "secure": true,
+   "session": true,
+   "setBy": "https://www3.bcb.gov.br/bc_moeda/rest/cotacao/fechamento/ultima/1/220/2026-09-26",
+   "site": "bcb.gov.br",
+   "sources": [
+    "http"
+   ],
+   "thirdParty": false,
+   "value": "!0zHSi0IMjrj0r65V8W0f74IkD3RYoPAh4Bigk418+70fbXzVxZ2MQZ7VKtx+MQegoHoKJlzz4XDFKhI=",
+   "writes": 2
+  },
+  {
+   "domain": "www3.bcb.gov.br",
+   "expiry": null,
+   "httpOnly": false,
+   "name": "TS012b7e98",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": null,
+   "secure": false,
+   "session": true,
+   "setBy": "https://www3.bcb.gov.br/bc_moeda/rest/cotacao/fechamento/ultima/1/220/2026-09-26",
+   "site": "bcb.gov.br",
+   "sources": [
+    "http"
+   ],
+   "thirdParty": false,
+   "value": "012e4f88b3bbb2a0892aa01b617cf907292cb4668697baaf02ab5dd118d39556a95429979eb0bc29f5356b5cf6660aef65c934fd4348f86b52d318cb5a6fb8e368b386b7580ed9a1db87616e3c9e9b13cf4b436f6fae8e83a84544d99da2b841d8cab21fe2",
+   "writes": 2
+  }
+ ],
+ "firstPartyRequests": 136,
+ "host": "www.bcb.gov.br",
+ "site": "bcb.gov.br",
+ "startedAt": 1790457714890,
+ "storage": [],
+ "storageSummary": {
+  "bytes": 0,
+  "idbDatabases": 0,
+  "localItems": 0,
+  "origins": 0,
+  "sessionItems": 0,
+  "thirdPartyOrigins": 0,
+  "writes": 0
+ },
+ "thirdParty": [
+  {
+   "blocked": {
+    "cancelled": 0,
+    "error": 0,
+    "etp": 0
+   },
+   "classifications": [],
+   "cookies": 0,
+   "count": 2,
+   "hosts": [
+    "www.googletagmanager.com"
+   ],
+   "sample": "https://www.googletagmanager.com/gtag/js?id=G-TPS4R7DC1S&l=dataLayer",
+   "site": "googletagmanager.com",
+   "tracker": false,
+   "types": {
+    "script": 2
+   }
+  },
+  {
+   "blocked": {
+    "cancelled": 0,
+    "error": 0,
+    "etp": 0
+   },
+   "classifications": [],
+   "cookies": 0,
+   "count": 1,
+   "hosts": [
+    "barra.brasil.gov.br"
+   ],
+   "sample": "https://barra.brasil.gov.br/static/Raleway-Bold.woff",
+   "site": "brasil.gov.br",
+   "tracker": false,
+   "types": {
+    "font": 1
+   }
+  }
+ ],
+ "thirdPartyRequests": 3,
+ "totalRequests": 139,
+ "tracking": {
+  "bounce": {
+   "detected": false,
+   "hops": [],
+   "leaks": [],
+   "origin": null,
+   "trackers": []
+  },
+  "canvas": {
+   "fingerprinting": false,
+   "reads": [],
+   "scripts": []
+  },
+  "idSharing": [],
+  "syncRedirects": [
+   {
+    "count": 2,
+    "from": "googletagmanager.com",
+    "sample": "moz-extension://99999999-8888-7777-6666-555555555555/web_accessible_resources/google-analytics_analytics.js?secret=pcs5go",
+    "to": "99999999-8888-7777-6666-555555555555"
+   }
+  ],
+  "trackingParams": {
+   "page": [],
+   "requests": []
+  }
+ },
+ "url": "https://www.bcb.gov.br/"
+}

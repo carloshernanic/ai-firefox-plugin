@@ -1,0 +1,356 @@
+{
+ "cookieRejected": [],
+ "cookieSummary": {
+  "deletions": 0,
+  "firstParty": 0,
+  "persistent": 1,
+  "rejected": 0,
+  "session": 1,
+  "thirdParty": 2,
+  "total": 2,
+  "viaHttp": 2,
+  "viaJs": 0
+ },
+ "cookies": [
+  {
+   "domain": "pexels.com",
+   "expiry": 1790459872000,
+   "httpOnly": true,
+   "name": "__cf_bm",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": "none",
+   "secure": true,
+   "session": false,
+   "setBy": "https://images.pexels.com/photos/4386366/pexels-photo-4386366.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+   "site": "pexels.com",
+   "sources": [
+    "http"
+   ],
+   "thirdParty": true,
+   "value": "V4YYygsoJLmDMLK60u6WIUrXG3Hh0UlygFv5NTa3FNA-1790458072.9434376-1.0.1.1-99YvD4nblv6IDEysxvvMCVS86RSRGryLTd9vkHFYSktmoM5slDSshroX6Xy6hwidqZMTCmRD_BVL4fx6VOivaP2NTNwWHyFtSEJcLM7VgxB76EjZ_aX97AIimBFPv9YO",
+   "writes": 1
+  },
+  {
+   "domain": "pexels.com",
+   "expiry": null,
+   "httpOnly": true,
+   "name": "_cfuvid",
+   "partitioned": false,
+   "path": "/",
+   "sameSite": "none",
+   "secure": true,
+   "session": true,
+   "setBy": "https://images.pexels.com/photos/4386366/pexels-photo-4386366.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+   "site": "pexels.com",
+   "sources": [
+    "http"
+   ],
+   "thirdParty": true,
+   "value": "bRxDO5veBskRs_Mi.pMHr7DuzFhW79Zn9O2uW4Jzomk-1790458072.9434376-1.0.1.1-BwlBdhSfb0qPtF05m3eR2Gdch5NjCMvJbWwEVFRoPTQ",
+   "writes": 1
+  }
+ ],
+ "firstPartyRequests": 40,
+ "host": "investidorsardinha.r7.com",
+ "site": "r7.com",
+ "startedAt": 1790458071687,
+ "storage": [],
+ "storageSummary": {
+  "bytes": 0,
+  "idbDatabases": 0,
+  "localItems": 0,
+  "origins": 0,
+  "sessionItems": 0,
+  "thirdPartyOrigins": 0,
+  "writes": 0
+ },
+ "thirdParty": [
+  {
+   "blocked": {
+    "cancelled": 0,
+    "error": 0,
+    "etp": 0
+   },
+   "classifications": [
+    "tracking_content",
+    "any_strict_tracking"
+   ],
+   "cookies": 0,
+   "count": 4,
+   "hosts": [
+    "fonts.googleapis.com"
+   ],
+   "sample": "https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap",
+   "site": "googleapis.com",
+   "tracker": true,
+   "types": {
+    "stylesheet": 4
+   }
+  },
+  {
+   "blocked": {
+    "cancelled": 0,
+    "error": 0,
+    "etp": 0
+   },
+   "classifications": [
+    "tracking_content",
+    "any_strict_tracking"
+   ],
+   "cookies": 0,
+   "count": 4,
+   "hosts": [
+    "fonts.gstatic.com"
+   ],
+   "sample": "https://fonts.gstatic.com/s/roboto/v51/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3yUBA.woff2",
+   "site": "gstatic.com",
+   "tracker": true,
+   "types": {
+    "font": 4
+   }
+  },
+  {
+   "blocked": {
+    "cancelled": 2,
+    "error": 0,
+    "etp": 0
+   },
+   "classifications": [
+    "tracking_ad",
+    "any_basic_tracking",
+    "any_strict_tracking"
+   ],
+   "cookies": 0,
+   "count": 2,
+   "hosts": [
+    "a.omappapi.com"
+   ],
+   "sample": "https://a.omappapi.com/app/js/api.min.js",
+   "site": "omappapi.com",
+   "tracker": true,
+   "types": {
+    "script": 2
+   }
+  },
+  {
+   "blocked": {
+    "cancelled": 0,
+    "error": 0,
+    "etp": 0
+   },
+   "classifications": [
+    "tracking_ad",
+    "any_basic_tracking",
+    "any_strict_tracking"
+   ],
+   "cookies": 0,
+   "count": 1,
+   "hosts": [
+    "securepubads.g.doubleclick.net"
+   ],
+   "sample": "https://securepubads.g.doubleclick.net/tag/js/gpt.js",
+   "site": "doubleclick.net",
+   "tracker": true,
+   "types": {
+    "script": 1
+   }
+  },
+  {
+   "blocked": {
+    "cancelled": 1,
+    "error": 0,
+    "etp": 0
+   },
+   "classifications": [
+    "tracking_analytics",
+    "any_basic_tracking",
+    "any_strict_tracking"
+   ],
+   "cookies": 0,
+   "count": 1,
+   "hosts": [
+    "www.clarity.ms"
+   ],
+   "sample": "https://www.clarity.ms/tag/rcd75s0gl4?ref=wordpress",
+   "site": "clarity.ms",
+   "tracker": true,
+   "types": {
+    "script": 1
+   }
+  },
+  {
+   "blocked": {
+    "cancelled": 1,
+    "error": 0,
+    "etp": 0
+   },
+   "classifications": [
+    "tracking_ad",
+    "any_basic_tracking",
+    "any_strict_tracking"
+   ],
+   "cookies": 0,
+   "count": 1,
+   "hosts": [
+    "tags.t.tailtarget.com"
+   ],
+   "sample": "https://tags.t.tailtarget.com/t3m.js?i=TT-9964-3/CT-23",
+   "site": "tailtarget.com",
+   "tracker": true,
+   "types": {
+    "script": 1
+   }
+  },
+  {
+   "blocked": {
+    "cancelled": 0,
+    "error": 0,
+    "etp": 0
+   },
+   "classifications": [
+    "tracking_analytics",
+    "any_basic_tracking",
+    "any_strict_tracking"
+   ],
+   "cookies": 0,
+   "count": 1,
+   "hosts": [
+    "sb.scorecardresearch.com"
+   ],
+   "sample": "https://sb.scorecardresearch.com/beacon.js",
+   "site": "scorecardresearch.com",
+   "tracker": true,
+   "types": {
+    "script": 1
+   }
+  },
+  {
+   "blocked": {
+    "cancelled": 0,
+    "error": 0,
+    "etp": 0
+   },
+   "classifications": [],
+   "cookies": 0,
+   "count": 16,
+   "hosts": [
+    "cdn.asupernova.com.br",
+    "pulse-backend.asupernova.com.br"
+   ],
+   "sample": "https://cdn.asupernova.com.br/calculadoras-investidor-sardinha/build/static/css/main.css?ver=6.8.2",
+   "site": "asupernova.com.br",
+   "tracker": false,
+   "types": {
+    "image": 13,
+    "script": 2,
+    "stylesheet": 1
+   }
+  },
+  {
+   "blocked": {
+    "cancelled": 0,
+    "error": 0,
+    "etp": 0
+   },
+   "classifications": [],
+   "cookies": 0,
+   "count": 13,
+   "hosts": [
+    "analitica.auvp.com.br"
+   ],
+   "sample": "https://analitica.auvp.com.br/api/cdn/images/assets/EQPA3.svg",
+   "site": "auvp.com.br",
+   "tracker": false,
+   "types": {
+    "image": 13
+   }
+  },
+  {
+   "blocked": {
+    "cancelled": 0,
+    "error": 0,
+    "etp": 0
+   },
+   "classifications": [],
+   "cookies": 0,
+   "count": 3,
+   "hosts": [
+    "www.googletagmanager.com"
+   ],
+   "sample": "https://www.googletagmanager.com/gtag/js?id=UA-159842796-1",
+   "site": "googletagmanager.com",
+   "tracker": false,
+   "types": {
+    "script": 3
+   }
+  },
+  {
+   "blocked": {
+    "cancelled": 0,
+    "error": 0,
+    "etp": 0
+   },
+   "classifications": [],
+   "cookies": 2,
+   "count": 1,
+   "hosts": [
+    "images.pexels.com"
+   ],
+   "sample": "https://images.pexels.com/photos/4386366/pexels-photo-4386366.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+   "site": "pexels.com",
+   "tracker": false,
+   "types": {
+    "image": 1
+   }
+  }
+ ],
+ "thirdPartyRequests": 47,
+ "totalRequests": 87,
+ "tracking": {
+  "bounce": {
+   "detected": false,
+   "hops": [],
+   "leaks": [],
+   "origin": null,
+   "trackers": []
+  },
+  "canvas": {
+   "fingerprinting": false,
+   "reads": [],
+   "scripts": []
+  },
+  "idSharing": [],
+  "syncRedirects": [
+   {
+    "count": 13,
+    "from": "auvp.com.br",
+    "sample": "https://cdn.asupernova.com.br/stocks/icons/EQPA7.svg",
+    "to": "asupernova.com.br"
+   },
+   {
+    "count": 3,
+    "from": "googletagmanager.com",
+    "sample": "moz-extension://99999999-8888-7777-6666-555555555555/web_accessible_resources/google-analytics_analytics.js?secret=83xb0b",
+    "to": "99999999-8888-7777-6666-555555555555"
+   },
+   {
+    "count": 1,
+    "from": "doubleclick.net",
+    "sample": "moz-extension://99999999-8888-7777-6666-555555555555/web_accessible_resources/googletagservices_gpt.js?secret=kp5mvp",
+    "to": "99999999-8888-7777-6666-555555555555"
+   },
+   {
+    "count": 1,
+    "from": "scorecardresearch.com",
+    "sample": "moz-extension://99999999-8888-7777-6666-555555555555/web_accessible_resources/scorecardresearch_beacon.js?secret=eixo20",
+    "to": "99999999-8888-7777-6666-555555555555"
+   }
+  ],
+  "trackingParams": {
+   "page": [],
+   "requests": []
+  }
+ },
+ "url": "https://investidorsardinha.r7.com/"
+}

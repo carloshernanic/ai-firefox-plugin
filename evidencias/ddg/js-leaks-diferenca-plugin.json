@@ -1,0 +1,38 @@
+{
+ "added": {
+  "so_com_plugin": [],
+  "so_sem_plugin": [],
+  "total_sem": 833,
+  "total_com": 833
+ },
+ "removed": {
+  "so_com_plugin": [],
+  "so_sem_plugin": [],
+  "total_sem": 17,
+  "total_com": 17
+ },
+ "changed": {
+  "so_com_plugin": [
+   "window.addEventListener changed value",
+   "window.clientInformation.clipboard.addEventListener changed value",
+   "window.clientInformation.mediaDevices.addEventListener changed value",
+   "window.clientInformation.serviceWorker.addEventListener changed value",
+   "window.indexedDB.deleteDatabase changed value",
+   "window.indexedDB.open changed value",
+   "window.localStorage.clear changed value",
+   "window.localStorage.removeItem changed value",
+   "window.localStorage.setItem changed value",
+   "window.performance.addEventListener changed value",
+   "window.screen.addEventListener changed value",
+   "window.screen.orientation.addEventListener changed value",
+   "window.sessionStorage.clear changed value",
+   "window.sessionStorage.removeItem changed value",
+   "window.sessionStorage.setItem changed value",
+   "window.speechSynthesis.addEventListener changed value",
+   "window.visualViewport.addEventListener changed value"
+  ],
+  "so_sem_plugin": [],
+  "total_sem": 2,
+  "total_com": 19
+ }
+}
